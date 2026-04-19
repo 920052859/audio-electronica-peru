@@ -3,26 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Audio Electrónica Perú - Los mejores componentes electrónicos para audio al mejor precio del mercado. Placas amplificadoras, módulos Bluetooth y más." />
-<meta name="keywords" content="amplificador, bluetooth, placa amplificadora, audio, subwoofer, Perú, ZK-502L, ZK-MT21, componentes electrónicos" />
-<meta name="author" content="Audio Electrónica Perú" />
+<meta name="description" content="Audio Electrónica Perú - Componentes electrónicos para audio, módulos Bluetooth, amplificadores y más. Stock actualizado, cotización rápida, envíos con Shalom a todo el Perú." />
+<meta name="keywords" content="amplificador, bluetooth, placa amplificadora, audio, subwoofer, Perú, ZK, Ate, Comas, Shalom, componentes electrónicos" />
 <meta property="og:title" content="Audio Electrónica Perú | Potencia tu Audio" />
-<meta property="og:description" content="Componentes electrónicos para audio de alta calidad al mejor precio del mercado." />
+<meta property="og:description" content="Componentes electrónicos para audio al mejor precio del mercado. Stock actualizado y envíos a todo el Perú." />
 <meta property="og:type" content="website" />
 <title>Audio Electrónica Perú | Potencia tu Audio</title>
 
-<!-- Fonts: Chakra Petch (tech/industrial display) + Outfit (clean modern body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-/* ============================================
-   DESIGN SYSTEM
-   ============================================ */
 :root {
   --color-bg: #050817;
   --color-bg-soft: #0a0e27;
@@ -30,1783 +23,422 @@
   --color-surface-2: #1a2349;
   --color-border: rgba(99, 132, 255, 0.15);
   --color-border-hover: rgba(255, 107, 53, 0.4);
-  
   --color-primary: #3b82f6;
   --color-primary-deep: #1e40af;
   --color-primary-glow: #60a5fa;
-  
   --color-accent: #ff6b35;
   --color-accent-soft: #ff8c5a;
   --color-accent-deep: #e54b1a;
-  
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
   --color-text: #f1f5f9;
   --color-text-muted: #94a3b8;
   --color-text-dim: #64748b;
-  
   --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
   --gradient-accent: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
   --gradient-hero: radial-gradient(ellipse at top, #1e3a8a 0%, #0a0e27 40%, #050817 100%);
   --gradient-card: linear-gradient(145deg, rgba(30, 41, 82, 0.6) 0%, rgba(10, 14, 39, 0.8) 100%);
-  
   --shadow-glow: 0 0 60px rgba(59, 130, 246, 0.25);
   --shadow-accent: 0 0 40px rgba(255, 107, 53, 0.3);
   --shadow-card: 0 20px 50px -15px rgba(0, 0, 0, 0.5);
-  
   --font-display: 'Chakra Petch', sans-serif;
   --font-body: 'Outfit', sans-serif;
-  
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 22px;
   --radius-xl: 32px;
-  
   --container: 1280px;
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.6; overflow-x: hidden; font-weight: 400; -webkit-font-smoothing: antialiased; }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
-  overflow-x: hidden;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Decorative grid background overlay */
 body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-  z-index: 0;
+  content: ''; position: fixed; inset: 0;
+  background-image: linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px; pointer-events: none; z-index: 0;
 }
 
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+button:disabled { cursor: not-allowed; opacity: 0.5; }
 input, select, textarea { font-family: inherit; }
 
-.container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative;
-  z-index: 1;
-}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-}
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding: 16px 0;
-  background: rgba(5, 8, 23, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-  border-bottom-color: var(--color-border);
-  padding: 12px 0;
-}
-
-.nav-container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
-}
-
-.logo-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #1e3a8a, #050817);
-  border: 2px solid rgba(255, 107, 53, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
-}
-
-.logo-icon::before {
-  content: '';
-  position: absolute;
-  inset: 4px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.logo-icon i {
-  color: var(--color-accent);
-  font-size: 1.1rem;
-  z-index: 1;
-}
-
+/* ==== NAVBAR ==== */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 0; background: rgba(5, 8, 23, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid transparent; transition: all 0.3s ease; }
+.navbar.scrolled { border-bottom-color: var(--color-border); padding: 12px 0; }
+.nav-container { max-width: var(--container); margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.02em; }
+.logo-icon { width: 44px; height: 44px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #1e3a8a, #050817); border: 2px solid rgba(255, 107, 53, 0.3); display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 0 20px rgba(255, 107, 53, 0.2); }
+.logo-icon::before { content: ''; position: absolute; inset: 4px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.1); }
+.logo-icon i { color: var(--color-accent); font-size: 1.1rem; z-index: 1; }
 .logo-text { display: flex; flex-direction: column; line-height: 1; }
 .logo-text strong { color: var(--color-text); font-size: 1rem; }
 .logo-text span { color: var(--color-accent); font-size: 0.7rem; letter-spacing: 0.15em; margin-top: 3px; }
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  list-style: none;
-}
-
-.nav-menu a {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  transition: color 0.2s ease;
-  position: relative;
-}
-
+.nav-menu { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-menu a { font-size: 0.92rem; font-weight: 500; color: var(--color-text-muted); transition: color 0.2s ease; position: relative; }
 .nav-menu a:hover { color: var(--color-text); }
-
-.nav-menu a::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--color-accent);
-  transition: width 0.3s ease;
-}
-
+.nav-menu a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--color-accent); transition: width 0.3s ease; }
 .nav-menu a:hover::after { width: 100%; }
-
-.nav-cta {
-  background: var(--gradient-accent);
-  padding: 10px 22px;
-  border-radius: var(--radius-sm);
-  color: white !important;
-  font-weight: 600;
-  font-size: 0.88rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-}
-
-.nav-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(255, 107, 53, 0.45);
-}
-
+.nav-cta { background: var(--gradient-accent); padding: 10px 22px; border-radius: var(--radius-sm); color: white !important; font-weight: 600; font-size: 0.88rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3); position: relative; }
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(255, 107, 53, 0.45); }
 .nav-cta::after { display: none; }
+.nav-cta .cart-badge { position: absolute; top: -8px; right: -8px; background: var(--color-danger); color: white; min-width: 22px; height: 22px; border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; font-weight: 700; padding: 0 6px; }
+.mobile-toggle { display: none; font-size: 1.5rem; color: var(--color-text); }
 
-.mobile-toggle {
-  display: none;
-  font-size: 1.5rem;
-  color: var(--color-text);
-}
-
-/* ============================================
-   HERO SECTION
-   ============================================ */
-.hero {
-  min-height: 100vh;
-  padding: 140px 0 80px;
-  background: var(--gradient-hero);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-/* Animated audio wave background */
-.hero-waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 300px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4px;
-  opacity: 0.12;
-  pointer-events: none;
-}
-
-.hero-waves .bar {
-  width: 6px;
-  background: linear-gradient(to top, var(--color-accent), var(--color-primary));
-  border-radius: 3px 3px 0 0;
-  animation: wave 1.5s ease-in-out infinite;
-}
-
-@keyframes wave {
-  0%, 100% { height: 20%; }
-  50% { height: 100%; }
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 20%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 60%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
-  background: rgba(255, 107, 53, 0.1);
-  border: 1px solid rgba(255, 107, 53, 0.3);
-  border-radius: 100px;
-  font-size: 0.82rem;
-  color: var(--color-accent-soft);
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  margin-bottom: 28px;
-  animation: fadeInUp 0.8s ease both;
-}
-
-.hero-badge .pulse {
-  width: 8px;
-  height: 8px;
-  background: var(--color-accent);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--color-accent);
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.3); }
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-  font-weight: 700;
-  margin-bottom: 24px;
-  letter-spacing: -0.02em;
-  animation: fadeInUp 0.8s ease 0.1s both;
-}
-
-.hero h1 .highlight {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  display: inline-block;
-}
-
-.hero-subtitle {
-  font-size: 1.15rem;
-  color: var(--color-text-muted);
-  margin-bottom: 40px;
-  max-width: 540px;
-  line-height: 1.7;
-  animation: fadeInUp 0.8s ease 0.2s both;
-}
-
-.hero-cta {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  animation: fadeInUp 0.8s ease 0.3s both;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 32px;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  letter-spacing: 0.02em;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary {
-  background: var(--gradient-accent);
-  color: white;
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  backdrop-filter: blur(10px);
-}
-
-.btn-secondary:hover {
-  background: rgba(59, 130, 246, 0.15);
-  border-color: var(--color-primary);
-  transform: translateY(-3px);
-}
-
-.btn-whatsapp {
-  background: #25d366;
-  color: white;
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
-}
-
-.btn-whatsapp:hover {
-  background: #20ba5a;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
-}
-
-.hero-stats {
-  display: flex;
-  gap: 40px;
-  margin-top: 60px;
-  padding-top: 40px;
-  border-top: 1px solid var(--color-border);
-  animation: fadeInUp 0.8s ease 0.4s both;
-}
-
-.hero-stat strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  line-height: 1;
-}
-
-.hero-stat span {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  margin-top: 6px;
-  display: block;
-}
-
-/* Hero Visual - audio speaker / circuit */
-.hero-visual {
-  position: relative;
-  animation: fadeIn 1.2s ease 0.5s both;
-}
-
-.speaker-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 460px;
-  aspect-ratio: 1;
-  margin: 0 auto;
-}
-
-.speaker {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: 
-    radial-gradient(circle at 50% 50%, #1a2349 0%, #050817 100%);
-  border: 8px solid #0a0e27;
-  box-shadow: 
-    0 0 80px rgba(59, 130, 246, 0.4),
-    inset 0 0 100px rgba(0, 0, 0, 0.8),
-    inset 0 0 0 3px rgba(255, 107, 53, 0.2);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: speakerPulse 4s ease-in-out infinite;
-}
-
-@keyframes speakerPulse {
-  0%, 100% { box-shadow: 0 0 80px rgba(59, 130, 246, 0.4), inset 0 0 100px rgba(0, 0, 0, 0.8), inset 0 0 0 3px rgba(255, 107, 53, 0.2); }
-  50% { box-shadow: 0 0 120px rgba(255, 107, 53, 0.4), inset 0 0 100px rgba(0, 0, 0, 0.8), inset 0 0 0 3px rgba(255, 107, 53, 0.4); }
-}
-
-.speaker-inner {
-  width: 60%;
-  height: 60%;
-  border-radius: 50%;
-  background: 
-    radial-gradient(circle at 30% 30%, #2a3a70 0%, #050817 80%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9);
-}
-
-.speaker-center {
-  width: 35%;
-  height: 35%;
-  border-radius: 50%;
-  background: var(--gradient-accent);
-  box-shadow: 0 0 30px rgba(255, 107, 53, 0.6), inset 0 -6px 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.8rem;
-}
-
-/* Sound waves around speaker */
-.sound-wave {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px solid var(--color-accent);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  animation: soundWave 3s ease-out infinite;
-}
-
+/* ==== HERO ==== */
+.hero { min-height: 100vh; padding: 140px 0 80px; background: var(--gradient-hero); position: relative; overflow: hidden; display: flex; align-items: center; }
+.hero-waves { position: absolute; bottom: 0; left: 0; right: 0; height: 300px; display: flex; align-items: flex-end; justify-content: center; gap: 4px; opacity: 0.12; pointer-events: none; }
+.hero-waves .bar { width: 6px; background: linear-gradient(to top, var(--color-accent), var(--color-primary)); border-radius: 3px 3px 0 0; animation: wave 1.5s ease-in-out infinite; }
+@keyframes wave { 0%,100% { height: 20%; } 50% { height: 100%; } }
+.hero::after { content: ''; position: absolute; top: 20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 60%); border-radius: 50%; pointer-events: none; }
+.hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 100px; font-size: 0.82rem; color: var(--color-accent-soft); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 28px; animation: fadeInUp 0.8s ease both; }
+.hero-badge .pulse { width: 8px; height: 8px; background: var(--color-accent); border-radius: 50%; box-shadow: 0 0 10px var(--color-accent); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); font-weight: 700; margin-bottom: 24px; letter-spacing: -0.02em; animation: fadeInUp 0.8s ease 0.1s both; }
+.hero h1 .highlight { background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; position: relative; display: inline-block; }
+.hero-subtitle { font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 40px; max-width: 540px; line-height: 1.7; animation: fadeInUp 0.8s ease 0.2s both; }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.8s ease 0.3s both; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; letter-spacing: 0.02em; position: relative; overflow: hidden; text-align: center; justify-content: center; }
+.btn-primary { background: var(--gradient-accent); color: white; box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35); }
+.btn-primary:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5); }
+.btn-secondary { background: rgba(255, 255, 255, 0.05); color: var(--color-text); border: 1px solid var(--color-border); backdrop-filter: blur(10px); }
+.btn-secondary:hover:not(:disabled) { background: rgba(59, 130, 246, 0.15); border-color: var(--color-primary); transform: translateY(-3px); }
+.btn-whatsapp { background: #25d366; color: white; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35); }
+.btn-whatsapp:hover:not(:disabled) { background: #20ba5a; transform: translateY(-3px); box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5); }
+.hero-stats { display: flex; gap: 40px; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--color-border); animation: fadeInUp 0.8s ease 0.4s both; }
+.hero-stat strong { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--color-accent); line-height: 1; }
+.hero-stat span { color: var(--color-text-muted); font-size: 0.85rem; margin-top: 6px; display: block; }
+.hero-visual { position: relative; animation: fadeIn 1.2s ease 0.5s both; }
+.speaker-wrap { position: relative; width: 100%; max-width: 460px; aspect-ratio: 1; margin: 0 auto; }
+.speaker { width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle at 50% 50%, #1a2349 0%, #050817 100%); border: 8px solid #0a0e27; box-shadow: 0 0 80px rgba(59, 130, 246, 0.4), inset 0 0 100px rgba(0, 0, 0, 0.8), inset 0 0 0 3px rgba(255, 107, 53, 0.2); position: relative; display: flex; align-items: center; justify-content: center; animation: speakerPulse 4s ease-in-out infinite; }
+@keyframes speakerPulse { 0%,100% { box-shadow: 0 0 80px rgba(59, 130, 246, 0.4), inset 0 0 100px rgba(0, 0, 0, 0.8), inset 0 0 0 3px rgba(255, 107, 53, 0.2); } 50% { box-shadow: 0 0 120px rgba(255, 107, 53, 0.4), inset 0 0 100px rgba(0, 0, 0, 0.8), inset 0 0 0 3px rgba(255, 107, 53, 0.4); } }
+.speaker-inner { width: 60%; height: 60%; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #2a3a70 0%, #050817 80%); position: relative; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9); }
+.speaker-center { width: 35%; height: 35%; border-radius: 50%; background: var(--gradient-accent); box-shadow: 0 0 30px rgba(255, 107, 53, 0.6), inset 0 -6px 20px rgba(0, 0, 0, 0.3); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; }
+.sound-wave { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: 50%; border: 2px solid var(--color-accent); transform: translate(-50%, -50%); opacity: 0; animation: soundWave 3s ease-out infinite; }
 .sound-wave:nth-child(2) { animation-delay: 1s; }
 .sound-wave:nth-child(3) { animation-delay: 2s; }
+@keyframes soundWave { 0% { width: 40%; height: 40%; opacity: 0.8; } 100% { width: 130%; height: 130%; opacity: 0; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-@keyframes soundWave {
-  0% { width: 40%; height: 40%; opacity: 0.8; }
-  100% { width: 130%; height: 130%; opacity: 0; }
-}
+/* ==== SECTION BASE ==== */
+section { padding: 100px 0; position: relative; }
+.section-header { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.section-tag { display: inline-block; padding: 6px 18px; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 100px; font-size: 0.78rem; color: var(--color-primary-glow); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+.section-title { font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 18px; letter-spacing: -0.02em; }
+.section-title .highlight { background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.section-desc { color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* ==== ABOUT ==== */
+.about { background: var(--color-bg-soft); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 80px; }
+.about-content h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 24px; letter-spacing: -0.02em; }
+.about-content h2 .highlight { background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.about-content p { color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
+.mvv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.mvv-card { background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 28px 24px; transition: all 0.3s ease; backdrop-filter: blur(10px); }
+.mvv-card:hover { border-color: var(--color-accent); transform: translateY(-4px); }
+.mvv-card-icon { width: 48px; height: 48px; background: var(--gradient-accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; margin-bottom: 16px; box-shadow: var(--shadow-accent); }
+.mvv-card h4 { font-size: 1.1rem; margin-bottom: 8px; color: var(--color-text); }
+.mvv-card p { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0; }
+.team-section { margin-top: 40px; }
+.team-section h3 { font-size: 1.8rem; text-align: center; margin-bottom: 40px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 960px; margin: 0 auto; }
+.team-card { background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 36px 28px; text-align: center; transition: all 0.4s ease; backdrop-filter: blur(10px); }
+.team-card:hover { border-color: var(--color-accent); transform: translateY(-6px); box-shadow: var(--shadow-card); }
+.team-avatar { width: 110px; height: 110px; margin: 0 auto 20px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; color: white; font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; border: 4px solid rgba(255, 107, 53, 0.25); box-shadow: 0 0 30px rgba(59, 130, 246, 0.3); }
+.team-card h4 { font-size: 1.2rem; color: var(--color-text); margin-bottom: 6px; }
+.team-card .role { color: var(--color-accent); font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; letter-spacing: 0.04em; }
+.team-card .bio { color: var(--color-text-muted); font-size: 0.88rem; line-height: 1.6; }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ============================================
-   SECTION BASE
-   ============================================ */
-section {
-  padding: 100px 0;
-  position: relative;
-}
-
-.section-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 64px;
-}
-
-.section-tag {
-  display: inline-block;
-  padding: 6px 18px;
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  border-radius: 100px;
-  font-size: 0.78rem;
-  color: var(--color-primary-glow);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  margin-bottom: 18px;
-  letter-spacing: -0.02em;
-}
-
-.section-title .highlight {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.section-desc {
-  color: var(--color-text-muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-/* ============================================
-   ABOUT SECTION
-   ============================================ */
-.about {
-  background: var(--color-bg-soft);
-  position: relative;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  margin-bottom: 80px;
-}
-
-.about-content .section-tag { margin-bottom: 20px; }
-.about-content h2 {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  margin-bottom: 24px;
-  letter-spacing: -0.02em;
-}
-
-.about-content h2 .highlight {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.about-content p {
-  color: var(--color-text-muted);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.mvv-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.mvv-card {
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 28px 24px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.mvv-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-4px);
-}
-
-.mvv-card-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--gradient-accent);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-accent);
-}
-
-.mvv-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: var(--color-text);
-}
-
-.mvv-card p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Team cards */
-.team-section {
-  margin-top: 40px;
-}
-
-.team-section h3 {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.team-card {
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 36px 28px;
-  text-align: center;
-  transition: all 0.4s ease;
-  backdrop-filter: blur(10px);
-}
-
-.team-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card);
-}
-
-.team-avatar {
-  width: 110px;
-  height: 110px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: var(--font-display);
-  font-size: 2.2rem;
-  font-weight: 700;
-  border: 4px solid rgba(255, 107, 53, 0.25);
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-}
-
-.team-card h4 {
-  font-size: 1.2rem;
-  color: var(--color-text);
-  margin-bottom: 6px;
-}
-
-.team-card .role {
-  color: var(--color-accent);
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  letter-spacing: 0.04em;
-}
-
-.team-card .bio {
-  color: var(--color-text-muted);
-  font-size: 0.88rem;
-  line-height: 1.6;
-}
-
-/* ============================================
-   PRODUCTS SECTION
-   ============================================ */
-.products {
-  background: var(--color-bg);
-}
-
-.category-filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 48px;
-}
-
-.filter-btn {
-  padding: 10px 22px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--color-border);
-  border-radius: 100px;
-  color: var(--color-text-muted);
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-family: var(--font-body);
-}
-
-.filter-btn:hover {
-  border-color: var(--color-accent);
-  color: var(--color-text);
-}
-
-.filter-btn.active {
-  background: var(--gradient-accent);
-  color: white;
-  border-color: transparent;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.product-card {
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  backdrop-filter: blur(10px);
-  position: relative;
-}
-
-.product-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gradient-accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.product-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-card);
-}
-
+/* ==== PRODUCTS ==== */
+.products { background: var(--color-bg); }
+.category-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+.filter-btn { padding: 10px 22px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--color-border); border-radius: 100px; color: var(--color-text-muted); font-size: 0.88rem; font-weight: 500; transition: all 0.3s ease; font-family: var(--font-body); }
+.filter-btn:hover { border-color: var(--color-accent); color: var(--color-text); }
+.filter-btn.active { background: var(--gradient-accent); color: white; border-color: transparent; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3); }
+.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.product-card { background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; backdrop-filter: blur(10px); position: relative; }
+.product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient-accent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
+.product-card:hover { border-color: var(--color-accent); transform: translateY(-8px); box-shadow: var(--shadow-card); }
 .product-card:hover::before { transform: scaleX(1); }
+.product-card.out-of-stock { opacity: 0.7; }
+.product-card.out-of-stock::after { content: 'AGOTADO'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-12deg); font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: rgba(239, 68, 68, 0.5); letter-spacing: 0.1em; pointer-events: none; z-index: 5; text-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+.product-image { aspect-ratio: 16 / 10; background: radial-gradient(circle at 30% 30%, #1a2349 0%, #050817 100%); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--color-border); }
+.product-image::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px); background-size: 20px 20px; }
+.product-image svg { width: 68%; height: 68%; z-index: 1; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); }
+.product-badge { position: absolute; top: 12px; left: 12px; background: rgba(5, 8, 23, 0.9); border: 1px solid var(--color-accent); color: var(--color-accent); padding: 4px 10px; border-radius: 100px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; z-index: 2; backdrop-filter: blur(10px); }
+.product-stock-badge { position: absolute; top: 12px; right: 12px; padding: 4px 10px; border-radius: 100px; font-size: 0.68rem; font-weight: 700; z-index: 2; backdrop-filter: blur(10px); display: inline-flex; align-items: center; gap: 5px; }
+.product-stock-badge.available { background: rgba(34, 197, 94, 0.15); border: 1px solid var(--color-success); color: var(--color-success); }
+.product-stock-badge.low { background: rgba(245, 158, 11, 0.15); border: 1px solid var(--color-warning); color: var(--color-warning); }
+.product-stock-badge.out { background: rgba(239, 68, 68, 0.15); border: 1px solid var(--color-danger); color: var(--color-danger); }
+.product-stock-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.product-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+.product-name { font-size: 1rem; color: var(--color-text); margin-bottom: 6px; font-family: var(--font-display); font-weight: 600; line-height: 1.3; min-height: 2.6em; }
+.product-category-tag { display: inline-block; color: var(--color-primary-glow); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+.product-desc { color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 16px; flex: 1; }
+.product-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--color-border); margin-top: auto; }
+.product-price small { color: var(--color-text-muted); font-size: 0.72rem; display: block; margin-bottom: 2px; letter-spacing: 0.06em; text-transform: uppercase; }
+.product-price strong { font-family: var(--font-display); color: var(--color-accent); font-size: 1.4rem; font-weight: 700; }
+.product-price strong small { display: inline; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 500; text-transform: none; letter-spacing: 0; margin-left: 2px; }
+.btn-add-cart { background: rgba(255, 107, 53, 0.1); color: var(--color-accent); border: 1px solid var(--color-accent); padding: 9px 14px; border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 600; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px; }
+.btn-add-cart:hover:not(:disabled) { background: var(--color-accent); color: white; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4); }
+.btn-add-cart:disabled { background: rgba(239, 68, 68, 0.1); color: var(--color-danger); border-color: var(--color-danger); }
 
-.product-image {
-  aspect-ratio: 16 / 10;
-  background: 
-    radial-gradient(circle at 30% 30%, #1a2349 0%, #050817 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-bottom: 1px solid var(--color-border);
+/* ==== COTIZADOR ==== */
+.quoter { background: var(--color-bg-soft); position: relative; }
+.quoter::before { content: ''; position: absolute; top: 50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+.quoter-wrap { max-width: 1100px; margin: 0 auto; background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 40px; backdrop-filter: blur(20px); box-shadow: var(--shadow-card); position: relative; overflow: hidden; }
+.quoter-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-accent); }
+.quoter-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; }
+
+.step-block { margin-bottom: 28px; }
+.step-title { display: flex; align-items: center; gap: 12px; font-size: 1.1rem; color: var(--color-text); margin-bottom: 16px; font-family: var(--font-display); }
+.step-number { width: 30px; height: 30px; background: var(--gradient-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+
+.add-product-row { display: grid; grid-template-columns: 1fr 120px auto; gap: 10px; align-items: end; }
+.form-group { margin-bottom: 0; }
+.form-group label { display: block; color: var(--color-text); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; letter-spacing: 0.02em; }
+.form-group select, .form-group input[type="number"], .form-group input[type="text"], .form-group input[type="tel"], .form-group input[type="email"], .form-group textarea {
+  width: 100%; padding: 12px 14px; background: rgba(5, 8, 23, 0.6); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text); font-size: 0.92rem; transition: all 0.25s ease;
 }
+.form-group select:focus, .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15); }
+.form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff6b35' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px; padding-right: 38px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-.product-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
+.btn-add-to-cart { background: var(--gradient-accent); color: white; padding: 12px 18px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.88rem; transition: all 0.3s ease; white-space: nowrap; }
+.btn-add-to-cart:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); }
 
-.product-image svg {
-  width: 70%;
-  height: 70%;
-  z-index: 1;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-}
+.cart-list { background: rgba(5, 8, 23, 0.5); border: 1px dashed var(--color-border); border-radius: var(--radius-md); padding: 16px; min-height: 100px; }
+.cart-empty { text-align: center; padding: 24px 0; color: var(--color-text-dim); font-size: 0.9rem; }
+.cart-empty i { font-size: 2rem; margin-bottom: 10px; display: block; color: var(--color-text-dim); opacity: 0.5; }
+.cart-item { display: grid; grid-template-columns: 1fr auto auto; gap: 14px; align-items: center; padding: 14px; background: rgba(5, 8, 23, 0.6); border: 1px solid var(--color-border); border-radius: var(--radius-sm); margin-bottom: 10px; transition: all 0.2s; }
+.cart-item:last-child { margin-bottom: 0; }
+.cart-item:hover { border-color: var(--color-accent); }
+.cart-item-info strong { display: block; color: var(--color-text); font-size: 0.9rem; margin-bottom: 3px; font-weight: 600; }
+.cart-item-info small { color: var(--color-text-muted); font-size: 0.78rem; }
+.cart-item-qty { display: flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-sm); padding: 3px; }
+.cart-qty-btn { width: 26px; height: 26px; border-radius: 4px; background: rgba(255, 107, 53, 0.15); color: var(--color-accent); font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.cart-qty-btn:hover:not(:disabled) { background: var(--color-accent); color: white; }
+.cart-qty-num { font-family: var(--font-display); color: var(--color-text); font-weight: 700; min-width: 26px; text-align: center; font-size: 0.92rem; }
+.cart-item-price { font-family: var(--font-display); color: var(--color-accent); font-weight: 700; font-size: 0.95rem; min-width: 70px; text-align: right; }
+.cart-remove { background: transparent; color: var(--color-danger); font-size: 1rem; padding: 6px; opacity: 0.7; transition: opacity 0.2s; }
+.cart-remove:hover { opacity: 1; }
 
-.product-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(5, 8, 23, 0.9);
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
-  padding: 4px 12px;
-  border-radius: 100px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  z-index: 2;
-  backdrop-filter: blur(10px);
-}
+.delivery-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.delivery-option { position: relative; }
+.delivery-option input[type="radio"] { position: absolute; opacity: 0; }
+.delivery-option label { display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: rgba(5, 8, 23, 0.4); border: 2px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; transition: all 0.25s; margin: 0; }
+.delivery-option input[type="radio"]:checked + label { border-color: var(--color-accent); background: rgba(255, 107, 53, 0.08); box-shadow: 0 4px 15px rgba(255, 107, 53, 0.15); }
+.delivery-icon { width: 40px; height: 40px; background: var(--gradient-accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem; flex-shrink: 0; }
+.delivery-option strong { display: block; color: var(--color-text); font-size: 0.95rem; margin-bottom: 3px; }
+.delivery-option span { color: var(--color-text-muted); font-size: 0.8rem; display: block; }
 
-.product-power {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: var(--gradient-primary);
-  color: white;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 700;
-  z-index: 2;
-}
+.delivery-details { display: none; padding: 16px; background: rgba(5, 8, 23, 0.4); border: 1px solid var(--color-border); border-radius: var(--radius-md); margin-top: 14px; }
+.delivery-details.active { display: block; animation: fadeIn 0.3s ease; }
 
-.product-body {
-  padding: 24px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-name {
-  font-size: 1.05rem;
-  color: var(--color-text);
-  margin-bottom: 8px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.product-model {
-  color: var(--color-primary-glow);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.product-specs {
-  list-style: none;
-  margin-bottom: 20px;
-  flex: 1;
-}
-
-.product-specs li {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  padding: 4px 0;
-  padding-left: 20px;
-  position: relative;
-  line-height: 1.5;
-}
-
-.product-specs li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
-  font-weight: bold;
-}
-
-.product-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 18px;
-  border-top: 1px solid var(--color-border);
-  margin-top: auto;
-}
-
-.product-price small {
-  color: var(--color-text-muted);
-  font-size: 0.75rem;
-  display: block;
-  margin-bottom: 2px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.product-price strong {
-  font-family: var(--font-display);
-  color: var(--color-accent);
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.product-price strong small {
-  display: inline;
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-left: 2px;
-}
-
-.btn-cotizar {
-  background: rgba(255, 107, 53, 0.1);
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  padding: 10px 18px;
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.btn-cotizar:hover {
-  background: var(--color-accent);
-  color: white;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-}
-
-/* ============================================
-   QUOTE CALCULATOR
-   ============================================ */
-.quoter {
-  background: var(--color-bg-soft);
-  position: relative;
-}
-
-.quoter::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.quoter-wrap {
-  max-width: 980px;
-  margin: 0 auto;
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: 48px;
-  backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-card);
-  position: relative;
-  overflow: hidden;
-}
-
-.quoter-wrap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-accent);
-}
-
-.quoter-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 40px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  color: var(--color-text);
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  letter-spacing: 0.03em;
-}
-
-.form-group select,
-.form-group input[type="number"],
-.form-group input[type="text"],
-.form-group input[type="tel"],
-.form-group input[type="email"],
-.form-group textarea {
-  width: 100%;
-  padding: 13px 16px;
-  background: rgba(5, 8, 23, 0.6);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  color: var(--color-text);
-  font-size: 0.95rem;
-  transition: all 0.25s ease;
-}
-
-.form-group select:focus,
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
-}
-
-.form-group select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff6b35' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-size: 18px;
-  padding-right: 42px;
-}
-
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-.checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 8px;
-}
-
-.checkbox-option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  background: rgba(5, 8, 23, 0.4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.checkbox-option:hover {
-  border-color: var(--color-accent);
-}
-
-.checkbox-option input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--color-accent);
-  cursor: pointer;
-}
-
-.checkbox-option label {
-  flex: 1;
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  cursor: pointer;
-  margin: 0;
-}
-
-.checkbox-option .opt-price {
-  color: var(--color-accent);
-  font-weight: 600;
-  font-size: 0.88rem;
-}
+.sede-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.sede-option input[type="radio"] { position: absolute; opacity: 0; }
+.sede-option label { display: block; padding: 14px 10px; text-align: center; background: rgba(5, 8, 23, 0.5); border: 2px solid var(--color-border); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.25s; margin: 0; }
+.sede-option input[type="radio"]:checked + label { border-color: var(--color-accent); background: rgba(255, 107, 53, 0.08); }
+.sede-option label i { font-size: 1.2rem; color: var(--color-accent); margin-bottom: 6px; display: block; }
+.sede-option label strong { display: block; color: var(--color-text); font-size: 0.88rem; margin-bottom: 2px; font-weight: 600; }
+.sede-option label small { color: var(--color-text-muted); font-size: 0.72rem; }
 
 /* Summary */
-.quote-summary {
-  background: rgba(5, 8, 23, 0.7);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  position: sticky;
-  top: 100px;
-  height: fit-content;
-}
-
-.quote-summary h3 {
-  font-size: 1.25rem;
-  margin-bottom: 20px;
-  color: var(--color-text);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.quote-summary h3::before {
-  content: '';
-  width: 4px;
-  height: 22px;
-  background: var(--gradient-accent);
-  border-radius: 2px;
-}
-
-.summary-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  color: var(--color-text-muted);
-  font-size: 0.92rem;
-  border-bottom: 1px dashed var(--color-border);
-}
-
+.quote-summary { background: rgba(5, 8, 23, 0.7); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 26px; position: sticky; top: 100px; height: fit-content; }
+.quote-summary h3 { font-size: 1.2rem; margin-bottom: 18px; color: var(--color-text); display: flex; align-items: center; gap: 10px; }
+.quote-summary h3::before { content: ''; width: 4px; height: 22px; background: var(--gradient-accent); border-radius: 2px; }
+.summary-row { display: flex; justify-content: space-between; padding: 8px 0; color: var(--color-text-muted); font-size: 0.88rem; border-bottom: 1px dashed var(--color-border); }
 .summary-row:last-of-type { border-bottom: none; }
+.summary-row strong { color: var(--color-text); font-weight: 500; }
+.summary-total { display: flex; justify-content: space-between; align-items: center; padding: 18px 0 8px; margin-top: 10px; border-top: 2px solid var(--color-accent); }
+.summary-total span:first-child { font-size: 0.95rem; color: var(--color-text-muted); font-weight: 500; }
+.summary-total .total-amount { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.summary-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.summary-actions .btn { width: 100%; padding: 13px; font-size: 0.88rem; }
+.summary-note { text-align: center; margin-top: 14px; font-size: 0.75rem; color: var(--color-text-dim); line-height: 1.5; }
 
-.summary-row strong {
-  color: var(--color-text);
-  font-weight: 500;
-}
+/* ==== SEDES SECTION ==== */
+.sedes { background: var(--color-bg); }
+.sedes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.sede-card { background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease; backdrop-filter: blur(10px); display: flex; flex-direction: column; }
+.sede-card:hover { border-color: var(--color-accent); transform: translateY(-6px); box-shadow: var(--shadow-card); }
+.sede-map { width: 100%; aspect-ratio: 16 / 10; background: #0a0e27; border-bottom: 1px solid var(--color-border); position: relative; overflow: hidden; }
+.sede-map iframe { width: 100%; height: 100%; border: 0; filter: invert(90%) hue-rotate(180deg) brightness(0.85) contrast(0.95); }
+.sede-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.sede-name { font-size: 1.3rem; color: var(--color-text); margin-bottom: 8px; font-family: var(--font-display); display: flex; align-items: center; gap: 10px; }
+.sede-name i { color: var(--color-accent); }
+.sede-address { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.sede-hours { display: flex; align-items: center; gap: 10px; color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 18px; padding: 10px 12px; background: rgba(5, 8, 23, 0.5); border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent); }
+.sede-hours i { color: var(--color-accent); }
+.sede-actions { display: flex; gap: 8px; }
+.sede-actions .btn { flex: 1; padding: 11px 12px; font-size: 0.82rem; }
 
-.summary-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0 10px;
-  margin-top: 10px;
-  border-top: 2px solid var(--color-accent);
-}
+/* ==== SHIPPING SECTION (Shalom info) ==== */
+.shipping-info { background: var(--color-bg-soft); padding: 80px 0; }
+.shipping-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.shipping-content h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 18px; }
+.shipping-content h2 .highlight { background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.shipping-content > p { color: var(--color-text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 28px; }
+.shipping-features { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.shipping-feature { display: flex; gap: 12px; align-items: flex-start; padding: 14px; background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+.shipping-feature i { color: var(--color-accent); font-size: 1.2rem; margin-top: 2px; }
+.shipping-feature strong { display: block; color: var(--color-text); font-size: 0.92rem; font-weight: 600; margin-bottom: 3px; }
+.shipping-feature span { color: var(--color-text-muted); font-size: 0.82rem; }
+.shipping-visual { background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 40px; position: relative; overflow: hidden; }
+.shipping-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(255, 107, 53, 0.12) 0%, transparent 60%); }
+.shipping-visual-content { position: relative; z-index: 1; text-align: center; }
+.shipping-visual-icon { width: 100px; height: 100px; margin: 0 auto 20px; background: var(--gradient-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; box-shadow: 0 0 50px rgba(255, 107, 53, 0.4); }
+.shipping-visual h3 { font-size: 1.8rem; margin-bottom: 10px; color: var(--color-text); }
+.shipping-visual p { color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; }
+.shalom-logo { display: inline-flex; align-items: center; gap: 10px; padding: 12px 28px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); border-radius: 100px; color: var(--color-accent); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: 0.06em; }
 
-.summary-total span {
-  font-size: 1rem;
-  color: var(--color-text-muted);
-  font-weight: 500;
-}
-
-.summary-total .total-amount {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.summary-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.summary-actions .btn {
-  width: 100%;
-  justify-content: center;
-  padding: 14px;
-  font-size: 0.9rem;
-}
-
-.summary-note {
-  text-align: center;
-  margin-top: 16px;
-  font-size: 0.78rem;
-  color: var(--color-text-dim);
-  line-height: 1.5;
-}
-
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
-.contact {
-  background: var(--color-bg);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 48px;
-  align-items: start;
-}
-
+/* ==== CONTACT ==== */
+.contact { background: var(--color-bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
 .contact-info { padding-top: 10px; }
-
-.contact-info h2 {
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  margin-bottom: 20px;
-}
-
-.contact-info h2 .highlight {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.contact-info > p {
-  color: var(--color-text-muted);
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.contact-methods { display: flex; flex-direction: column; gap: 16px; }
-
-.contact-method {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 18px 20px;
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  transition: all 0.3s ease;
-}
-
-.contact-method:hover {
-  border-color: var(--color-accent);
-  transform: translateX(6px);
-}
-
-.contact-method .icon {
-  width: 46px;
-  height: 46px;
-  border-radius: var(--radius-sm);
-  background: var(--gradient-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.15rem;
-  flex-shrink: 0;
-  box-shadow: var(--shadow-accent);
-}
-
+.contact-info h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 20px; }
+.contact-info h2 .highlight { background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.contact-info > p { color: var(--color-text-muted); line-height: 1.7; margin-bottom: 32px; }
+.contact-methods { display: flex; flex-direction: column; gap: 14px; }
+.contact-method { display: flex; align-items: center; gap: 16px; padding: 16px 18px; background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); transition: all 0.3s ease; }
+.contact-method:hover { border-color: var(--color-accent); transform: translateX(6px); }
+.contact-method .icon { width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--gradient-accent); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem; flex-shrink: 0; box-shadow: var(--shadow-accent); }
 .contact-method .icon.whatsapp { background: #25d366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); }
-
-.contact-method .details small {
-  color: var(--color-text-dim);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 2px;
-}
-
-.contact-method .details strong {
-  color: var(--color-text);
-  font-weight: 500;
-  font-size: 0.98rem;
-}
-
-.contact-method .details a {
-  color: var(--color-text);
-  display: block;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
+.contact-method .details small { color: var(--color-text-dim); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px; }
+.contact-method .details strong { color: var(--color-text); font-weight: 500; font-size: 0.95rem; }
+.contact-method .details a { color: var(--color-text); display: block; font-size: 0.88rem; transition: color 0.2s; }
 .contact-method .details a:hover { color: var(--color-accent); }
 
-.contact-form-wrap {
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  backdrop-filter: blur(20px);
-}
+.contact-form-wrap { background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 38px; backdrop-filter: blur(20px); }
+.contact-form-wrap h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.contact-form-wrap > p { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 24px; }
+.contact-form-wrap textarea { resize: vertical; min-height: 100px; }
+.form-actions { display: flex; gap: 10px; margin-top: 20px; }
+.form-actions .btn { flex: 1; padding: 13px; }
 
-.contact-form-wrap h3 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
+/* ==== TRUST / STATS ==== */
+.trust { background: var(--color-bg-soft); padding: 80px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.stat-card { text-align: center; padding: 30px 20px; background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); transition: all 0.3s ease; }
+.stat-card:hover { border-color: var(--color-accent); transform: translateY(-4px); }
+.stat-icon { width: 52px; height: 52px; margin: 0 auto 14px; background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-accent); font-size: 1.3rem; }
+.stat-number { font-family: var(--font-display); font-size: 2.3rem; font-weight: 700; color: var(--color-text); line-height: 1; margin-bottom: 8px; }
+.stat-number .highlight { background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-label { color: var(--color-text-muted); font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500; }
 
-.contact-form-wrap > p {
-  color: var(--color-text-muted);
-  font-size: 0.92rem;
-  margin-bottom: 28px;
-}
+.badges-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 48px; }
+.trust-badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: rgba(34, 197, 94, 0.08); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 100px; color: var(--color-success); font-size: 0.85rem; font-weight: 600; }
 
-.contact-form-wrap textarea {
-  resize: vertical;
-  min-height: 110px;
-}
-
-.form-actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.form-actions .btn { flex: 1; justify-content: center; padding: 14px; }
-
-/* ============================================
-   STATS / TRUST SECTION
-   ============================================ */
-.trust {
-  background: var(--color-bg-soft);
-  padding: 80px 0;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.stat-card {
-  text-align: center;
-  padding: 32px 20px;
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-4px);
-}
-
-.stat-icon {
-  width: 54px;
-  height: 54px;
-  margin: 0 auto 16px;
-  background: rgba(255, 107, 53, 0.1);
-  border: 1px solid rgba(255, 107, 53, 0.3);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-accent);
-  font-size: 1.4rem;
-}
-
-.stat-number {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-text);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-
-.stat-number .highlight {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.stat-label {
-  color: var(--color-text-muted);
-  font-size: 0.88rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-/* Testimonials */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 60px;
-}
-
-.testimonial {
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.testimonial:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-4px);
-}
-
-.testimonial .quote-icon {
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  font-size: 2.2rem;
-  color: var(--color-accent);
-  opacity: 0.15;
-}
-
-.testimonial-stars {
-  display: flex;
-  gap: 3px;
-  color: #fbbf24;
-  margin-bottom: 14px;
-}
-
-.testimonial-text {
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.author-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.author-info strong {
-  display: block;
-  color: var(--color-text);
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.author-info small {
-  color: var(--color-text-dim);
-  font-size: 0.78rem;
-}
-
-/* ============================================
-   SOCIAL / LINKS SECTION
-   ============================================ */
-.social-section {
-  background: var(--color-bg);
-  padding: 80px 0;
-}
-
-.social-wrap {
-  text-align: center;
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.social-wrap h2 {
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  margin-bottom: 16px;
-}
-
-.social-wrap > p {
-  color: var(--color-text-muted);
-  margin-bottom: 40px;
-  font-size: 1rem;
-}
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.social-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 24px 16px;
-  background: var(--gradient-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  transition: all 0.3s ease;
-  color: var(--color-text-muted);
-}
-
-.social-link:hover {
-  transform: translateY(-6px);
-  color: var(--color-text);
-}
-
-.social-link .sl-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: white;
-  transition: transform 0.3s ease;
-}
-
+/* ==== SOCIAL ==== */
+.social-section { background: var(--color-bg); padding: 80px 0; }
+.social-wrap { text-align: center; max-width: 820px; margin: 0 auto; }
+.social-wrap h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
+.social-wrap > p { color: var(--color-text-muted); margin-bottom: 40px; font-size: 1rem; }
+.social-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 720px; margin: 0 auto; }
+.social-link { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 14px; background: var(--gradient-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); transition: all 0.3s ease; color: var(--color-text-muted); }
+.social-link:hover { transform: translateY(-6px); color: var(--color-text); }
+.social-link .sl-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: white; transition: transform 0.3s ease; }
 .social-link:hover .sl-icon { transform: scale(1.1); }
-
 .sl-facebook { background: #1877f2; }
 .sl-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 .sl-tiktok { background: #000; border: 1px solid #fff; }
 .sl-youtube { background: #ff0000; }
 .sl-whatsapp { background: #25d366; }
 .sl-web { background: var(--gradient-primary); }
+.social-link span { font-size: 0.85rem; font-weight: 500; }
 
-.social-link span {
-  font-size: 0.88rem;
-  font-weight: 500;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-footer {
-  background: #030513;
-  padding: 60px 0 30px;
-  border-top: 1px solid var(--color-border);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.2fr;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
+/* ==== FOOTER ==== */
+footer { background: #030513; padding: 60px 0 30px; border-top: 1px solid var(--color-border); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 40px; margin-bottom: 40px; }
 .footer-brand .logo { margin-bottom: 18px; }
-
-.footer-brand p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
+.footer-brand p { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px; }
 .footer-socials { display: flex; gap: 10px; }
-
-.footer-socials a {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  transition: all 0.3s ease;
-}
-
-.footer-socials a:hover {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: white;
-  transform: translateY(-3px);
-}
-
-.footer-col h4 {
-  font-size: 1rem;
-  color: var(--color-text);
-  margin-bottom: 18px;
-  font-family: var(--font-display);
-  letter-spacing: 0.02em;
-}
-
+.footer-socials a { width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); transition: all 0.3s ease; }
+.footer-socials a:hover { background: var(--color-accent); border-color: var(--color-accent); color: white; transform: translateY(-3px); }
+.footer-col h4 { font-size: 1rem; color: var(--color-text); margin-bottom: 18px; font-family: var(--font-display); letter-spacing: 0.02em; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-
-.footer-col ul a {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
+.footer-col ul a { color: var(--color-text-muted); font-size: 0.9rem; transition: color 0.2s ease; display: inline-flex; align-items: center; gap: 6px; }
 .footer-col ul a:hover { color: var(--color-accent); }
-.footer-col ul a::before {
-  content: '›';
-  color: var(--color-accent);
-  font-weight: bold;
-}
-
-.footer-col .contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  color: var(--color-text-muted);
-  font-size: 0.88rem;
-  margin-bottom: 10px;
-}
-
-.footer-col .contact-item i {
-  color: var(--color-accent);
-  width: 16px;
-  margin-top: 3px;
-}
-
-.footer-bottom {
-  border-top: 1px solid var(--color-border);
-  padding-top: 24px;
-  text-align: center;
-  color: var(--color-text-dim);
-  font-size: 0.82rem;
-}
-
+.footer-col ul a::before { content: '›'; color: var(--color-accent); font-weight: bold; }
+.footer-col .contact-item { display: flex; align-items: flex-start; gap: 10px; color: var(--color-text-muted); font-size: 0.88rem; margin-bottom: 10px; }
+.footer-col .contact-item i { color: var(--color-accent); width: 16px; margin-top: 3px; }
+.footer-bottom { border-top: 1px solid var(--color-border); padding-top: 24px; text-align: center; color: var(--color-text-dim); font-size: 0.82rem; }
 .footer-bottom strong { color: var(--color-accent); }
 
-/* ============================================
-   FLOATING WHATSAPP
-   ============================================ */
-.float-whatsapp {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #25d366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.8rem;
-  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
-  z-index: 99;
-  transition: all 0.3s ease;
-  animation: floatBounce 2.5s ease-in-out infinite;
-}
+/* ==== FLOATING WHATSAPP ==== */
+.float-whatsapp { position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5); z-index: 99; transition: all 0.3s ease; animation: floatBounce 2.5s ease-in-out infinite; }
+.float-whatsapp::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid #25d366; animation: ripple 2s ease-out infinite; }
+@keyframes ripple { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+@keyframes floatBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.float-whatsapp:hover { transform: scale(1.1); background: #20ba5a; }
 
-.float-whatsapp::before {
-  content: '';
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 2px solid #25d366;
-  animation: ripple 2s ease-out infinite;
-}
-
-@keyframes ripple {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(1.5); opacity: 0; }
-}
-
-@keyframes floatBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.float-whatsapp:hover {
-  transform: scale(1.1);
-  background: #20ba5a;
-}
-
-/* ============================================
-   NOTIFICATION
-   ============================================ */
-.notification {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-  background: var(--gradient-card);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-md);
-  padding: 16px 24px;
-  color: var(--color-text);
-  font-size: 0.92rem;
-  box-shadow: var(--shadow-card);
-  backdrop-filter: blur(20px);
-  z-index: 1000;
-  transform: translateX(400px);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  max-width: 360px;
-}
-
+/* ==== NOTIFICATION ==== */
+.notification { position: fixed; top: 100px; right: 20px; background: var(--gradient-card); border: 1px solid var(--color-accent); border-radius: var(--radius-md); padding: 16px 24px; color: var(--color-text); font-size: 0.92rem; box-shadow: var(--shadow-card); backdrop-filter: blur(20px); z-index: 1000; transform: translateX(400px); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; gap: 12px; max-width: 380px; }
 .notification.show { transform: translateX(0); }
-.notification i { color: var(--color-accent); font-size: 1.2rem; }
+.notification.error { border-color: var(--color-danger); }
+.notification.error i { color: var(--color-danger); }
+.notification i { color: var(--color-success); font-size: 1.2rem; }
 
-/* ============================================
-   ANIMATIONS ON SCROLL
-   ============================================ */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+/* ==== REVEAL ANIMATIONS ==== */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* ==== RESPONSIVE ==== */
 @media (max-width: 1024px) {
-  .hero-grid, .about-grid, .contact-grid, .quoter-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-grid, .about-grid, .contact-grid, .quoter-grid, .shipping-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { max-width: 360px; margin: 0 auto; }
-  .products-grid, .team-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid, .team-grid, .sedes-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .social-grid { grid-template-columns: repeat(3, 1fr); }
   .quote-summary { position: static; }
+  .shipping-features { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: rgba(5, 8, 23, 0.98);
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    padding: 20px;
-    gap: 16px;
-    transform: translateY(-120%);
-    transition: transform 0.3s ease;
-    border-bottom: 1px solid var(--color-border);
-  }
-  
+  .nav-menu { position: fixed; top: 70px; left: 0; right: 0; background: rgba(5, 8, 23, 0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 20px; gap: 16px; transform: translateY(-120%); transition: transform 0.3s ease; border-bottom: 1px solid var(--color-border); }
   .nav-menu.open { transform: translateY(0); }
   .mobile-toggle { display: block; }
-  
   section { padding: 70px 0; }
-  
   .hero { padding: 120px 0 60px; min-height: auto; }
   .hero-stats { flex-wrap: wrap; gap: 24px; }
-  
-  .products-grid, .team-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .products-grid, .team-grid, .sedes-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .stat-number { font-size: 1.8rem; }
-  
   .mvv-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  
-  .quoter-wrap { padding: 28px 20px; }
-  .contact-form-wrap { padding: 28px 20px; }
-  
+  .add-product-row { grid-template-columns: 1fr; }
+  .delivery-options { grid-template-columns: 1fr; }
+  .sede-options { grid-template-columns: 1fr; }
+  .quoter-wrap { padding: 24px 18px; }
+  .contact-form-wrap { padding: 26px 20px; }
   .footer-grid { grid-template-columns: 1fr; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
-  
   .form-actions { flex-direction: column; }
-  
   .float-whatsapp { width: 54px; height: 54px; font-size: 1.5rem; bottom: 20px; right: 20px; }
+  .cart-item { grid-template-columns: 1fr; gap: 10px; }
+  .cart-item-price { text-align: left; }
 }
 
 @media (max-width: 480px) {
   .nav-cta { display: none; }
   .hero h1 { font-size: 2.2rem; }
-  .btn { padding: 14px 24px; font-size: 0.88rem; }
+  .btn { padding: 13px 22px; font-size: 0.88rem; }
   .section-title { font-size: 1.8rem; }
 }
 
-/* Scrollbar styling */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-surface-2); border-radius: 5px; }
@@ -1815,9 +447,7 @@ footer {
 </head>
 <body>
 
-<!-- ============================================
-     NAVBAR
-     ============================================ -->
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="#inicio" class="logo">
@@ -1832,16 +462,18 @@ footer {
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#productos">Productos</a></li>
       <li><a href="#cotizador">Cotizador</a></li>
+      <li><a href="#sedes">Sedes</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a href="#cotizador" class="nav-cta">Cotizar ahora</a></li>
+      <li><a href="#cotizador" class="nav-cta">
+        <i class="fas fa-cart-shopping"></i> Cotizar
+        <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+      </a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
 
-<!-- ============================================
-     HERO
-     ============================================ -->
+<!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-waves" id="heroWaves"></div>
   <div class="container">
@@ -1849,12 +481,12 @@ footer {
       <div class="hero-content">
         <div class="hero-badge">
           <span class="pulse"></span>
-          <span>Envíos a todo el Perú · Stock disponible</span>
+          <span>Stock actualizado · 3 sedes · Envíos con Shalom</span>
         </div>
         <h1>Potencia tu audio, <span class="highlight">eleva tu experiencia</span></h1>
         <p class="hero-subtitle">
-          Placas amplificadoras, módulos Bluetooth y componentes electrónicos profesionales
-          al mejor precio del mercado. Calidad comprobada, asesoría experta y respaldo de ingenieros certificados.
+          Amplificadores, módulos Bluetooth, componentes electrónicos y accesorios informáticos al mejor precio del mercado.
+          Stock real, asesoría de ingenieros certificados y envíos coordinados con Shalom a todo el Perú.
         </p>
         <div class="hero-cta">
           <a href="#cotizador" class="btn btn-primary">
@@ -1866,15 +498,15 @@ footer {
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
-            <strong data-counter="14">14+</strong>
-            <span>Modelos en catálogo</span>
+            <strong id="statProductCount">29+</strong>
+            <span>Productos en stock</span>
           </div>
           <div class="hero-stat">
-            <strong data-counter="500">500+</strong>
-            <span>Clientes satisfechos</span>
+            <strong>3</strong>
+            <span>Sedes en Lima</span>
           </div>
           <div class="hero-stat">
-            <strong data-counter="24">24h</strong>
+            <strong>24h</strong>
             <span>Respuesta garantizada</span>
           </div>
         </div>
@@ -1886,9 +518,7 @@ footer {
           <div class="sound-wave"></div>
           <div class="speaker">
             <div class="speaker-inner">
-              <div class="speaker-center">
-                <i class="fas fa-play"></i>
-              </div>
+              <div class="speaker-center"><i class="fas fa-play"></i></div>
             </div>
           </div>
         </div>
@@ -1897,9 +527,7 @@ footer {
   </div>
 </section>
 
-<!-- ============================================
-     ABOUT
-     ============================================ -->
+<!-- ABOUT -->
 <section class="about" id="nosotros">
   <div class="container">
     <div class="about-grid">
@@ -1907,22 +535,21 @@ footer {
         <span class="section-tag">Quiénes somos</span>
         <h2>Audio Electrónica, <span class="highlight">potencia tu vida</span></h2>
         <p>
-          Somos una empresa peruana especializada en tecnología de audio, liderada por ingenieros
-          con formación en las mejores universidades del país (UNI y UNMSM).
-          Seleccionamos y distribuimos los componentes electrónicos más confiables del mercado,
-          ofreciendo siempre la mejor relación calidad-precio.
+          Somos una empresa peruana especializada en tecnología de audio, liderada por ingenieros con formación
+          en las mejores universidades del país (UNI y UNMSM). Seleccionamos y distribuimos componentes electrónicos
+          confiables al mejor precio, con stock verificado y garantía real.
         </p>
         <p>
-          Cada producto pasa por nuestro control técnico antes de llegar a tus manos.
-          Brindamos asesoría especializada para que encuentres exactamente lo que tu proyecto necesita,
-          ya sea un parlante casero, un sistema automotriz o un equipo profesional.
+          Cada producto pasa por nuestro control técnico antes de llegar a tus manos. Te brindamos asesoría experta
+          para encontrar exactamente lo que tu proyecto necesita: desde un parlante casero hasta un sistema automotriz
+          o equipo profesional de karaoke.
         </p>
       </div>
       <div class="mvv-grid reveal">
         <div class="mvv-card">
           <div class="mvv-card-icon"><i class="fas fa-bullseye"></i></div>
           <h4>Misión</h4>
-          <p>Democratizar el acceso a componentes de audio de alta calidad con asesoría técnica experta y precios competitivos.</p>
+          <p>Democratizar el acceso a componentes de audio de alta calidad con asesoría técnica y precios competitivos.</p>
         </div>
         <div class="mvv-card">
           <div class="mvv-card-icon"><i class="fas fa-eye"></i></div>
@@ -1932,12 +559,12 @@ footer {
         <div class="mvv-card">
           <div class="mvv-card-icon"><i class="fas fa-award"></i></div>
           <h4>Calidad</h4>
-          <p>Productos probados por ingenieros. Garantía real y soporte post-venta de por vida.</p>
+          <p>Productos probados por ingenieros. Stock verificado y soporte post-venta real.</p>
         </div>
         <div class="mvv-card">
           <div class="mvv-card-icon"><i class="fas fa-handshake"></i></div>
           <h4>Confianza</h4>
-          <p>Transparencia total en precios, especificaciones y tiempos de entrega. Tu satisfacción es nuestra meta.</p>
+          <p>Transparencia total en precios, stock disponible y tiempos de entrega coordinados con Shalom.</p>
         </div>
       </div>
     </div>
@@ -1968,132 +595,188 @@ footer {
   </div>
 </section>
 
-<!-- ============================================
-     PRODUCTS
-     ============================================ -->
+<!-- PRODUCTS -->
 <section class="products" id="productos">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">Catálogo oficial</span>
+      <span class="section-tag">Catálogo con stock actualizado</span>
       <h2 class="section-title">Nuestros <span class="highlight">productos</span></h2>
       <p class="section-desc">
-        Componentes electrónicos para audio seleccionados por ingenieros.
-        Cada modelo incluye especificaciones técnicas completas y asesoría pre-venta gratuita.
+        Todos los precios y stock reflejan la disponibilidad real en nuestras sedes.
+        Haz clic en "Agregar" para incluir el producto en tu cotización.
       </p>
     </div>
 
     <div class="category-filters reveal">
       <button class="filter-btn active" data-category="all">Todos</button>
-      <button class="filter-btn" data-category="basico">Amplificadores Básicos</button>
-      <button class="filter-btn" data-category="medio">Potencia Media</button>
-      <button class="filter-btn" data-category="alto">Alta Potencia</button>
-      <button class="filter-btn" data-category="mp3">Módulos MP3</button>
-      <button class="filter-btn" data-category="modulo">Módulos Bluetooth</button>
+      <button class="filter-btn" data-category="amplificador">Amplificadores</button>
+      <button class="filter-btn" data-category="modulo">Módulos Audio</button>
+      <button class="filter-btn" data-category="informatica">Informática</button>
+      <button class="filter-btn" data-category="iluminacion">Iluminación</button>
     </div>
 
-    <div class="products-grid" id="productsGrid">
-      <!-- Products will be inserted by JS -->
-    </div>
+    <div class="products-grid" id="productsGrid"></div>
   </div>
 </section>
 
-<!-- ============================================
-     QUOTER
-     ============================================ -->
+<!-- COTIZADOR -->
 <section class="quoter" id="cotizador">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">Cotizador instantáneo</span>
+      <span class="section-tag">Cotizador con validación de stock</span>
       <h2 class="section-title">Arma tu <span class="highlight">cotización</span> en segundos</h2>
-      <p class="section-desc">Selecciona producto, cantidad y opciones. Recibe tu cotización por WhatsApp o correo al instante.</p>
+      <p class="section-desc">Agrega los productos que necesitas, elige recojo en tienda o envío con Shalom, y recibe tu cotización por correo y WhatsApp.</p>
     </div>
 
     <div class="quoter-wrap reveal">
       <div class="quoter-grid">
         <div class="quoter-form">
-          <div class="form-group">
-            <label>Producto de interés</label>
-            <select id="qProduct"></select>
-          </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label>Cantidad</label>
-              <input type="number" id="qQty" value="1" min="1" max="99" />
+          <!-- STEP 1: Add products -->
+          <div class="step-block">
+            <div class="step-title">
+              <div class="step-number">1</div>
+              <span>Agrega productos a tu cotización</span>
             </div>
-            <div class="form-group">
-              <label>Tipo de entrega</label>
-              <select id="qDelivery">
-                <option value="0">Recojo en tienda (gratis)</option>
-                <option value="15">Delivery Lima Metropolitana (+S/ 15)</option>
-                <option value="25">Delivery Lima extendida (+S/ 25)</option>
-                <option value="35">Envío a provincia (+S/ 35)</option>
-              </select>
+            <div class="add-product-row">
+              <div class="form-group">
+                <label>Producto</label>
+                <select id="qProduct"></select>
+              </div>
+              <div class="form-group">
+                <label>Cantidad</label>
+                <input type="number" id="qQty" value="1" min="1" />
+              </div>
+              <div class="form-group">
+                <label style="visibility:hidden">Acción</label>
+                <button class="btn-add-to-cart" id="btnAddToCart"><i class="fas fa-plus"></i> Agregar</button>
+              </div>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label>Opciones adicionales</label>
-            <div class="checkbox-group">
-              <div class="checkbox-option">
-                <input type="checkbox" id="optAsesoria" data-price="0" />
-                <label for="optAsesoria">Asesoría técnica personalizada</label>
-                <span class="opt-price">Gratis</span>
-              </div>
-              <div class="checkbox-option">
-                <input type="checkbox" id="optCable" data-price="12" />
-                <label for="optCable">Cable de alimentación compatible</label>
-                <span class="opt-price">+S/ 12</span>
-              </div>
-              <div class="checkbox-option">
-                <input type="checkbox" id="optInstala" data-price="50" />
-                <label for="optInstala">Servicio de instalación (Lima)</label>
-                <span class="opt-price">+S/ 50</span>
-              </div>
-              <div class="checkbox-option">
-                <input type="checkbox" id="optGarantia" data-price="20" />
-                <label for="optGarantia">Garantía extendida (6 meses)</label>
-                <span class="opt-price">+S/ 20</span>
+            <div class="cart-list" id="cartList" style="margin-top:16px;">
+              <div class="cart-empty">
+                <i class="fas fa-cart-shopping"></i>
+                Tu cotización está vacía. Agrega productos arriba o desde el catálogo.
               </div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label>Tu nombre (opcional)</label>
-            <input type="text" id="qName" placeholder="Para personalizar tu cotización" />
+          <!-- STEP 2: Delivery type -->
+          <div class="step-block">
+            <div class="step-title">
+              <div class="step-number">2</div>
+              <span>¿Cómo prefieres recibir tu pedido?</span>
+            </div>
+            <div class="delivery-options">
+              <div class="delivery-option">
+                <input type="radio" name="deliveryType" id="deliveryPickup" value="pickup" checked />
+                <label for="deliveryPickup">
+                  <div class="delivery-icon"><i class="fas fa-store"></i></div>
+                  <div>
+                    <strong>Recojo en tienda</strong>
+                    <span>Gratis · Lima</span>
+                  </div>
+                </label>
+              </div>
+              <div class="delivery-option">
+                <input type="radio" name="deliveryType" id="deliveryShalom" value="shalom" />
+                <label for="deliveryShalom">
+                  <div class="delivery-icon"><i class="fas fa-truck-fast"></i></div>
+                  <div>
+                    <strong>Envío con Shalom</strong>
+                    <span>A todo el Perú</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pickup details -->
+            <div class="delivery-details active" id="pickupDetails">
+              <label style="display:block;color:var(--color-text);font-size:0.88rem;font-weight:600;margin-bottom:10px;">Selecciona tu sede de recojo *</label>
+              <div class="sede-options">
+                <div class="sede-option">
+                  <input type="radio" name="sede" id="sedeAte" value="Ate" checked />
+                  <label for="sedeAte">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Ate</strong>
+                    <small>Lima Este</small>
+                  </label>
+                </div>
+                <div class="sede-option">
+                  <input type="radio" name="sede" id="sedeComas" value="Comas" />
+                  <label for="sedeComas">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Comas</strong>
+                    <small>Lima Norte</small>
+                  </label>
+                </div>
+                <div class="sede-option">
+                  <input type="radio" name="sede" id="sedeTercera" value="Tercera Sede" />
+                  <label for="sedeTercera">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>3ra Sede</strong>
+                    <small>Ver ubicación</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shalom delivery details -->
+            <div class="delivery-details" id="shalomDetails">
+              <div class="form-row" style="margin-bottom:12px;">
+                <div class="form-group">
+                  <label>Distrito *</label>
+                  <input type="text" id="shipDistrict" placeholder="Ej: Miraflores, Surco..." />
+                </div>
+                <div class="form-group">
+                  <label>Teléfono de contacto *</label>
+                  <input type="tel" id="shipPhone" placeholder="+51 999 999 999" />
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom:12px;">
+                <label>Dirección completa *</label>
+                <input type="text" id="shipAddress" placeholder="Av. Ejemplo 123, piso 4" />
+              </div>
+              <div class="form-group">
+                <label>Referencia (opcional)</label>
+                <input type="text" id="shipReference" placeholder="Cerca del parque / edificio azul..." />
+              </div>
+              <p style="color:var(--color-text-dim);font-size:0.78rem;margin-top:10px;line-height:1.5;">
+                <i class="fas fa-info-circle" style="color:var(--color-accent);"></i>
+                El costo de envío se calcula con Shalom según destino. Te lo confirmaremos en la cotización final.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 3: Customer info -->
+          <div class="step-block">
+            <div class="step-title">
+              <div class="step-number">3</div>
+              <span>Tus datos de contacto</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre completo *</label>
+                <input type="text" id="qName" placeholder="Juan Pérez" />
+              </div>
+              <div class="form-group">
+                <label>Teléfono / WhatsApp *</label>
+                <input type="tel" id="qPhone" placeholder="+51 999 999 999" />
+              </div>
+            </div>
+            <div class="form-group" style="margin-top:14px;">
+              <label>Correo electrónico *</label>
+              <input type="email" id="qEmail" placeholder="tu@correo.com" />
+            </div>
           </div>
         </div>
 
+        <!-- SUMMARY -->
         <div class="quote-summary">
-          <h3>Resumen de tu cotización</h3>
-          <div class="summary-row">
-            <span>Producto</span>
-            <strong id="sumProduct">—</strong>
-          </div>
-          <div class="summary-row">
-            <span>Cantidad</span>
-            <strong id="sumQty">1</strong>
-          </div>
-          <div class="summary-row">
-            <span>Precio unitario</span>
-            <strong id="sumUnit">S/ 0.00</strong>
-          </div>
-          <div class="summary-row">
-            <span>Subtotal</span>
-            <strong id="sumSubtotal">S/ 0.00</strong>
-          </div>
-          <div class="summary-row">
-            <span>Opcionales</span>
-            <strong id="sumOpts">S/ 0.00</strong>
-          </div>
-          <div class="summary-row">
-            <span>Envío</span>
-            <strong id="sumShip">S/ 0.00</strong>
-          </div>
-          <div class="summary-row">
-            <span>IGV (18%)</span>
-            <strong id="sumIgv">S/ 0.00</strong>
-          </div>
+          <h3>Resumen de cotización</h3>
+          <div class="summary-row"><span>Items</span><strong id="sumItems">0 productos</strong></div>
+          <div class="summary-row"><span>Subtotal (sin IGV)</span><strong id="sumSubtotal">S/ 0.00</strong></div>
+          <div class="summary-row"><span>Envío</span><strong id="sumShip">Recojo gratis</strong></div>
+          <div class="summary-row"><span>IGV (18% incluido)</span><strong id="sumIgv">S/ 0.00</strong></div>
           <div class="summary-total">
             <span>Total estimado</span>
             <span class="total-amount" id="sumTotal">S/ 0.00</span>
@@ -2103,14 +786,16 @@ footer {
               <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
             </button>
             <button class="btn btn-primary" id="btnEmailQuote">
-              <i class="fas fa-envelope"></i> Enviar por correo
+              <i class="fas fa-envelope"></i> Enviar cotización por correo
             </button>
-            <button class="btn btn-secondary" id="btnAsesoria">
-              <i class="fas fa-headset"></i> Solicitar asesoría
+            <button class="btn btn-secondary" id="btnClearCart" style="display:none">
+              <i class="fas fa-trash"></i> Limpiar cotización
             </button>
           </div>
           <p class="summary-note">
-            * Los precios son referenciales. La cotización final será confirmada por un asesor.
+            <i class="fas fa-info-circle" style="color:var(--color-accent);"></i>
+            Precios incluyen IGV. Al enviar recibirás copia en tu correo y te contactaremos en menos de 24h.
+            El costo de envío con Shalom depende del destino y se confirma en la cotización final.
           </p>
         </div>
       </div>
@@ -2118,79 +803,56 @@ footer {
   </div>
 </section>
 
-<!-- ============================================
-     TRUST / STATS
-     ============================================ -->
-<section class="trust">
+<!-- SEDES -->
+<section class="sedes" id="sedes">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">La confianza de nuestros clientes</span>
-      <h2 class="section-title">Números que nos <span class="highlight">respaldan</span></h2>
+      <span class="section-tag">Atención presencial</span>
+      <h2 class="section-title">Nuestras <span class="highlight">3 sedes</span> en Lima</h2>
+      <p class="section-desc">Visítanos para ver los productos en persona, recibir asesoría técnica o recoger tu pedido sin costo de envío.</p>
     </div>
-
-    <div class="stats-grid reveal">
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number"><span class="highlight" data-target="500">0</span>+</div>
-        <div class="stat-label">Clientes atendidos</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-box-open"></i></div>
-        <div class="stat-number"><span class="highlight" data-target="1200">0</span>+</div>
-        <div class="stat-label">Productos entregados</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <div class="stat-number"><span class="highlight" data-target="24">0</span></div>
-        <div class="stat-label">Departamentos cubiertos</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-star"></i></div>
-        <div class="stat-number"><span class="highlight" data-target="98">0</span>%</div>
-        <div class="stat-label">Satisfacción cliente</div>
-      </div>
-    </div>
-
-    <div class="testimonials-grid reveal">
-      <div class="testimonial">
-        <i class="fas fa-quote-right quote-icon"></i>
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <div class="sedes-grid reveal">
+      <div class="sede-card">
+        <div class="sede-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.2!2d-76.9368619!3d-12.0441137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6a375bef737%3A0xaa54a8bc7899dac7!2sBruselas%20275-197%2C%20Lima%2015012!5e0!3m2!1sen!2spe!4v1700000000000!5m2!1sen!2spe" loading="lazy"></iframe>
         </div>
-        <p class="testimonial-text">"La placa ZK-MT21 llegó perfecta. Los ingenieros me ayudaron a elegir el modelo ideal para mi proyecto de subwoofer casero. Atención 10/10."</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">CM</div>
-          <div class="author-info">
-            <strong>Carlos Mendoza</strong>
-            <small>Lima · Cliente verificado</small>
+        <div class="sede-body">
+          <h3 class="sede-name"><i class="fas fa-map-marker-alt"></i> Sede Ate</h3>
+          <p class="sede-address">Lima Este · Cerca del Metropolitano<br>Atención personalizada con nuestros ingenieros.</p>
+          <div class="sede-hours"><i class="far fa-clock"></i> Lun - Sáb: 9:00 AM - 7:00 PM</div>
+          <div class="sede-actions">
+            <a href="https://maps.app.goo.gl/5jnmtahUudMWNBUUA" target="_blank" class="btn btn-primary"><i class="fas fa-location-dot"></i> Ver ubicación</a>
+            <a href="https://wa.me/51904894397?text=Hola!%20Quisiera%20visitar%20la%20sede%20de%20Ate" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
-      <div class="testimonial">
-        <i class="fas fa-quote-right quote-icon"></i>
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+      <div class="sede-card">
+        <div class="sede-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.2!2d-77.0584403!3d-11.9306891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1fa9bd85aab%3A0xe9029c47f852adfb!2sAcacias%20Villa%20Residencial!5e0!3m2!1sen!2spe!4v1700000000000!5m2!1sen!2spe" loading="lazy"></iframe>
         </div>
-        <p class="testimonial-text">"Compré el amplificador AS21HPA para mi local. La potencia es impresionante y el precio imbatible. Envío a Arequipa llegó en 3 días."</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">DR</div>
-          <div class="author-info">
-            <strong>Diego Rivas</strong>
-            <small>Arequipa · Cliente verificado</small>
+        <div class="sede-body">
+          <h3 class="sede-name"><i class="fas fa-map-marker-alt"></i> Sede Comas</h3>
+          <p class="sede-address">Lima Norte · Zona residencial segura<br>Stock completo de amplificadores y módulos.</p>
+          <div class="sede-hours"><i class="far fa-clock"></i> Lun - Sáb: 9:00 AM - 7:00 PM</div>
+          <div class="sede-actions">
+            <a href="https://maps.app.goo.gl/Qzu9kmnY61hmxyix7" target="_blank" class="btn btn-primary"><i class="fas fa-location-dot"></i> Ver ubicación</a>
+            <a href="https://wa.me/51935129108?text=Hola!%20Quisiera%20visitar%20la%20sede%20de%20Comas" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
-      <div class="testimonial">
-        <i class="fas fa-quote-right quote-icon"></i>
-        <div class="testimonial-stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+      <div class="sede-card">
+        <div class="sede-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.2!2d-76.936931!3d-12.044304!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAyJzM5LjUiUyA3NsKwNTYnMTMuMCJX!5e0!3m2!1sen!2spe!4v1700000000000!5m2!1sen!2spe" loading="lazy"></iframe>
         </div>
-        <p class="testimonial-text">"Excelente asesoría técnica. Me explicaron cada detalle del módulo Bluetooth antes de comprar. Recomendado para cualquier proyecto DIY."</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">MS</div>
-          <div class="author-info">
-            <strong>María Salazar</strong>
-            <small>Trujillo · Cliente verificado</small>
+        <div class="sede-body">
+          <h3 class="sede-name"><i class="fas fa-map-marker-alt"></i> Tercera Sede</h3>
+          <p class="sede-address">Lima Metropolitana · Fácil acceso<br>Punto alternativo para recojo de pedidos.</p>
+          <div class="sede-hours"><i class="far fa-clock"></i> Lun - Sáb: 9:00 AM - 7:00 PM</div>
+          <div class="sede-actions">
+            <a href="https://maps.app.goo.gl/jCHBrebhSUiCguJD6" target="_blank" class="btn btn-primary"><i class="fas fa-location-dot"></i> Ver ubicación</a>
+            <a href="https://wa.me/51920052859?text=Hola!%20Quisiera%20visitar%20la%20tercera%20sede" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -2198,17 +860,69 @@ footer {
   </div>
 </section>
 
-<!-- ============================================
-     CONTACT
-     ============================================ -->
+<!-- SHIPPING / SHALOM -->
+<section class="shipping-info">
+  <div class="container">
+    <div class="shipping-grid reveal">
+      <div class="shipping-content">
+        <span class="section-tag">Cobertura nacional</span>
+        <h2>Envíos a todo el Perú con <span class="highlight">Shalom</span></h2>
+        <p>
+          Coordinamos los envíos a provincia con <strong>Shalom</strong>, la empresa de transporte con más de 450 destinos y red aérea a 14 ciudades.
+          Confiabilidad y seguimiento en tiempo real para que tu pedido llegue a salvo.
+        </p>
+        <div class="shipping-features">
+          <div class="shipping-feature">
+            <i class="fas fa-map-location-dot"></i>
+            <div>
+              <strong>Cobertura total</strong>
+              <span>+450 destinos en todo el Perú</span>
+            </div>
+          </div>
+          <div class="shipping-feature">
+            <i class="fas fa-magnifying-glass-location"></i>
+            <div>
+              <strong>Seguimiento real</strong>
+              <span>Rastreo en línea por Shalom</span>
+            </div>
+          </div>
+          <div class="shipping-feature">
+            <i class="fas fa-shield-halved"></i>
+            <div>
+              <strong>Embalaje seguro</strong>
+              <span>Tus componentes protegidos</span>
+            </div>
+          </div>
+          <div class="shipping-feature">
+            <i class="fas fa-bolt"></i>
+            <div>
+              <strong>Envíos aéreos</strong>
+              <span>Disponibles para urgencias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shipping-visual">
+        <div class="shipping-visual-content">
+          <div class="shipping-visual-icon"><i class="fas fa-truck-fast"></i></div>
+          <h3>Envío con Shalom</h3>
+          <p>Despachamos tu pedido en 24-48h a la agencia Shalom más cercana para su envío nacional.</p>
+          <div class="shalom-logo"><i class="fas fa-truck"></i> Partner logístico oficial</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact" id="contacto">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info reveal">
         <span class="section-tag">Contáctanos</span>
         <h2>Hablemos de tu <span class="highlight">próximo proyecto</span></h2>
-        <p>Nuestro equipo de ingenieros está listo para asesorarte. Escríbenos, llámanos o visita nuestras redes. Atención de lunes a sábado.</p>
-        
+        <p>Nuestro equipo de ingenieros está listo para asesorarte. Escríbenos, llámanos o visita nuestras sedes.</p>
+
         <div class="contact-methods">
           <a href="https://wa.me/51904894397" target="_blank" class="contact-method">
             <div class="icon whatsapp"><i class="fab fa-whatsapp"></i></div>
@@ -2231,11 +945,11 @@ footer {
               <strong>+51 920 052 859</strong>
             </div>
           </a>
-          <a href="mailto:contacto@audioelectronica.pe" class="contact-method">
+          <a href="mailto:siguientepaso2004@gmail.com" class="contact-method">
             <div class="icon"><i class="fas fa-envelope"></i></div>
             <div class="details">
               <small>Correo corporativo</small>
-              <strong>contacto@audioelectronica.pe</strong>
+              <strong>siguientepaso2004@gmail.com</strong>
             </div>
           </a>
           <div class="contact-method">
@@ -2250,7 +964,7 @@ footer {
 
       <div class="contact-form-wrap reveal">
         <h3>Envíanos un mensaje</h3>
-        <p>Completa el formulario y te responderemos en menos de 24 horas.</p>
+        <p>Completa el formulario y te responderemos en menos de 24 horas a tu correo.</p>
         <form id="contactForm">
           <div class="form-row">
             <div class="form-group">
@@ -2259,10 +973,10 @@ footer {
             </div>
             <div class="form-group">
               <label>Empresa (opcional)</label>
-              <input type="text" id="cCompany" placeholder="Nombre de tu empresa" />
+              <input type="text" id="cCompany" placeholder="Tu empresa" />
             </div>
           </div>
-          <div class="form-row">
+          <div class="form-row" style="margin-top:14px;">
             <div class="form-group">
               <label>Teléfono / WhatsApp *</label>
               <input type="tel" id="cPhone" required placeholder="+51 999 999 999" />
@@ -2272,13 +986,41 @@ footer {
               <input type="email" id="cEmail" required placeholder="tu@correo.com" />
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-row" style="margin-top:14px;">
+            <div class="form-group">
+              <label>Producto de interés</label>
+              <select id="cProduct">
+                <option value="">General / Sin producto específico</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Sede de interés</label>
+              <select id="cSede">
+                <option value="Cualquiera">Cualquiera</option>
+                <option value="Ate">Sede Ate</option>
+                <option value="Comas">Sede Comas</option>
+                <option value="Tercera">Tercera sede</option>
+                <option value="Envio">Envío con Shalom</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:14px;">
+            <label>Tipo de atención *</label>
+            <select id="cTipo" required>
+              <option value="Cotización">Solicitar cotización</option>
+              <option value="Información">Información de producto</option>
+              <option value="Soporte">Soporte técnico post-venta</option>
+              <option value="Mayorista">Ventas mayoristas</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-top:14px;">
             <label>¿En qué te podemos ayudar? *</label>
-            <textarea id="cMessage" required placeholder="Cuéntanos sobre tu proyecto o producto de interés..."></textarea>
+            <textarea id="cMessage" required placeholder="Cuéntanos sobre tu proyecto o consulta..."></textarea>
           </div>
           <div class="form-actions">
             <button type="button" class="btn btn-whatsapp" id="btnContactWa">
-              <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
             <button type="submit" class="btn btn-primary">
               <i class="fas fa-paper-plane"></i> Enviar por correo
@@ -2290,16 +1032,54 @@ footer {
   </div>
 </section>
 
-<!-- ============================================
-     SOCIAL LINKS
-     ============================================ -->
+<!-- TRUST / STATS -->
+<section class="trust">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">La confianza de nuestros clientes</span>
+      <h2 class="section-title">Tu compra con <span class="highlight">garantía real</span></h2>
+    </div>
+
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-boxes-stacked"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="29">0</span>+</div>
+        <div class="stat-label">Productos en catálogo</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="3">0</span></div>
+        <div class="stat-label">Sedes en Lima</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-truck-fast"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="450">0</span>+</div>
+        <div class="stat-label">Destinos con Shalom</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-star"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="98">0</span>%</div>
+        <div class="stat-label">Satisfacción cliente</div>
+      </div>
+    </div>
+
+    <div class="badges-row reveal">
+      <div class="trust-badge"><i class="fas fa-circle-check"></i> Stock actualizado en tiempo real</div>
+      <div class="trust-badge"><i class="fas fa-bolt"></i> Cotización rápida por correo</div>
+      <div class="trust-badge"><i class="fas fa-store"></i> Atención en 3 sedes</div>
+      <div class="trust-badge"><i class="fas fa-truck"></i> Envíos coordinados con Shalom</div>
+      <div class="trust-badge"><i class="fas fa-graduation-cap"></i> Asesoría de ingenieros UNI / UNMSM</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
 <section class="social-section">
   <div class="container">
     <div class="social-wrap reveal">
       <span class="section-tag">Síguenos</span>
       <h2>Conéctate con <span style="background:var(--gradient-accent);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">nosotros</span></h2>
       <p>Nuevos productos, tutoriales, ofertas exclusivas y contenido para amantes del audio.</p>
-      
       <div class="social-grid">
         <a href="https://facebook.com/audioelectronica.pe" target="_blank" class="social-link">
           <div class="sl-icon sl-facebook"><i class="fab fa-facebook-f"></i></div>
@@ -2313,34 +1093,16 @@ footer {
           <div class="sl-icon sl-tiktok"><i class="fab fa-tiktok"></i></div>
           <span>TikTok</span>
         </a>
-        <a href="https://youtube.com/@audioelectronica" target="_blank" class="social-link">
-          <div class="sl-icon sl-youtube"><i class="fab fa-youtube"></i></div>
-          <span>YouTube</span>
-        </a>
         <a href="https://wa.me/51904894397" target="_blank" class="social-link">
           <div class="sl-icon sl-whatsapp"><i class="fab fa-whatsapp"></i></div>
           <span>WhatsApp</span>
-        </a>
-        <a href="#" class="social-link">
-          <div class="sl-icon sl-web"><i class="fas fa-globe"></i></div>
-          <span>audioelectronica.pe</span>
-        </a>
-        <a href="#" class="social-link">
-          <div class="sl-icon sl-web"><i class="fas fa-book-open"></i></div>
-          <span>Catálogo PDF</span>
-        </a>
-        <a href="https://linkedin.com/company/audioelectronica-pe" target="_blank" class="social-link">
-          <div class="sl-icon" style="background:#0077b5"><i class="fab fa-linkedin-in"></i></div>
-          <span>LinkedIn</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     FOOTER
-     ============================================ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -2352,7 +1114,7 @@ footer {
             <span>PERÚ</span>
           </div>
         </a>
-        <p>Los mejores componentes electrónicos para audio al mejor precio del mercado. Calidad, respaldo técnico y atención personalizada.</p>
+        <p>Los mejores componentes electrónicos para audio al mejor precio del mercado. Stock real, 3 sedes en Lima y envíos a todo el Perú con Shalom.</p>
         <div class="footer-socials">
           <a href="https://facebook.com/audioelectronica.pe" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://instagram.com/audioelectronica.pe" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -2367,17 +1129,16 @@ footer {
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#productos">Productos</a></li>
           <li><a href="#cotizador">Cotizador</a></li>
+          <li><a href="#sedes">Sedes</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Categorías</h4>
+        <h4>Nuestras Sedes</h4>
         <ul>
-          <li><a href="#productos">Amplificadores</a></li>
-          <li><a href="#productos">Módulos Bluetooth</a></li>
-          <li><a href="#productos">Reproductores MP3</a></li>
-          <li><a href="#productos">Subwoofers</a></li>
-          <li><a href="#productos">Accesorios</a></li>
+          <li><a href="https://maps.app.goo.gl/5jnmtahUudMWNBUUA" target="_blank">Sede Ate</a></li>
+          <li><a href="https://maps.app.goo.gl/Qzu9kmnY61hmxyix7" target="_blank">Sede Comas</a></li>
+          <li><a href="https://maps.app.goo.gl/jCHBrebhSUiCguJD6" target="_blank">Tercera sede</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -2388,11 +1149,11 @@ footer {
         </div>
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
-          <span>contacto@audioelectronica.pe</span>
+          <span>siguientepaso2004@gmail.com</span>
         </div>
         <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Lima, Perú · Envíos a nivel nacional</span>
+          <i class="fas fa-truck"></i>
+          <span>Envíos con Shalom a todo el Perú</span>
         </div>
       </div>
     </div>
@@ -2403,7 +1164,7 @@ footer {
 </footer>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/51904894397?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos" target="_blank" class="float-whatsapp" aria-label="Chatea por WhatsApp">
+<a href="https://wa.me/51904894397?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos" target="_blank" class="float-whatsapp" aria-label="WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -2413,378 +1174,143 @@ footer {
   <span id="notifText">Mensaje enviado correctamente</span>
 </div>
 
-<!-- ============================================
-     JAVASCRIPT
-     ============================================ -->
 <script>
-/* ======================================
-   PRODUCT DATABASE
-   ====================================== */
-const products = [
-  {
-    id: 'zk502l',
-    name: 'Amplificador Bluetooth ZK-502L',
-    model: 'ZK-502L · 2×50W',
-    category: 'basico',
-    price: 35,
-    power: '2×50W',
-    badge: 'Compacto',
-    specs: [
-      'Potencia: 2×50W estéreo',
-      'Bluetooth 5.0 estable',
-      'Chip Clase D + condensadores sólidos',
-      'Alimentación: 9–24V DC'
-    ],
-    svg: 'board-small'
-  },
-  {
-    id: 'bt50tono',
-    name: 'Módulo Bluetooth 5.0 con Control de Tono',
-    model: 'ZK-PT1 · Pre-Amp Estéreo',
-    category: 'modulo',
-    price: 45,
-    power: 'Pre-Amp',
-    badge: 'Popular',
-    specs: [
-      'Bluetooth 5.0 + AUX con cambio automático',
-      'Control físico de volumen, graves y agudos',
-      'SNR > 90 dB · Sonido limpio',
-      'Alimentación: 5V–24V DC'
-    ],
-    svg: 'board-knobs'
-  },
-  {
-    id: 'zkmt21',
-    name: 'Placa Amplificadora ZK-MT21 2.1',
-    model: 'ZK-MT21 · 2×50W + 100W SUB',
-    category: 'medio',
-    price: 75,
-    power: '200W',
-    badge: '2.1 Canales',
-    specs: [
-      'Potencia: 200W (2×50W + 100W subwoofer)',
-      'Entradas: Bluetooth + AUX (3.5mm)',
-      'Control: graves, agudos, volumen, sub',
-      'Alimentación: 12–24V'
-    ],
-    svg: 'board-knobs'
-  },
-  {
-    id: 'cs8673e',
-    name: 'Placa Amplificadora CS8673E + USB',
-    model: 'CS8673E · 2×50W + 100W SUB',
-    category: 'medio',
-    price: 85,
-    power: '200W',
-    badge: 'Con USB',
-    specs: [
-      'Potencia: 200W (2×50W + 100W sub)',
-      'Entradas: Bluetooth, USB y AUX 3.5mm',
-      'Control: graves, agudos, volumen, sub',
-      'Alimentación: 5–26V'
-    ],
-    svg: 'board-knobs'
-  },
-  {
-    id: 'xyap100l',
-    name: 'Amplificador XY-AP100L',
-    model: 'XY-AP100L · 2×100W',
-    category: 'medio',
-    price: 95,
-    power: '200W',
-    badge: 'App Sinilink',
-    specs: [
-      'Potencia total: 200W (2×100W estéreo)',
-      'Bluetooth 5.0, AUX y USB (modo disco U)',
-      'Control por app Sinilink (Android/iOS)',
-      'Alimentación: 8V–26V DC'
-    ],
-    svg: 'board-round'
-  },
-  {
-    id: 'zk1002t',
-    name: 'Amplificador Estéreo ZK-1002T',
-    model: 'ZK-1002T · 2×100W',
-    category: 'medio',
-    price: 110,
-    power: '200W',
-    badge: 'Estéreo HiFi',
-    specs: [
-      'Potencia: 200W (2×100W estéreo)',
-      'Bluetooth 5.0 y AUX 3.5mm',
-      'Control: volumen, agudos y graves',
-      'Alimentación: 12V–24V DC'
-    ],
-    svg: 'board-knobs'
-  },
-  {
-    id: 'zkht21',
-    name: 'Placa Amplificadora ZK-HT21',
-    model: 'ZK-HT21 · 2×160W + 220W SUB',
-    category: 'alto',
-    price: 165,
-    power: '540W',
-    badge: '2.1 Pro',
-    specs: [
-      'Potencia: 2×160W + 220W subwoofer',
-      'Entradas: Bluetooth, USB y AUX',
-      'Ventilador ultrasilencioso',
-      'Alimentación: 15–36V'
-    ],
-    svg: 'board-fan'
-  },
-  {
-    id: 'yss350h',
-    name: 'Placa Amplificadora YS-S350H',
-    model: 'YS-S350H · 2×220W + 350W SUB',
-    category: 'alto',
-    price: 245,
-    power: '790W',
-    badge: 'Chip TPA3251',
-    specs: [
-      'Potencia: 2×220W + 350W subwoofer',
-      'Chip TPA3251 alta fidelidad',
-      'Múltiples protecciones integradas',
-      'Alimentación: 18–38V'
-    ],
-    svg: 'board-fan'
-  },
-  {
-    id: 'as21hpa',
-    name: 'Placa Amplificadora AS21HPA',
-    model: 'AS21HPA · 2×300W + 600W SUB',
-    category: 'alto',
-    price: 320,
-    power: '1200W',
-    badge: 'Top Gama',
-    specs: [
-      'Potencia: 2×300W + 600W subwoofer',
-      'Bluetooth, USB, AUX + tarjeta integrada',
-      'Chip TPA3251 máxima fidelidad',
-      'Alimentación: 19–51V'
-    ],
-    svg: 'board-fan'
-  },
-  {
-    id: 'kitauto',
-    name: 'Kit Reproductor de Música Auto',
-    model: 'Kebidu · BT + USB/TF/FM/AUX',
-    category: 'mp3',
-    price: 55,
-    power: 'MP3',
-    badge: 'Para auto',
-    specs: [
-      'Bluetooth 5.0, USB, TF, AUX y FM',
-      'Pantalla LED a color',
-      'Control remoto incluido',
-      'Alimentación: 9V–12V'
-    ],
-    svg: 'board-display'
-  },
-  {
-    id: 'mp3bt25',
-    name: 'Placa Amplificadora MP3 BT 5.0',
-    model: 'MP3 · 2×25W',
-    category: 'mp3',
-    price: 40,
-    power: '50W',
-    badge: 'Compacto',
-    specs: [
-      'Potencia total: 50W (2×25W estéreo)',
-      'Bluetooth 5.0, AUX, USB, TF y FM',
-      'Reproducción sin pérdidas (FLAC/APE)',
-      'Alimentación: 7–18V DC'
-    ],
-    svg: 'board-display'
-  },
-  {
-    id: 'mp3120',
-    name: 'Módulo Amplificador MP3 120W',
-    model: 'MP3 · 2×60W con USB/TF/FM',
-    category: 'mp3',
-    price: 65,
-    power: '120W',
-    badge: 'Multiformato',
-    specs: [
-      'Potencia: 120W (2×60W estéreo)',
-      'Bluetooth 5.0, USB, TF, AUX y FM',
-      'Soporta MP3, WAV, APE, FLAC',
-      'Alimentación: 8–24V DC'
-    ],
-    svg: 'board-display'
-  },
-  {
-    id: 'mp3200',
-    name: 'Módulo Amplificador MP3 200W',
-    model: 'MP3 · 2×100W con Control Sólido',
-    category: 'mp3',
-    price: 95,
-    power: '200W',
-    badge: 'Premium',
-    specs: [
-      'Potencia: 200W (2×100W estéreo)',
-      'Doble chip TPA3116 Clase D',
-      'USB, TF, AUX, Bluetooth 5.0, FM',
-      'Control remoto sólido (sin batería)'
-    ],
-    svg: 'board-display'
-  },
-  {
-    id: 'd10mic',
-    name: 'Placa Amplificadora D10 con Micrófono',
-    model: 'D10 · 30-150W con Subwoofer',
-    category: 'medio',
-    price: 75,
-    power: '150W',
-    badge: 'Karaoke',
-    specs: [
-      'Potencia ajustable: 30–120W',
-      'Entradas: Bluetooth, RCA, USB, TF y MIC',
-      'Micrófonos duales con efecto eco + FM',
-      'Alimentación: 12–24V DC o 110–220V AC'
-    ],
-    svg: 'board-controls'
+/* ==========================================================
+   CONFIGURACIÓN (edita aquí)
+   ========================================================== */
+const CONFIG = {
+  WHATSAPP_NUMBER: '51904894397',          // Número principal
+  EMAIL: 'siguientepaso2004@gmail.com',    // Correo para recibir formularios
+  FORMSUBMIT_ENDPOINT: 'https://formsubmit.co/ajax/siguientepaso2004@gmail.com',
+  // Google Forms (ver guía): reemplaza con tu URL y entry IDs
+  GOOGLE_FORM: {
+    ENABLED: false,  // Pon en true cuando configures tu form
+    URL: 'https://docs.google.com/forms/d/e/REEMPLAZA_ID_FORM/formResponse',
+    FIELDS: {
+      nombre: 'entry.000000001',
+      telefono: 'entry.000000002',
+      correo: 'entry.000000003',
+      empresa: 'entry.000000004',
+      mensaje: 'entry.000000005',
+      producto: 'entry.000000006',
+      sede: 'entry.000000007',
+      tipo: 'entry.000000008'
+    }
   }
-];
-
-/* ======================================
-   SVG PRODUCT ILLUSTRATIONS
-   ====================================== */
-const svgs = {
-  'board-small': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="pcb1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a3a2e"/><stop offset="1" stop-color="#0a1f1a"/></linearGradient></defs>
-    <rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb1)" stroke="#2d5f4e" stroke-width="1"/>
-    <circle cx="40" cy="70" r="18" fill="#c0c0c0" stroke="#333" stroke-width="2"/>
-    <circle cx="40" cy="70" r="10" fill="#2d8659"/>
-    <rect x="80" y="50" width="40" height="30" rx="2" fill="#222" stroke="#ff6b35" stroke-width="0.5"/>
-    <circle cx="150" cy="45" r="9" fill="#666" stroke="#999"/>
-    <circle cx="150" cy="95" r="9" fill="#666" stroke="#999"/>
-    <rect x="165" y="60" width="18" height="20" rx="2" fill="#000"/>
-    <line x1="20" y1="30" x2="190" y2="30" stroke="#ff6b35" stroke-width="0.3" opacity="0.5"/>
-    <line x1="20" y1="110" x2="190" y2="110" stroke="#ff6b35" stroke-width="0.3" opacity="0.5"/>
-  </svg>`,
-  'board-knobs': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="pcb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient></defs>
-    <rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb2)" stroke="#444"/>
-    <circle cx="40" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
-    <circle cx="40" cy="70" r="8" fill="#ff6b35"/>
-    <circle cx="80" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
-    <circle cx="80" cy="70" r="8" fill="#3b82f6"/>
-    <circle cx="120" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
-    <circle cx="120" cy="70" r="8" fill="#3b82f6"/>
-    <circle cx="160" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
-    <circle cx="160" cy="70" r="8" fill="#3b82f6"/>
-    <line x1="40" y1="60" x2="40" y2="64" stroke="white" stroke-width="1.5"/>
-    <line x1="80" y1="60" x2="80" y2="64" stroke="white" stroke-width="1.5"/>
-    <line x1="120" y1="60" x2="120" y2="64" stroke="white" stroke-width="1.5"/>
-    <line x1="160" y1="60" x2="160" y2="64" stroke="white" stroke-width="1.5"/>
-  </svg>`,
-  'board-round': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="pcb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
-      <radialGradient id="knob3"><stop offset="0" stop-color="#aaa"/><stop offset="1" stop-color="#333"/></radialGradient>
-    </defs>
-    <rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb3)" stroke="#444"/>
-    <circle cx="100" cy="70" r="28" fill="url(#knob3)" stroke="#000" stroke-width="2"/>
-    <circle cx="100" cy="70" r="20" fill="#1a1a1a"/>
-    <circle cx="100" cy="70" r="3" fill="#ff6b35"/>
-    <rect x="30" y="55" width="20" height="30" rx="2" fill="#000" stroke="#666"/>
-    <rect x="150" y="55" width="20" height="30" rx="2" fill="#000" stroke="#666"/>
-    <text x="35" y="95" fill="#ff6b35" font-size="6" font-family="monospace">AUX</text>
-    <text x="153" y="95" fill="#ff6b35" font-size="6" font-family="monospace">USB</text>
-  </svg>`,
-  'board-fan': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="pcb4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a2a"/><stop offset="1" stop-color="#050510"/></linearGradient></defs>
-    <rect x="10" y="15" width="180" height="110" rx="6" fill="url(#pcb4)" stroke="#3b82f6" stroke-width="0.5"/>
-    <circle cx="100" cy="70" r="30" fill="#0a0a0a" stroke="#444" stroke-width="2"/>
-    <g transform="translate(100 70)">
-      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333"/>
-      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(72)"/>
-      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(144)"/>
-      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(216)"/>
-      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(288)"/>
-      <circle r="6" fill="#ff6b35"/>
-    </g>
-    <circle cx="30" cy="40" r="8" fill="#444"/>
-    <circle cx="30" cy="40" r="4" fill="#3b82f6"/>
-    <circle cx="30" cy="100" r="8" fill="#444"/>
-    <circle cx="30" cy="100" r="4" fill="#3b82f6"/>
-    <circle cx="170" cy="40" r="8" fill="#444"/>
-    <circle cx="170" cy="40" r="4" fill="#ff6b35"/>
-    <circle cx="170" cy="100" r="8" fill="#444"/>
-    <circle cx="170" cy="100" r="4" fill="#ff6b35"/>
-  </svg>`,
-  'board-display': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="pcb5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#050505"/></linearGradient></defs>
-    <rect x="10" y="30" width="180" height="80" rx="4" fill="url(#pcb5)" stroke="#444"/>
-    <rect x="55" y="45" width="90" height="32" rx="2" fill="#1a0000" stroke="#ff6b35" stroke-width="0.5"/>
-    <text x="100" y="68" fill="#ff3030" font-size="18" font-family="'Courier New', monospace" text-anchor="middle" font-weight="bold">88:8</text>
-    <circle cx="30" cy="95" r="6" fill="#333" stroke="#888"/>
-    <circle cx="50" cy="95" r="4" fill="#666"/>
-    <circle cx="70" cy="95" r="4" fill="#666"/>
-    <circle cx="90" cy="95" r="4" fill="#666"/>
-    <circle cx="110" cy="95" r="4" fill="#666"/>
-    <circle cx="130" cy="95" r="4" fill="#666"/>
-    <circle cx="150" cy="95" r="4" fill="#666"/>
-    <rect x="165" y="90" width="18" height="12" rx="1" fill="#1e40af"/>
-    <text x="174" y="99" fill="white" font-size="6" text-anchor="middle" font-family="sans-serif">BT</text>
-  </svg>`,
-  'board-controls': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="pcb6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2f1a"/><stop offset="1" stop-color="#0f0a05"/></linearGradient></defs>
-    <rect x="10" y="20" width="180" height="100" rx="4" fill="url(#pcb6)" stroke="#ffb347" stroke-width="0.5"/>
-    <circle cx="35" cy="55" r="8" fill="#ff0" stroke="#333"/>
-    <circle cx="60" cy="55" r="8" fill="#f00" stroke="#333"/>
-    <circle cx="85" cy="55" r="8" fill="#f90" stroke="#333"/>
-    <circle cx="110" cy="55" r="8" fill="#f90" stroke="#333"/>
-    <circle cx="135" cy="55" r="8" fill="#ff0" stroke="#333"/>
-    <circle cx="160" cy="55" r="8" fill="#ff0" stroke="#333"/>
-    <rect x="30" y="80" width="140" height="25" rx="2" fill="#000" stroke="#666"/>
-    <text x="40" y="96" fill="#ff6b35" font-size="6" font-family="monospace">MIC VOL ECHO TREBLE BASS</text>
-  </svg>`
 };
 
-/* ======================================
-   RENDER PRODUCTS
-   ====================================== */
+/* ==========================================================
+   PRODUCTOS (datos reales desde dim_producto)
+   ========================================================== */
+const PRODUCTS = [
+  // Audio - Amplificadores 2.1
+  { id: 'P002', name: 'Amplificador 2.1 50Wx2 + 100W Sub', desc: 'Módulo con entrada USB, Bluetooth y AUX. Ideal para sistemas 2.1 caseros.', cat: 'amplificador', price: 85, stock: 0, sku: 'ZK-MT21-USB', link: 'https://web.facebook.com/share/19BS4VCDYy/', svg: 'amp-knobs', badge: '2.1 con USB' },
+  { id: 'P004', name: 'Amplificador 2.1 200W sin USB', desc: 'Módulo amplificador negro compacto. Bluetooth + AUX, ideal para parlantes medianos.', cat: 'amplificador', price: 75, stock: 62, sku: 'ZK-MT21', link: 'https://web.facebook.com/share/1C1VVLizhu/', svg: 'amp-knobs', badge: 'Más vendido' },
+  { id: 'P009', name: 'Amplificador 2.1 160Wx2 + 220W Sub', desc: 'Módulo amplificador negro de alta potencia. Bluetooth, USB y AUX.', cat: 'amplificador', price: 140, stock: 18, sku: 'ZK-HT21', link: 'https://web.facebook.com/share/1ADyhdaamz/', svg: 'amp-fan', badge: 'Alta potencia' },
+  { id: 'P010', name: 'Amplificador 2.1 220Wx2 + 350W Sub', desc: 'Módulo profesional. Bluetooth, USB y AUX. Para equipos exigentes.', cat: 'amplificador', price: 170, stock: 3, sku: 'YS-S350H', link: 'https://web.facebook.com/share/1CAYFG2KvB/', svg: 'amp-fan', badge: 'Pro' },
+  { id: 'P015', name: 'Amplificador 2.1 300Wx2 + 600W Sub', desc: 'Top de gama con chip TPA3251. Múltiples entradas y protecciones integradas.', cat: 'amplificador', price: 220, stock: 0, sku: 'AS21HPA', link: 'https://www.facebook.com/marketplace/item/1234201864839905/', svg: 'amp-fan', badge: 'Top gama' },
+  { id: 'P025', name: 'Amplificador 50Wx2 BT 1 perilla', desc: 'Placa amplificadora digital ZK-502L. Compacto, Bluetooth 5.0, ideal para proyectos DIY.', cat: 'amplificador', price: 25, stock: 6, sku: 'ZK-502L', link: 'https://web.facebook.com/share/1FGAYgRTba/', svg: 'amp-small', badge: 'Compacto' },
+  { id: 'P032', name: 'Amplificador 300Wx2 ZK3002', desc: 'Amplificador estéreo de alta potencia con Bluetooth y controles profesionales.', cat: 'amplificador', price: 100, stock: 3, sku: 'ZK-3002', link: 'https://www.facebook.com/share/1CGmQXLDoq/', svg: 'amp-fan', badge: 'Alta potencia' },
+  { id: 'P034', name: 'Amplificador 3 perillas 50Wx2', desc: 'Amplificador pequeño con control de volumen, graves y agudos.', cat: 'amplificador', price: 40, stock: 23, sku: 'AMP-50WX2', link: 'https://web.facebook.com/share/1AczEfqgjv/', svg: 'amp-knobs', badge: 'Recomendado' },
+  { id: 'P041', name: 'Amplificador FIO - Bluetooth', desc: 'Amplificador premium con conectividad Bluetooth avanzada. Para audiophiles.', cat: 'amplificador', price: 280, stock: 0, sku: 'FIO-BT', link: '#', svg: 'amp-fan', badge: 'Premium' },
+  { id: 'P047', name: 'Ampli-deco 2.1 6Wx2 + 25W 2 perillas', desc: 'Amplificador compacto 2.1 con 2 perillas para volumen y subwoofer.', cat: 'amplificador', price: 30, stock: 0, sku: 'AMP-6WX2', link: 'https://web.facebook.com/share/1Vyue5AaMd/', svg: 'amp-small', badge: 'Compacto' },
+
+  // Audio - Deco/Módulos
+  { id: 'P005', name: 'Deco-amplificador 60Wx2', desc: 'Cubierta amplificadora con pantalla LED. Reproduce Bluetooth, USB, TF y FM.', cat: 'modulo', price: 35, stock: 15, sku: 'DECO-60WX2', link: 'https://web.facebook.com/share/19iC4teUSC/', svg: 'deco-display', badge: 'Con display' },
+  { id: 'P006', name: 'Deco-ampli 100Wx2 control sólido', desc: 'Cubierta amplificadora con control remoto sólido (sin batería). Potencia premium.', cat: 'modulo', price: 50, stock: 14, sku: 'DECO-100WX2', link: 'https://web.facebook.com/marketplace/item/1372100317409019/', svg: 'deco-display', badge: 'Control remoto' },
+  { id: 'P007', name: 'Deco-ampli 25Wx2 blanco', desc: 'Cubierta amplificadora compacta color blanco. Ideal para autos y motos.', cat: 'modulo', price: 20, stock: 6, sku: 'DECO-25WX2-W', link: 'https://web.facebook.com/share/16n3XDAFw4/', svg: 'deco-display', badge: 'Blanco' },
+  { id: 'P008', name: 'Chips CS8673 (repuesto)', desc: 'Chip amplificador de repuesto para placas que usan este integrado.', cat: 'modulo', price: 5, stock: 5, sku: 'CHIP-CS8673', link: '#', svg: 'chip', badge: 'Repuesto' },
+  { id: 'P048', name: 'Deco-ecualizador BT zk-pt1', desc: 'Pre-amplificador con control de tono (graves, agudos, volumen) y Bluetooth.', cat: 'modulo', price: 50, stock: 6, sku: 'ZK-PT1', link: 'https://web.facebook.com/share/17EZB1Gvjg/', svg: 'amp-knobs', badge: 'Pre-Amp' },
+  { id: 'P055', name: 'Deco-ampli 25Wx2 negro', desc: 'Cubierta amplificadora compacta color negro. Multiformato.', cat: 'modulo', price: 20, stock: 10, sku: 'DECO-25WX2-B', link: '#', svg: 'deco-display', badge: 'Negro' },
+  { id: 'P057', name: 'Preamplificador HIFI 3 perillas', desc: 'Preamplificador de alta fidelidad con 3 controles de tono profesionales.', cat: 'modulo', price: 28, stock: 1, sku: 'HIFI-PREAMP', link: '#', svg: 'amp-knobs', badge: 'HiFi' },
+  { id: 'P001', name: 'Elevador de voltaje pequeño', desc: 'Convertidor DC-DC step-up para proyectos electrónicos. Compacto y eficiente.', cat: 'modulo', price: 30, stock: 9, sku: 'ELEV-SMALL', link: 'https://web.facebook.com/share/16c25eK4ZW/', svg: 'elevador', badge: 'DIY' },
+  { id: 'P035', name: 'Elevador de voltaje 1200W', desc: 'Convertidor de alta potencia para aplicaciones industriales y de audio.', cat: 'modulo', price: 60, stock: 7, sku: 'ELEV-1200W', link: 'https://web.facebook.com/share/1AYW8RKDU8/', svg: 'elevador', badge: '1200W' },
+
+  // Informática
+  { id: 'P003', name: 'Memoria RAM DDR3 8GB Kingston', desc: 'Memoria RAM DDR3 Kingston de 8GB para laptops y PCs compatibles.', cat: 'informatica', price: 40, stock: 6, sku: 'RAM-DDR3-8GB', link: 'https://web.facebook.com/marketplace/item/696890443292951/', svg: 'ram', badge: 'Kingston' },
+  { id: 'P026', name: 'Memoria RAM DDR3L 4GB Kingston', desc: 'Memoria DDR3L de bajo voltaje 4GB. Compatible con laptops de última generación.', cat: 'informatica', price: 40, stock: 4, sku: 'RAM-DDR3L-4GB', link: '#', svg: 'ram', badge: 'Kingston' },
+  { id: 'P011', name: 'Hub USB (HDMI + Ethernet)', desc: 'Hub multifuncional con puerto HDMI y Ethernet. Para laptops y tablets.', cat: 'informatica', price: 40, stock: 3, sku: 'HUB-HDMI-ETH', link: '#', svg: 'hub', badge: 'Multipuerto' },
+  { id: 'P012', name: 'Hub USB (USB + Audio + C + Memoria)', desc: 'Hub con entrada USB, audio 3.5mm, USB-C y lector de tarjetas.', cat: 'informatica', price: 35, stock: 5, sku: 'HUB-USB-AUD', link: '#', svg: 'hub', badge: 'Multipuerto' },
+  { id: 'P013', name: 'Hub USB 4 puertos con switch', desc: 'Hub USB de 4 puertos con switch individual para cada puerto.', cat: 'informatica', price: 20, stock: 2, sku: 'HUB-4USB', link: '#', svg: 'hub', badge: '4 puertos' },
+  { id: 'P014', name: 'Mouse USB + Bluetooth RGB', desc: 'Mouse inalámbrico con conexión USB dual (2.4GHz + Bluetooth) e iluminación RGB.', cat: 'informatica', price: 40, stock: 2, sku: 'MOUSE-RGB', link: '#', svg: 'mouse', badge: 'RGB' },
+  { id: 'P039', name: 'Mouse USB + BT RGB silencioso', desc: 'Mouse silencioso con click suave. Conexión dual y luces RGB.', cat: 'informatica', price: 40, stock: 2, sku: 'MOUSE-SILENT', link: '#', svg: 'mouse', badge: 'Silencioso' },
+  { id: 'P027', name: 'Nimbot Impresora Térmica', desc: 'Impresora térmica Bluetooth portátil para etiquetas y recibos.', cat: 'informatica', price: 160, stock: 2, sku: 'NIMBOT-PRINT', link: '#', svg: 'printer', badge: 'Portátil' },
+  { id: 'P036', name: 'Soporte Laptop Aluminio', desc: 'Soporte ergonómico de aluminio para laptop. Mejora ventilación y postura.', cat: 'informatica', price: 35, stock: 2, sku: 'STAND-ALU', link: '#', svg: 'stand', badge: 'Ergonómico' },
+
+  // Iluminación
+  { id: 'P037', name: 'Sensor de movimiento para focos', desc: 'Sensor infrarrojo automático para focos. Ahorro energético en pasillos y escaleras.', cat: 'iluminacion', price: 10, stock: 10, sku: 'SENSOR-MOV', link: '#', svg: 'sensor', badge: 'Automático' }
+];
+
+/* ==========================================================
+   SVG ILLUSTRATIONS
+   ========================================================== */
+const SVGS = {
+  'amp-knobs': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pcb_a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient></defs><rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb_a)" stroke="#444"/><circle cx="40" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/><circle cx="40" cy="70" r="8" fill="#ff6b35"/><circle cx="80" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/><circle cx="80" cy="70" r="8" fill="#3b82f6"/><circle cx="120" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/><circle cx="120" cy="70" r="8" fill="#3b82f6"/><circle cx="160" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/><circle cx="160" cy="70" r="8" fill="#3b82f6"/><line x1="40" y1="60" x2="40" y2="64" stroke="white" stroke-width="1.5"/><line x1="80" y1="60" x2="80" y2="64" stroke="white" stroke-width="1.5"/><line x1="120" y1="60" x2="120" y2="64" stroke="white" stroke-width="1.5"/><line x1="160" y1="60" x2="160" y2="64" stroke="white" stroke-width="1.5"/></svg>`,
+  'amp-small': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pcb_s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a3a2e"/><stop offset="1" stop-color="#0a1f1a"/></linearGradient></defs><rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb_s)" stroke="#2d5f4e"/><circle cx="40" cy="70" r="18" fill="#c0c0c0" stroke="#333" stroke-width="2"/><circle cx="40" cy="70" r="10" fill="#2d8659"/><rect x="80" y="50" width="40" height="30" rx="2" fill="#222" stroke="#ff6b35" stroke-width="0.5"/><circle cx="150" cy="45" r="9" fill="#666" stroke="#999"/><circle cx="150" cy="95" r="9" fill="#666" stroke="#999"/><rect x="165" y="60" width="18" height="20" rx="2" fill="#000"/></svg>`,
+  'amp-fan': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pcb_f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a2a"/><stop offset="1" stop-color="#050510"/></linearGradient></defs><rect x="10" y="15" width="180" height="110" rx="6" fill="url(#pcb_f)" stroke="#3b82f6" stroke-width="0.5"/><circle cx="100" cy="70" r="30" fill="#0a0a0a" stroke="#444" stroke-width="2"/><g transform="translate(100 70)"><path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333"/><path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(72)"/><path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(144)"/><path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(216)"/><path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(288)"/><circle r="6" fill="#ff6b35"/></g><circle cx="30" cy="40" r="8" fill="#444"/><circle cx="30" cy="40" r="4" fill="#3b82f6"/><circle cx="30" cy="100" r="8" fill="#444"/><circle cx="30" cy="100" r="4" fill="#3b82f6"/><circle cx="170" cy="40" r="8" fill="#444"/><circle cx="170" cy="40" r="4" fill="#ff6b35"/><circle cx="170" cy="100" r="8" fill="#444"/><circle cx="170" cy="100" r="4" fill="#ff6b35"/></svg>`,
+  'deco-display': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pcb_d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#050505"/></linearGradient></defs><rect x="10" y="30" width="180" height="80" rx="4" fill="url(#pcb_d)" stroke="#444"/><rect x="55" y="45" width="90" height="32" rx="2" fill="#1a0000" stroke="#ff6b35" stroke-width="0.5"/><text x="100" y="68" fill="#ff3030" font-size="18" font-family="'Courier New', monospace" text-anchor="middle" font-weight="bold">88:8</text><circle cx="30" cy="95" r="6" fill="#333" stroke="#888"/><circle cx="50" cy="95" r="4" fill="#666"/><circle cx="70" cy="95" r="4" fill="#666"/><circle cx="90" cy="95" r="4" fill="#666"/><circle cx="110" cy="95" r="4" fill="#666"/><circle cx="130" cy="95" r="4" fill="#666"/><circle cx="150" cy="95" r="4" fill="#666"/><rect x="165" y="90" width="18" height="12" rx="1" fill="#1e40af"/><text x="174" y="99" fill="white" font-size="6" text-anchor="middle" font-family="sans-serif">BT</text></svg>`,
+  'chip': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="40" width="80" height="60" rx="4" fill="#1a1a1a" stroke="#ff6b35" stroke-width="1"/><text x="100" y="75" fill="#ff6b35" font-size="10" font-family="'Courier New', monospace" text-anchor="middle" font-weight="bold">CS8673</text><g fill="#888"><rect x="50" y="48" width="12" height="3"/><rect x="50" y="58" width="12" height="3"/><rect x="50" y="68" width="12" height="3"/><rect x="50" y="78" width="12" height="3"/><rect x="50" y="88" width="12" height="3"/><rect x="138" y="48" width="12" height="3"/><rect x="138" y="58" width="12" height="3"/><rect x="138" y="68" width="12" height="3"/><rect x="138" y="78" width="12" height="3"/><rect x="138" y="88" width="12" height="3"/><rect x="68" y="30" width="3" height="12"/><rect x="78" y="30" width="3" height="12"/><rect x="88" y="30" width="3" height="12"/><rect x="108" y="30" width="3" height="12"/><rect x="118" y="30" width="3" height="12"/><rect x="128" y="30" width="3" height="12"/><rect x="68" y="98" width="3" height="12"/><rect x="78" y="98" width="3" height="12"/><rect x="88" y="98" width="3" height="12"/><rect x="108" y="98" width="3" height="12"/><rect x="118" y="98" width="3" height="12"/><rect x="128" y="98" width="3" height="12"/></g><circle cx="70" cy="50" r="2" fill="#fff" opacity="0.5"/></svg>`,
+  'elevador': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pcb_e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#003f3f"/><stop offset="1" stop-color="#001a1a"/></linearGradient></defs><rect x="20" y="30" width="160" height="80" rx="4" fill="url(#pcb_e)" stroke="#00ccaa" stroke-width="0.5"/><circle cx="50" cy="70" r="16" fill="#1a1a1a" stroke="#666" stroke-width="2"/><text x="50" y="74" fill="#00ccaa" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">L</text><rect x="90" y="55" width="35" height="30" rx="2" fill="#c0c0c0" stroke="#333"/><rect x="95" y="60" width="25" height="6" fill="#1a1a1a"/><text x="108" y="65" fill="#00ccaa" font-size="4" font-family="monospace" text-anchor="middle">12V-24V</text><rect x="98" y="70" width="20" height="10" rx="1" fill="#ff6b35"/><circle cx="150" cy="70" r="12" fill="#000" stroke="#888"/><circle cx="150" cy="70" r="7" fill="#ff6b35"/><line x1="150" y1="63" x2="150" y2="65" stroke="white" stroke-width="1"/></svg>`,
+  'ram': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pcb_r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a4a1a"/><stop offset="1" stop-color="#021a08"/></linearGradient></defs><rect x="15" y="55" width="170" height="40" rx="3" fill="url(#pcb_r)" stroke="#1a8a3a"/><g fill="#222" stroke="#666" stroke-width="0.5"><rect x="25" y="63" width="18" height="14" rx="1"/><rect x="48" y="63" width="18" height="14" rx="1"/><rect x="71" y="63" width="18" height="14" rx="1"/><rect x="94" y="63" width="18" height="14" rx="1"/><rect x="117" y="63" width="18" height="14" rx="1"/><rect x="140" y="63" width="18" height="14" rx="1"/></g><text x="100" y="90" fill="#ddd" font-size="5" font-family="sans-serif" text-anchor="middle" font-weight="600">KINGSTON DDR3 8GB</text><g fill="#d4a017"><rect x="20" y="97" width="160" height="3"/></g><g fill="#c8c8c8"><rect x="22" y="100" width="2" height="8"/><rect x="27" y="100" width="2" height="8"/><rect x="32" y="100" width="2" height="8"/><rect x="37" y="100" width="2" height="8"/><rect x="42" y="100" width="2" height="8"/><rect x="47" y="100" width="2" height="8"/><rect x="52" y="100" width="2" height="8"/><rect x="57" y="100" width="2" height="8"/><rect x="62" y="100" width="2" height="8"/><rect x="67" y="100" width="2" height="8"/><rect x="77" y="100" width="2" height="8"/><rect x="82" y="100" width="2" height="8"/><rect x="87" y="100" width="2" height="8"/><rect x="92" y="100" width="2" height="8"/><rect x="97" y="100" width="2" height="8"/><rect x="102" y="100" width="2" height="8"/><rect x="107" y="100" width="2" height="8"/><rect x="112" y="100" width="2" height="8"/><rect x="117" y="100" width="2" height="8"/><rect x="122" y="100" width="2" height="8"/><rect x="132" y="100" width="2" height="8"/><rect x="137" y="100" width="2" height="8"/><rect x="142" y="100" width="2" height="8"/><rect x="147" y="100" width="2" height="8"/><rect x="152" y="100" width="2" height="8"/><rect x="157" y="100" width="2" height="8"/><rect x="162" y="100" width="2" height="8"/><rect x="167" y="100" width="2" height="8"/><rect x="172" y="100" width="2" height="8"/></g></svg>`,
+  'hub': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="45" width="140" height="50" rx="6" fill="#1a1a1a" stroke="#444"/><rect x="35" y="50" width="130" height="40" rx="3" fill="#2a2a2a"/><g fill="#666" stroke="#888" stroke-width="0.5"><rect x="42" y="62" width="18" height="16" rx="1"/><rect x="64" y="62" width="18" height="16" rx="1"/><rect x="86" y="62" width="18" height="16" rx="1"/><rect x="108" y="62" width="18" height="16" rx="1"/><rect x="130" y="62" width="25" height="16" rx="2"/></g><g fill="#3b82f6"><rect x="44" y="65" width="14" height="10"/><rect x="66" y="65" width="14" height="10"/><rect x="88" y="65" width="14" height="10"/><rect x="110" y="65" width="14" height="10"/></g><text x="100" y="105" fill="#888" font-size="6" font-family="sans-serif" text-anchor="middle">USB HUB 4+1</text><circle cx="165" cy="70" r="3" fill="#22c55e"/><rect x="20" y="65" width="10" height="10" rx="1" fill="#000" stroke="#ff6b35"/></svg>`,
+  'mouse': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="mouse_g" cx="0.5" cy="0.3"><stop offset="0" stop-color="#444"/><stop offset="1" stop-color="#0a0a0a"/></radialGradient></defs><path d="M 70,35 Q 100,25 130,35 Q 145,55 145,90 Q 145,115 100,118 Q 55,115 55,90 Q 55,55 70,35 Z" fill="url(#mouse_g)" stroke="#333" stroke-width="1"/><line x1="100" y1="35" x2="100" y2="75" stroke="#222" stroke-width="1"/><rect x="95" y="45" width="10" height="18" rx="2" fill="#ff6b35" opacity="0.7"/><circle cx="100" cy="85" r="4" fill="#3b82f6" opacity="0.9"/><path d="M 60,75 Q 58,95 65,110" stroke="#ff6b35" stroke-width="2" fill="none" opacity="0.5"/><path d="M 140,75 Q 142,95 135,110" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.5"/></svg>`,
+  'printer': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="40" width="100" height="65" rx="8" fill="#1a1a1a" stroke="#444"/><rect x="58" y="48" width="84" height="32" rx="3" fill="#0a0a0a"/><rect x="62" y="52" width="76" height="24" rx="1" fill="#fff"/><g fill="#000"><rect x="66" y="56" width="68" height="2"/><rect x="66" y="60" width="50" height="2"/><rect x="66" y="64" width="58" height="2"/><rect x="66" y="68" width="40" height="2"/></g><rect x="70" y="85" width="60" height="15" rx="2" fill="#000"/><rect x="75" y="90" width="50" height="5" fill="#333"/><circle cx="100" cy="115" r="4" fill="#22c55e"/><text x="155" y="60" fill="#ff6b35" font-size="6" font-family="monospace">BT</text><rect x="150" y="50" width="12" height="8" rx="1" fill="#3b82f6"/></svg>`,
+  'stand': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><path d="M 30,110 L 170,110 L 160,50 L 40,50 Z" fill="#aaa" stroke="#666" stroke-width="1" opacity="0.9"/><rect x="35" y="40" width="130" height="12" rx="2" fill="#ccc" stroke="#888"/><rect x="40" y="100" width="120" height="5" fill="#888"/><g fill="#fff" opacity="0.5"><rect x="45" y="55" width="110" height="2"/><rect x="50" y="65" width="100" height="2"/><rect x="55" y="75" width="90" height="2"/><rect x="60" y="85" width="80" height="2"/></g><line x1="100" y1="42" x2="100" y2="105" stroke="#666" stroke-width="0.5"/></svg>`,
+  'sensor': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="70" r="42" fill="#1a1a1a" stroke="#666" stroke-width="2"/><circle cx="100" cy="70" r="32" fill="#0a0a0a"/><circle cx="100" cy="70" r="24" fill="#fff" opacity="0.9"/><circle cx="100" cy="70" r="18" fill="#222"/><circle cx="100" cy="70" r="12" fill="#444"/><circle cx="100" cy="70" r="6" fill="#ff6b35"/><g stroke="#ff6b35" stroke-width="1.5" fill="none" opacity="0.6"><path d="M 50 70 Q 55 55 65 50"/><path d="M 150 70 Q 145 55 135 50"/><path d="M 50 70 Q 55 85 65 90"/><path d="M 150 70 Q 145 85 135 90"/></g><rect x="95" y="112" width="10" height="8" fill="#333"/></svg>`
+};
+
+/* ==========================================================
+   STATE
+   ========================================================== */
+let cart = [];  // [{id, qty}]
+
+/* ==========================================================
+   PRODUCT RENDERING
+   ========================================================== */
 const productsGrid = document.getElementById('productsGrid');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
+function stockStatus(stock) {
+  if (stock === 0) return { label: 'Agotado', class: 'out' };
+  if (stock <= 3) return { label: `Últimas ${stock} unidades`, class: 'low' };
+  return { label: `${stock} disponibles`, class: 'available' };
+}
+
 function renderProducts(category = 'all') {
   productsGrid.innerHTML = '';
-  const filtered = category === 'all' ? products : products.filter(p => p.category === category);
+  const filtered = category === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === category);
   filtered.forEach((p, i) => {
+    const s = stockStatus(p.stock);
+    const outOfStock = p.stock === 0;
     const card = document.createElement('div');
-    card.className = 'product-card reveal';
-    card.style.animationDelay = `${i * 0.05}s`;
+    card.className = 'product-card reveal' + (outOfStock ? ' out-of-stock' : '');
+    card.style.animationDelay = `${i * 0.04}s`;
     card.innerHTML = `
       <div class="product-image">
         <div class="product-badge">${p.badge}</div>
-        <div class="product-power">${p.power}</div>
-        ${svgs[p.svg] || svgs['board-knobs']}
+        <div class="product-stock-badge ${s.class}"><span class="dot"></span>${s.label}</div>
+        ${SVGS[p.svg] || SVGS['amp-knobs']}
       </div>
       <div class="product-body">
-        <div class="product-model">${p.model}</div>
+        <div class="product-category-tag">${p.sku}</div>
         <h3 class="product-name">${p.name}</h3>
-        <ul class="product-specs">
-          ${p.specs.map(s => `<li>${s}</li>`).join('')}
-        </ul>
+        <p class="product-desc">${p.desc}</p>
         <div class="product-footer">
           <div class="product-price">
-            <small>Desde</small>
+            <small>Precio</small>
             <strong>S/ ${p.price}<small>.00</small></strong>
           </div>
-          <button class="btn-cotizar" onclick="quickQuote('${p.id}')">
-            <i class="fas fa-calculator"></i> Cotizar
+          <button class="btn-add-cart" ${outOfStock ? 'disabled' : ''} onclick="quickAdd('${p.id}')">
+            ${outOfStock ? '<i class="fas fa-ban"></i> Agotado' : '<i class="fas fa-plus"></i> Agregar'}
           </button>
         </div>
       </div>
     `;
     productsGrid.appendChild(card);
   });
-  // Re-observe new reveals
   setTimeout(() => {
     document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
-  }, 50);
+  }, 30);
 }
 
 filterBtns.forEach(btn => {
@@ -2797,197 +1323,389 @@ filterBtns.forEach(btn => {
 
 renderProducts();
 
-/* ======================================
-   POPULATE QUOTER DROPDOWN
-   ====================================== */
+/* ==========================================================
+   POPULATE DROPDOWNS
+   ========================================================== */
 const qProductSelect = document.getElementById('qProduct');
-products.forEach(p => {
-  const opt = document.createElement('option');
-  opt.value = p.id;
-  opt.textContent = `${p.name} — S/ ${p.price}`;
-  qProductSelect.appendChild(opt);
+const cProductSelect = document.getElementById('cProduct');
+
+PRODUCTS.forEach(p => {
+  if (p.stock > 0) {
+    const opt = document.createElement('option');
+    opt.value = p.id;
+    opt.textContent = `${p.name} — S/ ${p.price} (Stock: ${p.stock})`;
+    qProductSelect.appendChild(opt);
+  }
+  const optC = document.createElement('option');
+  optC.value = p.name;
+  optC.textContent = p.name;
+  cProductSelect.appendChild(optC);
 });
 
-/* ======================================
-   QUOTE CALCULATOR
-   ====================================== */
-const qQty = document.getElementById('qQty');
-const qDelivery = document.getElementById('qDelivery');
-const optCheckboxes = document.querySelectorAll('.checkbox-option input[type="checkbox"]');
+/* Stats */
+document.getElementById('statProductCount').textContent = PRODUCTS.length + '+';
 
-function calculateQuote() {
-  const product = products.find(p => p.id === qProductSelect.value);
-  if (!product) return null;
-  const qty = parseInt(qQty.value) || 1;
-  const unit = product.price;
-  const subtotal = unit * qty;
-  let opts = 0;
-  optCheckboxes.forEach(cb => { if (cb.checked) opts += parseFloat(cb.dataset.price); });
-  const ship = parseFloat(qDelivery.value) || 0;
-  const base = subtotal + opts + ship;
-  const igv = base * 0.18;
-  const total = base + igv;
-  return { product, qty, unit, subtotal, opts, ship, igv, total };
+/* ==========================================================
+   CART LOGIC
+   ========================================================== */
+function findProduct(id) { return PRODUCTS.find(p => p.id === id); }
+
+function addToCart(productId, qty) {
+  const p = findProduct(productId);
+  if (!p) return;
+  if (p.stock === 0) { showNotification('Producto agotado', 'error'); return; }
+  const existing = cart.find(item => item.id === productId);
+  const totalQty = (existing ? existing.qty : 0) + qty;
+  if (totalQty > p.stock) {
+    showNotification(`Solo quedan ${p.stock} unidades de ${p.name}`, 'error');
+    return;
+  }
+  if (existing) existing.qty = totalQty;
+  else cart.push({ id: productId, qty });
+  renderCart();
+  updateSummary();
+  showNotification(`${p.name} agregado a la cotización`);
 }
 
-function updateQuote() {
+function removeFromCart(productId) {
+  cart = cart.filter(item => item.id !== productId);
+  renderCart();
+  updateSummary();
+}
+
+function changeCartQty(productId, delta) {
+  const item = cart.find(i => i.id === productId);
+  if (!item) return;
+  const p = findProduct(productId);
+  const newQty = item.qty + delta;
+  if (newQty < 1) { removeFromCart(productId); return; }
+  if (newQty > p.stock) { showNotification(`Solo quedan ${p.stock} unidades`, 'error'); return; }
+  item.qty = newQty;
+  renderCart();
+  updateSummary();
+}
+
+function renderCart() {
+  const cartList = document.getElementById('cartList');
+  const navBadge = document.getElementById('navCartBadge');
+  const clearBtn = document.getElementById('btnClearCart');
+
+  if (cart.length === 0) {
+    cartList.innerHTML = `<div class="cart-empty"><i class="fas fa-cart-shopping"></i>Tu cotización está vacía. Agrega productos arriba o desde el catálogo.</div>`;
+    navBadge.style.display = 'none';
+    if (clearBtn) clearBtn.style.display = 'none';
+    return;
+  }
+
+  const totalItems = cart.reduce((s, i) => s + i.qty, 0);
+  navBadge.textContent = totalItems;
+  navBadge.style.display = 'flex';
+  if (clearBtn) clearBtn.style.display = 'flex';
+
+  cartList.innerHTML = cart.map(item => {
+    const p = findProduct(item.id);
+    const subtotal = p.price * item.qty;
+    return `
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <strong>${p.name}</strong>
+          <small>${p.sku} · S/ ${p.price} c/u</small>
+        </div>
+        <div class="cart-item-qty">
+          <button class="cart-qty-btn" onclick="changeCartQty('${p.id}', -1)">−</button>
+          <span class="cart-qty-num">${item.qty}</span>
+          <button class="cart-qty-btn" onclick="changeCartQty('${p.id}', 1)" ${item.qty >= p.stock ? 'disabled' : ''}>+</button>
+        </div>
+        <div class="cart-item-price">S/ ${subtotal.toFixed(2)}</div>
+        <button class="cart-remove" onclick="removeFromCart('${p.id}')"><i class="fas fa-trash"></i></button>
+      </div>
+    `;
+  }).join('');
+}
+
+function quickAdd(productId) {
+  addToCart(productId, 1);
+  document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
+}
+window.quickAdd = quickAdd;
+window.removeFromCart = removeFromCart;
+window.changeCartQty = changeCartQty;
+
+document.getElementById('btnAddToCart').addEventListener('click', () => {
+  const id = qProductSelect.value;
+  const qty = parseInt(document.getElementById('qQty').value) || 1;
+  if (!id) { showNotification('Selecciona un producto', 'error'); return; }
+  addToCart(id, qty);
+  document.getElementById('qQty').value = 1;
+});
+
+document.getElementById('btnClearCart').addEventListener('click', () => {
+  if (cart.length === 0) return;
+  if (confirm('¿Seguro que quieres vaciar tu cotización?')) {
+    cart = [];
+    renderCart();
+    updateSummary();
+    showNotification('Cotización vaciada');
+  }
+});
+
+/* ==========================================================
+   DELIVERY OPTIONS TOGGLE
+   ========================================================== */
+document.querySelectorAll('input[name="deliveryType"]').forEach(r => {
+  r.addEventListener('change', () => {
+    document.getElementById('pickupDetails').classList.toggle('active', r.value === 'pickup' && r.checked);
+    document.getElementById('shalomDetails').classList.toggle('active', r.value === 'shalom' && r.checked);
+    updateSummary();
+  });
+});
+
+/* ==========================================================
+   SUMMARY
+   ========================================================== */
+function calculateQuote() {
+  const totalItems = cart.reduce((s, i) => s + i.qty, 0);
+  // En Perú, los precios de venta al público INCLUYEN IGV (18%)
+  const subtotal = cart.reduce((s, i) => s + (findProduct(i.id).price * i.qty), 0);
+  const deliveryType = document.querySelector('input[name="deliveryType"]:checked').value;
+  const shipCost = 0;  // El costo Shalom se confirma al cotizar (depende del destino)
+  // IGV ya está incluido en los precios - lo mostramos como desglose informativo
+  const igvIncluded = subtotal - (subtotal / 1.18);
+  const subtotalSinIgv = subtotal / 1.18;
+  const total = subtotal + shipCost;
+  return { totalItems, subtotal, subtotalSinIgv, shipCost, igvIncluded, total, deliveryType };
+}
+
+function updateSummary() {
   const q = calculateQuote();
-  if (!q) return;
-  document.getElementById('sumProduct').textContent = q.product.name;
-  document.getElementById('sumQty').textContent = q.qty;
-  document.getElementById('sumUnit').textContent = `S/ ${q.unit.toFixed(2)}`;
-  document.getElementById('sumSubtotal').textContent = `S/ ${q.subtotal.toFixed(2)}`;
-  document.getElementById('sumOpts').textContent = `S/ ${q.opts.toFixed(2)}`;
-  document.getElementById('sumShip').textContent = `S/ ${q.ship.toFixed(2)}`;
-  document.getElementById('sumIgv').textContent = `S/ ${q.igv.toFixed(2)}`;
+  document.getElementById('sumItems').textContent = q.totalItems === 0 ? '0 productos' : `${q.totalItems} producto${q.totalItems > 1 ? 's' : ''}`;
+  document.getElementById('sumSubtotal').textContent = `S/ ${q.subtotalSinIgv.toFixed(2)}`;
+  document.getElementById('sumShip').textContent = q.deliveryType === 'pickup' ? 'Recojo gratis' : 'A coordinar con Shalom';
+  document.getElementById('sumIgv').textContent = `S/ ${q.igvIncluded.toFixed(2)}`;
   document.getElementById('sumTotal').textContent = `S/ ${q.total.toFixed(2)}`;
 }
 
-[qProductSelect, qQty, qDelivery, ...optCheckboxes].forEach(el => {
-  el.addEventListener('change', updateQuote);
-  el.addEventListener('input', updateQuote);
-});
+updateSummary();
 
-updateQuote();
+/* ==========================================================
+   VALIDATE & SEND QUOTE
+   ========================================================== */
+function validateQuote() {
+  if (cart.length === 0) { showNotification('Agrega al menos un producto', 'error'); return null; }
+  const name = document.getElementById('qName').value.trim();
+  const phone = document.getElementById('qPhone').value.trim();
+  const email = document.getElementById('qEmail').value.trim();
+  if (!name || !phone || !email) { showNotification('Completa tus datos de contacto', 'error'); return null; }
 
-/* ======================================
-   QUICK QUOTE (from product card)
-   ====================================== */
-function quickQuote(productId) {
-  qProductSelect.value = productId;
-  updateQuote();
-  document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
+  const deliveryType = document.querySelector('input[name="deliveryType"]:checked').value;
+  let deliveryInfo = {};
+
+  if (deliveryType === 'pickup') {
+    const sede = document.querySelector('input[name="sede"]:checked');
+    if (!sede) { showNotification('Elige una sede de recojo', 'error'); return null; }
+    deliveryInfo = { type: 'Recojo en tienda', sede: sede.value };
+  } else {
+    const district = document.getElementById('shipDistrict').value.trim();
+    const address = document.getElementById('shipAddress').value.trim();
+    const shipPhone = document.getElementById('shipPhone').value.trim();
+    const ref = document.getElementById('shipReference').value.trim();
+    if (!district || !address || !shipPhone) { showNotification('Completa los datos de envío', 'error'); return null; }
+    deliveryInfo = { type: 'Envío con Shalom', district, address, phone: shipPhone, reference: ref };
+  }
+
+  return {
+    customer: { name, phone, email },
+    items: cart.map(i => { const p = findProduct(i.id); return { id: p.id, name: p.name, sku: p.sku, qty: i.qty, unit: p.price, subtotal: p.price * i.qty }; }),
+    delivery: deliveryInfo,
+    totals: calculateQuote()
+  };
 }
-window.quickQuote = quickQuote;
 
-/* ======================================
-   WHATSAPP / EMAIL ACTIONS
-   ====================================== */
-const WHATSAPP_NUMBER = '51904894397';
-const EMAIL = 'contacto@audioelectronica.pe';
-
-function buildQuoteMessage() {
-  const q = calculateQuote();
-  const name = document.getElementById('qName').value || 'Cliente';
-  const optsList = [];
-  optCheckboxes.forEach(cb => {
-    if (cb.checked) {
-      const label = cb.parentElement.querySelector('label').textContent;
-      optsList.push(label);
-    }
+function buildQuoteText(data) {
+  const lines = [];
+  lines.push('*SOLICITUD DE COTIZACIÓN - AUDIO ELECTRÓNICA*');
+  lines.push('');
+  lines.push('*CLIENTE*');
+  lines.push(`• Nombre: ${data.customer.name}`);
+  lines.push(`• Teléfono: ${data.customer.phone}`);
+  lines.push(`• Correo: ${data.customer.email}`);
+  lines.push('');
+  lines.push('*PRODUCTOS*');
+  data.items.forEach(item => {
+    lines.push(`• ${item.name} (${item.sku})`);
+    lines.push(`  Cantidad: ${item.qty} × S/ ${item.unit.toFixed(2)} = S/ ${item.subtotal.toFixed(2)}`);
   });
-  const deliveryText = qDelivery.options[qDelivery.selectedIndex].text;
-  return `Hola Audio Electrónica Perú!%0A%0A*Solicitud de cotización*%0A%0ACliente: ${name}%0A%0A` +
-    `📦 Producto: ${q.product.name}%0A` +
-    `🔢 Cantidad: ${q.qty}%0A` +
-    `💰 Precio unitario: S/ ${q.unit.toFixed(2)}%0A` +
-    `🧾 Subtotal: S/ ${q.subtotal.toFixed(2)}%0A` +
-    `${optsList.length ? '✅ Opcionales: ' + optsList.join(', ') + '%0A' : ''}` +
-    `🚚 Envío: ${deliveryText}%0A` +
-    `💵 IGV: S/ ${q.igv.toFixed(2)}%0A` +
-    `*TOTAL: S/ ${q.total.toFixed(2)}*%0A%0A` +
-    `¿Podrían confirmar disponibilidad y tiempos de entrega? ¡Gracias!`;
+  lines.push('');
+  lines.push('*ENTREGA*');
+  lines.push(`• Tipo: ${data.delivery.type}`);
+  if (data.delivery.sede) lines.push(`• Sede: ${data.delivery.sede}`);
+  if (data.delivery.district) lines.push(`• Distrito: ${data.delivery.district}`);
+  if (data.delivery.address) lines.push(`• Dirección: ${data.delivery.address}`);
+  if (data.delivery.phone) lines.push(`• Tel. contacto: ${data.delivery.phone}`);
+  if (data.delivery.reference) lines.push(`• Referencia: ${data.delivery.reference}`);
+  lines.push('');
+  lines.push('*RESUMEN*');
+  lines.push(`• Subtotal sin IGV: S/ ${data.totals.subtotalSinIgv.toFixed(2)}`);
+  lines.push(`• IGV (18% incluido): S/ ${data.totals.igvIncluded.toFixed(2)}`);
+  lines.push(`• Envío: ${data.delivery.type === 'Recojo en tienda' ? 'Gratis' : 'A coordinar con Shalom'}`);
+  lines.push(`• *TOTAL A PAGAR: S/ ${data.totals.total.toFixed(2)}*`);
+  lines.push('');
+  lines.push('_Precios incluyen IGV. El costo de envío con Shalom se coordina según destino._');
+  return lines.join('\n');
 }
 
+// Send to WhatsApp
 document.getElementById('btnWhatsQuote').addEventListener('click', () => {
-  const msg = buildQuoteMessage();
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+  const data = validateQuote();
+  if (!data) return;
+  const text = encodeURIComponent(buildQuoteText(data));
+  window.open(`https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${text}`, '_blank');
   showNotification('Abriendo WhatsApp con tu cotización...');
 });
 
-document.getElementById('btnEmailQuote').addEventListener('click', () => {
-  const q = calculateQuote();
-  const name = document.getElementById('qName').value || 'Cliente';
-  const subject = encodeURIComponent(`Cotización: ${q.product.name}`);
-  const optsList = [];
-  optCheckboxes.forEach(cb => {
-    if (cb.checked) {
-      const label = cb.parentElement.querySelector('label').textContent;
-      optsList.push(label);
+// Send by Email (FormSubmit)
+document.getElementById('btnEmailQuote').addEventListener('click', async () => {
+  const data = validateQuote();
+  if (!data) return;
+  const btn = document.getElementById('btnEmailQuote');
+  const originalText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+  try {
+    const payload = {
+      _subject: `Cotización web: ${data.customer.name} - S/ ${data.totals.total.toFixed(2)}`,
+      _template: 'table',
+      _captcha: 'false',
+      _autoresponse: `Hola ${data.customer.name},\n\nRecibimos tu cotización en Audio Electrónica Perú. Nuestro equipo la revisará y te contactaremos en menos de 24 horas.\n\nResumen:\n${buildQuoteText(data)}\n\n¡Gracias por confiar en nosotros!\n\n- Equipo Audio Electrónica`,
+      nombre: data.customer.name,
+      telefono: data.customer.phone,
+      correo: data.customer.email,
+      tipo_entrega: data.delivery.type,
+      sede: data.delivery.sede || '-',
+      distrito: data.delivery.district || '-',
+      direccion: data.delivery.address || '-',
+      telefono_envio: data.delivery.phone || '-',
+      referencia: data.delivery.reference || '-',
+      productos: data.items.map(i => `${i.name} (${i.sku}) × ${i.qty} = S/ ${i.subtotal.toFixed(2)}`).join('\n'),
+      subtotal_sin_igv: `S/ ${data.totals.subtotalSinIgv.toFixed(2)}`,
+      igv_incluido: `S/ ${data.totals.igvIncluded.toFixed(2)}`,
+      total: `S/ ${data.totals.total.toFixed(2)}`
+    };
+
+    const response = await fetch(CONFIG.FORMSUBMIT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    if (response.ok) {
+      showNotification('¡Cotización enviada! Revisa tu correo.');
+      cart = []; renderCart(); updateSummary();
+      document.getElementById('qName').value = '';
+      document.getElementById('qPhone').value = '';
+      document.getElementById('qEmail').value = '';
+    } else {
+      throw new Error('No se pudo enviar');
     }
-  });
-  const body = encodeURIComponent(
-    `Hola,\n\nSolicito cotización con los siguientes detalles:\n\n` +
-    `Cliente: ${name}\n` +
-    `Producto: ${q.product.name}\n` +
-    `Cantidad: ${q.qty}\n` +
-    `Precio unitario: S/ ${q.unit.toFixed(2)}\n` +
-    `Subtotal: S/ ${q.subtotal.toFixed(2)}\n` +
-    (optsList.length ? `Opcionales: ${optsList.join(', ')}\n` : '') +
-    `Envío: ${qDelivery.options[qDelivery.selectedIndex].text}\n` +
-    `IGV: S/ ${q.igv.toFixed(2)}\n` +
-    `TOTAL: S/ ${q.total.toFixed(2)}\n\n` +
-    `Por favor confirmar disponibilidad y tiempo de entrega.\n\n¡Gracias!`
-  );
-  window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-  showNotification('Abriendo tu cliente de correo...');
+  } catch (err) {
+    showNotification('Error al enviar. Intenta por WhatsApp.', 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = originalText;
+  }
 });
 
-document.getElementById('btnAsesoria').addEventListener('click', () => {
-  const q = calculateQuote();
-  const msg = `Hola! Me interesa el producto *${q.product.name}* y quisiera agendar una asesoría técnica. ¿Cuándo podrían atenderme?`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
-});
-
-/* ======================================
+/* ==========================================================
    CONTACT FORM
-   ====================================== */
+   ========================================================== */
 const contactForm = document.getElementById('contactForm');
 
 function getContactData() {
   return {
-    name: document.getElementById('cName').value.trim(),
-    company: document.getElementById('cCompany').value.trim(),
-    phone: document.getElementById('cPhone').value.trim(),
-    email: document.getElementById('cEmail').value.trim(),
-    message: document.getElementById('cMessage').value.trim()
+    nombre: document.getElementById('cName').value.trim(),
+    empresa: document.getElementById('cCompany').value.trim(),
+    telefono: document.getElementById('cPhone').value.trim(),
+    correo: document.getElementById('cEmail').value.trim(),
+    producto: document.getElementById('cProduct').value.trim(),
+    sede: document.getElementById('cSede').value.trim(),
+    tipo: document.getElementById('cTipo').value.trim(),
+    mensaje: document.getElementById('cMessage').value.trim()
   };
 }
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const d = getContactData();
-  const subject = encodeURIComponent(`Contacto desde web: ${d.name}`);
-  const body = encodeURIComponent(
-    `Nombre: ${d.name}\n` +
-    (d.company ? `Empresa: ${d.company}\n` : '') +
-    `Teléfono: ${d.phone}\n` +
-    `Correo: ${d.email}\n\n` +
-    `Mensaje:\n${d.message}`
-  );
-  window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-  showNotification('Abriendo tu cliente de correo para enviar el mensaje...');
+  if (!d.nombre || !d.telefono || !d.correo || !d.mensaje) { showNotification('Completa los campos obligatorios', 'error'); return; }
+
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const original = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+  try {
+    // 1. Send to FormSubmit (email notification)
+    const payload = {
+      _subject: `Contacto web (${d.tipo}): ${d.nombre}`,
+      _template: 'table',
+      _captcha: 'false',
+      _autoresponse: `Hola ${d.nombre},\n\nRecibimos tu mensaje en Audio Electrónica Perú. Te responderemos en menos de 24 horas.\n\nResumen de tu consulta:\n• Tipo: ${d.tipo}\n• Producto: ${d.producto || 'General'}\n• Sede: ${d.sede}\n• Mensaje: ${d.mensaje}\n\n¡Gracias por contactarnos!\n\n- Equipo Audio Electrónica`,
+      ...d
+    };
+
+    const resp = await fetch(CONFIG.FORMSUBMIT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    // 2. Send to Google Forms (if configured)
+    if (CONFIG.GOOGLE_FORM.ENABLED) {
+      const formData = new FormData();
+      Object.keys(CONFIG.GOOGLE_FORM.FIELDS).forEach(key => {
+        if (d[key]) formData.append(CONFIG.GOOGLE_FORM.FIELDS[key], d[key]);
+      });
+      fetch(CONFIG.GOOGLE_FORM.URL, { method: 'POST', mode: 'no-cors', body: formData }).catch(() => {});
+    }
+
+    if (resp.ok) {
+      showNotification('¡Mensaje enviado! Revisa tu correo.');
+      contactForm.reset();
+    } else {
+      throw new Error('Error enviando');
+    }
+  } catch (err) {
+    showNotification('Error al enviar. Intenta por WhatsApp.', 'error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = original;
+  }
 });
 
 document.getElementById('btnContactWa').addEventListener('click', () => {
   const d = getContactData();
-  if (!d.name || !d.phone || !d.email || !d.message) {
-    showNotification('Por favor completa nombre, teléfono, correo y mensaje', 'error');
-    return;
-  }
-  const msg = `Hola Audio Electrónica!%0A%0A*Contacto desde web*%0A%0A` +
-    `👤 Nombre: ${d.name}%0A` +
-    (d.company ? `🏢 Empresa: ${d.company}%0A` : '') +
-    `📞 Teléfono: ${d.phone}%0A` +
-    `📧 Correo: ${d.email}%0A%0A` +
-    `💬 Mensaje:%0A${d.message}`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
-  showNotification('Abriendo WhatsApp...');
+  if (!d.nombre || !d.telefono || !d.correo || !d.mensaje) { showNotification('Completa los campos obligatorios', 'error'); return; }
+  const msg = `*CONTACTO DESDE WEB*%0A%0A👤 ${d.nombre}${d.empresa ? ' (' + d.empresa + ')' : ''}%0A📞 ${d.telefono}%0A📧 ${d.correo}%0A%0A📝 *Tipo de atención:* ${d.tipo}%0A🛒 *Producto de interés:* ${d.producto || 'General'}%0A📍 *Sede de interés:* ${d.sede}%0A%0A💬 *Mensaje:*%0A${d.mensaje}`;
+  window.open(`https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${msg}`, '_blank');
 });
 
-/* ======================================
+/* ==========================================================
    NOTIFICATION
-   ====================================== */
+   ========================================================== */
 function showNotification(text, type = 'success') {
   const notif = document.getElementById('notification');
+  notif.className = 'notification' + (type === 'error' ? ' error' : '');
+  const icon = notif.querySelector('i');
+  icon.className = type === 'error' ? 'fas fa-exclamation-circle' : 'fas fa-check-circle';
   document.getElementById('notifText').textContent = text;
   notif.classList.add('show');
-  setTimeout(() => notif.classList.remove('show'), 3500);
+  setTimeout(() => notif.classList.remove('show'), 4000);
 }
 
-/* ======================================
+/* ==========================================================
    NAVIGATION
-   ====================================== */
+   ========================================================== */
 const navbar = document.getElementById('navbar');
 const mobileToggle = document.getElementById('mobileToggle');
 const navMenu = document.getElementById('navMenu');
@@ -3009,9 +1727,9 @@ document.querySelectorAll('.nav-menu a').forEach(a => {
   });
 });
 
-/* ======================================
-   SCROLL REVEAL
-   ====================================== */
+/* ==========================================================
+   SCROLL REVEAL & COUNTERS
+   ========================================================== */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -3023,9 +1741,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ======================================
-   ANIMATED COUNTERS
-   ====================================== */
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -3045,9 +1760,9 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
-/* ======================================
-   HERO AUDIO WAVE BARS
-   ====================================== */
+/* ==========================================================
+   HERO WAVES
+   ========================================================== */
 const heroWaves = document.getElementById('heroWaves');
 for (let i = 0; i < 80; i++) {
   const bar = document.createElement('div');
@@ -3057,11 +1772,7 @@ for (let i = 0; i < 80; i++) {
   heroWaves.appendChild(bar);
 }
 
-/* ======================================
-   FOOTER YEAR
-   ====================================== */
 document.getElementById('year').textContent = new Date().getFullYear();
-
 </script>
 </body>
 </html>
