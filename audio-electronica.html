@@ -1,0 +1,3067 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Audio Electrónica Perú - Los mejores componentes electrónicos para audio al mejor precio del mercado. Placas amplificadoras, módulos Bluetooth y más." />
+<meta name="keywords" content="amplificador, bluetooth, placa amplificadora, audio, subwoofer, Perú, ZK-502L, ZK-MT21, componentes electrónicos" />
+<meta name="author" content="Audio Electrónica Perú" />
+<meta property="og:title" content="Audio Electrónica Perú | Potencia tu Audio" />
+<meta property="og:description" content="Componentes electrónicos para audio de alta calidad al mejor precio del mercado." />
+<meta property="og:type" content="website" />
+<title>Audio Electrónica Perú | Potencia tu Audio</title>
+
+<!-- Fonts: Chakra Petch (tech/industrial display) + Outfit (clean modern body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ============================================
+   DESIGN SYSTEM
+   ============================================ */
+:root {
+  --color-bg: #050817;
+  --color-bg-soft: #0a0e27;
+  --color-surface: #111936;
+  --color-surface-2: #1a2349;
+  --color-border: rgba(99, 132, 255, 0.15);
+  --color-border-hover: rgba(255, 107, 53, 0.4);
+  
+  --color-primary: #3b82f6;
+  --color-primary-deep: #1e40af;
+  --color-primary-glow: #60a5fa;
+  
+  --color-accent: #ff6b35;
+  --color-accent-soft: #ff8c5a;
+  --color-accent-deep: #e54b1a;
+  
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-text-dim: #64748b;
+  
+  --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
+  --gradient-accent: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+  --gradient-hero: radial-gradient(ellipse at top, #1e3a8a 0%, #0a0e27 40%, #050817 100%);
+  --gradient-card: linear-gradient(145deg, rgba(30, 41, 82, 0.6) 0%, rgba(10, 14, 39, 0.8) 100%);
+  
+  --shadow-glow: 0 0 60px rgba(59, 130, 246, 0.25);
+  --shadow-accent: 0 0 40px rgba(255, 107, 53, 0.3);
+  --shadow-card: 0 20px 50px -15px rgba(0, 0, 0, 0.5);
+  
+  --font-display: 'Chakra Petch', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  
+  --container: 1280px;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Decorative grid background overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+input, select, textarea { font-family: inherit; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  background: rgba(5, 8, 23, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  border-bottom-color: var(--color-border);
+  padding: 12px 0;
+}
+
+.nav-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #1e3a8a, #050817);
+  border: 2px solid rgba(255, 107, 53, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+}
+
+.logo-icon::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-icon i {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  z-index: 1;
+}
+
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text strong { color: var(--color-text); font-size: 1rem; }
+.logo-text span { color: var(--color-accent); font-size: 0.7rem; letter-spacing: 0.15em; margin-top: 3px; }
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-menu a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-menu a:hover { color: var(--color-text); }
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after { width: 100%; }
+
+.nav-cta {
+  background: var(--gradient-accent);
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 107, 53, 0.45);
+}
+
+.nav-cta::after { display: none; }
+
+.mobile-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  padding: 140px 0 80px;
+  background: var(--gradient-hero);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Animated audio wave background */
+.hero-waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.hero-waves .bar {
+  width: 6px;
+  background: linear-gradient(to top, var(--color-accent), var(--color-primary));
+  border-radius: 3px 3px 0 0;
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { height: 20%; }
+  50% { height: 100%; }
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 100px;
+  font-size: 0.82rem;
+  color: var(--color-accent-soft);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 28px;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.hero-badge .pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+.hero h1 .highlight {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+  max-width: 540px;
+  line-height: 1.7;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border);
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.hero-stat span {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Hero Visual - audio speaker / circuit */
+.hero-visual {
+  position: relative;
+  animation: fadeIn 1.2s ease 0.5s both;
+}
+
+.speaker-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.speaker {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 50% 50%, #1a2349 0%, #050817 100%);
+  border: 8px solid #0a0e27;
+  box-shadow: 
+    0 0 80px rgba(59, 130, 246, 0.4),
+    inset 0 0 100px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 3px rgba(255, 107, 53, 0.2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: speakerPulse 4s ease-in-out infinite;
+}
+
+@keyframes speakerPulse {
+  0%, 100% { box-shadow: 0 0 80px rgba(59, 130, 246, 0.4), inset 0 0 100px rgba(0, 0, 0, 0.8), inset 0 0 0 3px rgba(255, 107, 53, 0.2); }
+  50% { box-shadow: 0 0 120px rgba(255, 107, 53, 0.4), inset 0 0 100px rgba(0, 0, 0, 0.8), inset 0 0 0 3px rgba(255, 107, 53, 0.4); }
+}
+
+.speaker-inner {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 30% 30%, #2a3a70 0%, #050817 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9);
+}
+
+.speaker-center {
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.6), inset 0 -6px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* Sound waves around speaker */
+.sound-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: soundWave 3s ease-out infinite;
+}
+
+.sound-wave:nth-child(2) { animation-delay: 1s; }
+.sound-wave:nth-child(3) { animation-delay: 2s; }
+
+@keyframes soundWave {
+  0% { width: 40%; height: 40%; opacity: 0.8; }
+  100% { width: 130%; height: 130%; opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================================
+   SECTION BASE
+   ============================================ */
+section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 64px;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  color: var(--color-primary-glow);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.section-title .highlight {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-desc {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about {
+  background: var(--color-bg-soft);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.about-content .section-tag { margin-bottom: 20px; }
+.about-content h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.about-content h2 .highlight {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mvv-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.mvv-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.mvv-card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-accent);
+}
+
+.mvv-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.mvv-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Team cards */
+.team-section {
+  margin-top: 40px;
+}
+
+.team-section h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.team-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+}
+
+.team-avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  border: 4px solid rgba(255, 107, 53, 0.25);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.team-card h4 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.team-card .role {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.team-card .bio {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   PRODUCTS SECTION
+   ============================================ */
+.products {
+  background: var(--color-bg);
+}
+
+.category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.filter-btn {
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.filter-btn.active {
+  background: var(--gradient-accent);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card);
+}
+
+.product-card:hover::before { transform: scaleX(1); }
+
+.product-image {
+  aspect-ratio: 16 / 10;
+  background: 
+    radial-gradient(circle at 30% 30%, #1a2349 0%, #050817 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.product-image svg {
+  width: 70%;
+  height: 70%;
+  z-index: 1;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.product-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(5, 8, 23, 0.9);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+.product-power {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.product-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.product-model {
+  color: var(--color-primary-glow);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.product-specs {
+  list-style: none;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.product-specs li {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.product-specs li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+  margin-top: auto;
+}
+
+.product-price small {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 2px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.product-price strong {
+  font-family: var(--font-display);
+  color: var(--color-accent);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.product-price strong small {
+  display: inline;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 2px;
+}
+
+.btn-cotizar {
+  background: rgba(255, 107, 53, 0.1);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cotizar:hover {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* ============================================
+   QUOTE CALCULATOR
+   ============================================ */
+.quoter {
+  background: var(--color-bg-soft);
+  position: relative;
+}
+
+.quoter::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.quoter-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.quoter-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+}
+
+.quoter-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--color-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.form-group select,
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: rgba(5, 8, 23, 0.6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff6b35' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  padding-right: 42px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(5, 8, 23, 0.4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.checkbox-option:hover {
+  border-color: var(--color-accent);
+}
+
+.checkbox-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.checkbox-option label {
+  flex: 1;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 0;
+}
+
+.checkbox-option .opt-price {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+/* Summary */
+.quote-summary {
+  background: rgba(5, 8, 23, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.quote-summary h3 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quote-summary h3::before {
+  content: '';
+  width: 4px;
+  height: 22px;
+  background: var(--gradient-accent);
+  border-radius: 2px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.summary-row:last-of-type { border-bottom: none; }
+
+.summary-row strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 10px;
+  margin-top: 10px;
+  border-top: 2px solid var(--color-accent);
+}
+
+.summary-total span {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.summary-total .total-amount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.summary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.summary-actions .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+  font-size: 0.9rem;
+}
+
+.summary-note {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: var(--color-text-dim);
+  line-height: 1.5;
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact {
+  background: var(--color-bg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info { padding-top: 10px; }
+
+.contact-info h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin-bottom: 20px;
+}
+
+.contact-info h2 .highlight {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-info > p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contact-methods { display: flex; flex-direction: column; gap: 16px; }
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  border-color: var(--color-accent);
+  transform: translateX(6px);
+}
+
+.contact-method .icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-accent);
+}
+
+.contact-method .icon.whatsapp { background: #25d366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); }
+
+.contact-method .details small {
+  color: var(--color-text-dim);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.contact-method .details strong {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+
+.contact-method .details a {
+  color: var(--color-text);
+  display: block;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.contact-method .details a:hover { color: var(--color-accent); }
+
+.contact-form-wrap {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  backdrop-filter: blur(20px);
+}
+
+.contact-form-wrap h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.contact-form-wrap > p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+
+.contact-form-wrap textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.form-actions .btn { flex: 1; justify-content: center; padding: 14px; }
+
+/* ============================================
+   STATS / TRUST SECTION
+   ============================================ */
+.trust {
+  background: var(--color-bg-soft);
+  padding: 80px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 32px 20px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-number .highlight {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.testimonial {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.testimonial .quote-icon {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  opacity: 0.15;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  color: #fbbf24;
+  margin-bottom: 14px;
+}
+
+.testimonial-text {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.author-info strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.author-info small {
+  color: var(--color-text-dim);
+  font-size: 0.78rem;
+}
+
+/* ============================================
+   SOCIAL / LINKS SECTION
+   ============================================ */
+.social-section {
+  background: var(--color-bg);
+  padding: 80px 0;
+}
+
+.social-wrap {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.social-wrap h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  margin-bottom: 16px;
+}
+
+.social-wrap > p {
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 16px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  color: var(--color-text-muted);
+}
+
+.social-link:hover {
+  transform: translateY(-6px);
+  color: var(--color-text);
+}
+
+.social-link .sl-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .sl-icon { transform: scale(1.1); }
+
+.sl-facebook { background: #1877f2; }
+.sl-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.sl-tiktok { background: #000; border: 1px solid #fff; }
+.sl-youtube { background: #ff0000; }
+.sl-whatsapp { background: #25d366; }
+.sl-web { background: var(--gradient-primary); }
+
+.social-link span {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background: #030513;
+  padding: 60px 0 30px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand .logo { margin-bottom: 18px; }
+
+.footer-brand p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.footer-socials { display: flex; gap: 10px; }
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 18px;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.footer-col ul a {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-col ul a:hover { color: var(--color-accent); }
+.footer-col ul a::before {
+  content: '›';
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.footer-col .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.footer-col .contact-item i {
+  color: var(--color-accent);
+  width: 16px;
+  margin-top: 3px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 24px;
+  text-align: center;
+  color: var(--color-text-dim);
+  font-size: 0.82rem;
+}
+
+.footer-bottom strong { color: var(--color-accent); }
+
+/* ============================================
+   FLOATING WHATSAPP
+   ============================================ */
+.float-whatsapp {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+  z-index: 99;
+  transition: all 0.3s ease;
+  animation: floatBounce 2.5s ease-in-out infinite;
+}
+
+.float-whatsapp::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  animation: ripple 2s ease-out infinite;
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-whatsapp:hover {
+  transform: scale(1.1);
+  background: #20ba5a;
+}
+
+/* ============================================
+   NOTIFICATION
+   ============================================ */
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  color: var(--color-text);
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  transform: translateX(400px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 360px;
+}
+
+.notification.show { transform: translateX(0); }
+.notification i { color: var(--color-accent); font-size: 1.2rem; }
+
+/* ============================================
+   ANIMATIONS ON SCROLL
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero-grid, .about-grid, .contact-grid, .quoter-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { max-width: 360px; margin: 0 auto; }
+  .products-grid, .team-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .social-grid { grid-template-columns: repeat(3, 1fr); }
+  .quote-summary { position: static; }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(5, 8, 23, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .nav-menu.open { transform: translateY(0); }
+  .mobile-toggle { display: block; }
+  
+  section { padding: 70px 0; }
+  
+  .hero { padding: 120px 0 60px; min-height: auto; }
+  .hero-stats { flex-wrap: wrap; gap: 24px; }
+  
+  .products-grid, .team-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .stat-number { font-size: 1.8rem; }
+  
+  .mvv-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  
+  .quoter-wrap { padding: 28px 20px; }
+  .contact-form-wrap { padding: 28px 20px; }
+  
+  .footer-grid { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: repeat(2, 1fr); }
+  
+  .form-actions { flex-direction: column; }
+  
+  .float-whatsapp { width: 54px; height: 54px; font-size: 1.5rem; bottom: 20px; right: 20px; }
+}
+
+@media (max-width: 480px) {
+  .nav-cta { display: none; }
+  .hero h1 { font-size: 2.2rem; }
+  .btn { padding: 14px 24px; font-size: 0.88rem; }
+  .section-title { font-size: 1.8rem; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-surface-2); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVBAR
+     ============================================ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#inicio" class="logo">
+      <div class="logo-icon"><i class="fas fa-volume-high"></i></div>
+      <div class="logo-text">
+        <strong>AUDIO ELECTRÓNICA</strong>
+        <span>PERÚ</span>
+      </div>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#cotizador">Cotizador</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#cotizador" class="nav-cta">Cotizar ahora</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-waves" id="heroWaves"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          <span>Envíos a todo el Perú · Stock disponible</span>
+        </div>
+        <h1>Potencia tu audio, <span class="highlight">eleva tu experiencia</span></h1>
+        <p class="hero-subtitle">
+          Placas amplificadoras, módulos Bluetooth y componentes electrónicos profesionales
+          al mejor precio del mercado. Calidad comprobada, asesoría experta y respaldo de ingenieros certificados.
+        </p>
+        <div class="hero-cta">
+          <a href="#cotizador" class="btn btn-primary">
+            <i class="fas fa-calculator"></i> Solicitar cotización
+          </a>
+          <a href="#productos" class="btn btn-secondary">
+            <i class="fas fa-microchip"></i> Ver productos
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong data-counter="14">14+</strong>
+            <span>Modelos en catálogo</span>
+          </div>
+          <div class="hero-stat">
+            <strong data-counter="500">500+</strong>
+            <span>Clientes satisfechos</span>
+          </div>
+          <div class="hero-stat">
+            <strong data-counter="24">24h</strong>
+            <span>Respuesta garantizada</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="speaker-wrap">
+          <div class="sound-wave"></div>
+          <div class="sound-wave"></div>
+          <div class="sound-wave"></div>
+          <div class="speaker">
+            <div class="speaker-inner">
+              <div class="speaker-center">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section class="about" id="nosotros">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content reveal">
+        <span class="section-tag">Quiénes somos</span>
+        <h2>Audio Electrónica, <span class="highlight">potencia tu vida</span></h2>
+        <p>
+          Somos una empresa peruana especializada en tecnología de audio, liderada por ingenieros
+          con formación en las mejores universidades del país (UNI y UNMSM).
+          Seleccionamos y distribuimos los componentes electrónicos más confiables del mercado,
+          ofreciendo siempre la mejor relación calidad-precio.
+        </p>
+        <p>
+          Cada producto pasa por nuestro control técnico antes de llegar a tus manos.
+          Brindamos asesoría especializada para que encuentres exactamente lo que tu proyecto necesita,
+          ya sea un parlante casero, un sistema automotriz o un equipo profesional.
+        </p>
+      </div>
+      <div class="mvv-grid reveal">
+        <div class="mvv-card">
+          <div class="mvv-card-icon"><i class="fas fa-bullseye"></i></div>
+          <h4>Misión</h4>
+          <p>Democratizar el acceso a componentes de audio de alta calidad con asesoría técnica experta y precios competitivos.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card-icon"><i class="fas fa-eye"></i></div>
+          <h4>Visión</h4>
+          <p>Ser la tienda líder de componentes electrónicos para audio en el Perú y Latinoamérica.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card-icon"><i class="fas fa-award"></i></div>
+          <h4>Calidad</h4>
+          <p>Productos probados por ingenieros. Garantía real y soporte post-venta de por vida.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card-icon"><i class="fas fa-handshake"></i></div>
+          <h4>Confianza</h4>
+          <p>Transparencia total en precios, especificaciones y tiempos de entrega. Tu satisfacción es nuestra meta.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-section reveal">
+      <h3>Nuestro <span style="color:var(--color-accent);">equipo de ingenieros</span></h3>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">CL</div>
+          <h4>Corina Lazo</h4>
+          <div class="role">Ingeniera Mecatrónica</div>
+          <p class="bio">Universidad Nacional de Ingeniería (UNI). Especialista en integración de sistemas electrónicos y automatización.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">YL</div>
+          <h4>Yerson Lopez</h4>
+          <div class="role">Ingeniero de Sistemas</div>
+          <p class="bio">Universidad Nacional de Ingeniería (UNI). Experto en desarrollo de soluciones tecnológicas y soporte técnico.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">JL</div>
+          <h4>Jesús Lazo</h4>
+          <div class="role">Ingeniero Electrónico</div>
+          <p class="bio">Universidad Nacional Mayor de San Marcos. Especialista en diseño de circuitos y amplificadores de audio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PRODUCTS
+     ============================================ -->
+<section class="products" id="productos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Catálogo oficial</span>
+      <h2 class="section-title">Nuestros <span class="highlight">productos</span></h2>
+      <p class="section-desc">
+        Componentes electrónicos para audio seleccionados por ingenieros.
+        Cada modelo incluye especificaciones técnicas completas y asesoría pre-venta gratuita.
+      </p>
+    </div>
+
+    <div class="category-filters reveal">
+      <button class="filter-btn active" data-category="all">Todos</button>
+      <button class="filter-btn" data-category="basico">Amplificadores Básicos</button>
+      <button class="filter-btn" data-category="medio">Potencia Media</button>
+      <button class="filter-btn" data-category="alto">Alta Potencia</button>
+      <button class="filter-btn" data-category="mp3">Módulos MP3</button>
+      <button class="filter-btn" data-category="modulo">Módulos Bluetooth</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Products will be inserted by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     QUOTER
+     ============================================ -->
+<section class="quoter" id="cotizador">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Cotizador instantáneo</span>
+      <h2 class="section-title">Arma tu <span class="highlight">cotización</span> en segundos</h2>
+      <p class="section-desc">Selecciona producto, cantidad y opciones. Recibe tu cotización por WhatsApp o correo al instante.</p>
+    </div>
+
+    <div class="quoter-wrap reveal">
+      <div class="quoter-grid">
+        <div class="quoter-form">
+          <div class="form-group">
+            <label>Producto de interés</label>
+            <select id="qProduct"></select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Cantidad</label>
+              <input type="number" id="qQty" value="1" min="1" max="99" />
+            </div>
+            <div class="form-group">
+              <label>Tipo de entrega</label>
+              <select id="qDelivery">
+                <option value="0">Recojo en tienda (gratis)</option>
+                <option value="15">Delivery Lima Metropolitana (+S/ 15)</option>
+                <option value="25">Delivery Lima extendida (+S/ 25)</option>
+                <option value="35">Envío a provincia (+S/ 35)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Opciones adicionales</label>
+            <div class="checkbox-group">
+              <div class="checkbox-option">
+                <input type="checkbox" id="optAsesoria" data-price="0" />
+                <label for="optAsesoria">Asesoría técnica personalizada</label>
+                <span class="opt-price">Gratis</span>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" id="optCable" data-price="12" />
+                <label for="optCable">Cable de alimentación compatible</label>
+                <span class="opt-price">+S/ 12</span>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" id="optInstala" data-price="50" />
+                <label for="optInstala">Servicio de instalación (Lima)</label>
+                <span class="opt-price">+S/ 50</span>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" id="optGarantia" data-price="20" />
+                <label for="optGarantia">Garantía extendida (6 meses)</label>
+                <span class="opt-price">+S/ 20</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Tu nombre (opcional)</label>
+            <input type="text" id="qName" placeholder="Para personalizar tu cotización" />
+          </div>
+        </div>
+
+        <div class="quote-summary">
+          <h3>Resumen de tu cotización</h3>
+          <div class="summary-row">
+            <span>Producto</span>
+            <strong id="sumProduct">—</strong>
+          </div>
+          <div class="summary-row">
+            <span>Cantidad</span>
+            <strong id="sumQty">1</strong>
+          </div>
+          <div class="summary-row">
+            <span>Precio unitario</span>
+            <strong id="sumUnit">S/ 0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="sumSubtotal">S/ 0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Opcionales</span>
+            <strong id="sumOpts">S/ 0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Envío</span>
+            <strong id="sumShip">S/ 0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>IGV (18%)</span>
+            <strong id="sumIgv">S/ 0.00</strong>
+          </div>
+          <div class="summary-total">
+            <span>Total estimado</span>
+            <span class="total-amount" id="sumTotal">S/ 0.00</span>
+          </div>
+          <div class="summary-actions">
+            <button class="btn btn-whatsapp" id="btnWhatsQuote">
+              <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+            </button>
+            <button class="btn btn-primary" id="btnEmailQuote">
+              <i class="fas fa-envelope"></i> Enviar por correo
+            </button>
+            <button class="btn btn-secondary" id="btnAsesoria">
+              <i class="fas fa-headset"></i> Solicitar asesoría
+            </button>
+          </div>
+          <p class="summary-note">
+            * Los precios son referenciales. La cotización final será confirmada por un asesor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TRUST / STATS
+     ============================================ -->
+<section class="trust">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">La confianza de nuestros clientes</span>
+      <h2 class="section-title">Números que nos <span class="highlight">respaldan</span></h2>
+    </div>
+
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="500">0</span>+</div>
+        <div class="stat-label">Clientes atendidos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-box-open"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="1200">0</span>+</div>
+        <div class="stat-label">Productos entregados</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="24">0</span></div>
+        <div class="stat-label">Departamentos cubiertos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-star"></i></div>
+        <div class="stat-number"><span class="highlight" data-target="98">0</span>%</div>
+        <div class="stat-label">Satisfacción cliente</div>
+      </div>
+    </div>
+
+    <div class="testimonials-grid reveal">
+      <div class="testimonial">
+        <i class="fas fa-quote-right quote-icon"></i>
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"La placa ZK-MT21 llegó perfecta. Los ingenieros me ayudaron a elegir el modelo ideal para mi proyecto de subwoofer casero. Atención 10/10."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CM</div>
+          <div class="author-info">
+            <strong>Carlos Mendoza</strong>
+            <small>Lima · Cliente verificado</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <i class="fas fa-quote-right quote-icon"></i>
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Compré el amplificador AS21HPA para mi local. La potencia es impresionante y el precio imbatible. Envío a Arequipa llegó en 3 días."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DR</div>
+          <div class="author-info">
+            <strong>Diego Rivas</strong>
+            <small>Arequipa · Cliente verificado</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <i class="fas fa-quote-right quote-icon"></i>
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Excelente asesoría técnica. Me explicaron cada detalle del módulo Bluetooth antes de comprar. Recomendado para cualquier proyecto DIY."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MS</div>
+          <div class="author-info">
+            <strong>María Salazar</strong>
+            <small>Trujillo · Cliente verificado</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-tag">Contáctanos</span>
+        <h2>Hablemos de tu <span class="highlight">próximo proyecto</span></h2>
+        <p>Nuestro equipo de ingenieros está listo para asesorarte. Escríbenos, llámanos o visita nuestras redes. Atención de lunes a sábado.</p>
+        
+        <div class="contact-methods">
+          <a href="https://wa.me/51904894397" target="_blank" class="contact-method">
+            <div class="icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+            <div class="details">
+              <small>WhatsApp principal</small>
+              <strong>+51 904 894 397</strong>
+            </div>
+          </a>
+          <a href="tel:+51935129108" class="contact-method">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div class="details">
+              <small>Atención comercial</small>
+              <strong>+51 935 129 108</strong>
+            </div>
+          </a>
+          <a href="tel:+51920052859" class="contact-method">
+            <div class="icon"><i class="fas fa-headset"></i></div>
+            <div class="details">
+              <small>Soporte técnico</small>
+              <strong>+51 920 052 859</strong>
+            </div>
+          </a>
+          <a href="mailto:contacto@audioelectronica.pe" class="contact-method">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div class="details">
+              <small>Correo corporativo</small>
+              <strong>contacto@audioelectronica.pe</strong>
+            </div>
+          </a>
+          <div class="contact-method">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <div class="details">
+              <small>Horario de atención</small>
+              <strong>Lun - Sáb: 9:00 AM - 7:00 PM</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <h3>Envíanos un mensaje</h3>
+        <p>Completa el formulario y te responderemos en menos de 24 horas.</p>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre completo *</label>
+              <input type="text" id="cName" required placeholder="Juan Pérez" />
+            </div>
+            <div class="form-group">
+              <label>Empresa (opcional)</label>
+              <input type="text" id="cCompany" placeholder="Nombre de tu empresa" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Teléfono / WhatsApp *</label>
+              <input type="tel" id="cPhone" required placeholder="+51 999 999 999" />
+            </div>
+            <div class="form-group">
+              <label>Correo electrónico *</label>
+              <input type="email" id="cEmail" required placeholder="tu@correo.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>¿En qué te podemos ayudar? *</label>
+            <textarea id="cMessage" required placeholder="Cuéntanos sobre tu proyecto o producto de interés..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-whatsapp" id="btnContactWa">
+              <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+            </button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Enviar por correo
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SOCIAL LINKS
+     ============================================ -->
+<section class="social-section">
+  <div class="container">
+    <div class="social-wrap reveal">
+      <span class="section-tag">Síguenos</span>
+      <h2>Conéctate con <span style="background:var(--gradient-accent);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">nosotros</span></h2>
+      <p>Nuevos productos, tutoriales, ofertas exclusivas y contenido para amantes del audio.</p>
+      
+      <div class="social-grid">
+        <a href="https://facebook.com/audioelectronica.pe" target="_blank" class="social-link">
+          <div class="sl-icon sl-facebook"><i class="fab fa-facebook-f"></i></div>
+          <span>Facebook</span>
+        </a>
+        <a href="https://instagram.com/audioelectronica.pe" target="_blank" class="social-link">
+          <div class="sl-icon sl-instagram"><i class="fab fa-instagram"></i></div>
+          <span>Instagram</span>
+        </a>
+        <a href="https://tiktok.com/@audioelectronica.pe" target="_blank" class="social-link">
+          <div class="sl-icon sl-tiktok"><i class="fab fa-tiktok"></i></div>
+          <span>TikTok</span>
+        </a>
+        <a href="https://youtube.com/@audioelectronica" target="_blank" class="social-link">
+          <div class="sl-icon sl-youtube"><i class="fab fa-youtube"></i></div>
+          <span>YouTube</span>
+        </a>
+        <a href="https://wa.me/51904894397" target="_blank" class="social-link">
+          <div class="sl-icon sl-whatsapp"><i class="fab fa-whatsapp"></i></div>
+          <span>WhatsApp</span>
+        </a>
+        <a href="#" class="social-link">
+          <div class="sl-icon sl-web"><i class="fas fa-globe"></i></div>
+          <span>audioelectronica.pe</span>
+        </a>
+        <a href="#" class="social-link">
+          <div class="sl-icon sl-web"><i class="fas fa-book-open"></i></div>
+          <span>Catálogo PDF</span>
+        </a>
+        <a href="https://linkedin.com/company/audioelectronica-pe" target="_blank" class="social-link">
+          <div class="sl-icon" style="background:#0077b5"><i class="fab fa-linkedin-in"></i></div>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">
+          <div class="logo-icon"><i class="fas fa-volume-high"></i></div>
+          <div class="logo-text">
+            <strong>AUDIO ELECTRÓNICA</strong>
+            <span>PERÚ</span>
+          </div>
+        </a>
+        <p>Los mejores componentes electrónicos para audio al mejor precio del mercado. Calidad, respaldo técnico y atención personalizada.</p>
+        <div class="footer-socials">
+          <a href="https://facebook.com/audioelectronica.pe" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/audioelectronica.pe" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@audioelectronica.pe" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/51904894397" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#cotizador">Cotizador</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categorías</h4>
+        <ul>
+          <li><a href="#productos">Amplificadores</a></li>
+          <li><a href="#productos">Módulos Bluetooth</a></li>
+          <li><a href="#productos">Reproductores MP3</a></li>
+          <li><a href="#productos">Subwoofers</a></li>
+          <li><a href="#productos">Accesorios</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <span>+51 904 894 397<br>+51 935 129 108<br>+51 920 052 859</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>contacto@audioelectronica.pe</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Lima, Perú · Envíos a nivel nacional</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> <strong>Audio Electrónica Perú</strong>. Todos los derechos reservados. Diseñado con pasión por el audio.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/51904894397?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos" target="_blank" class="float-whatsapp" aria-label="Chatea por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Notification -->
+<div class="notification" id="notification">
+  <i class="fas fa-check-circle"></i>
+  <span id="notifText">Mensaje enviado correctamente</span>
+</div>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+/* ======================================
+   PRODUCT DATABASE
+   ====================================== */
+const products = [
+  {
+    id: 'zk502l',
+    name: 'Amplificador Bluetooth ZK-502L',
+    model: 'ZK-502L · 2×50W',
+    category: 'basico',
+    price: 35,
+    power: '2×50W',
+    badge: 'Compacto',
+    specs: [
+      'Potencia: 2×50W estéreo',
+      'Bluetooth 5.0 estable',
+      'Chip Clase D + condensadores sólidos',
+      'Alimentación: 9–24V DC'
+    ],
+    svg: 'board-small'
+  },
+  {
+    id: 'bt50tono',
+    name: 'Módulo Bluetooth 5.0 con Control de Tono',
+    model: 'ZK-PT1 · Pre-Amp Estéreo',
+    category: 'modulo',
+    price: 45,
+    power: 'Pre-Amp',
+    badge: 'Popular',
+    specs: [
+      'Bluetooth 5.0 + AUX con cambio automático',
+      'Control físico de volumen, graves y agudos',
+      'SNR > 90 dB · Sonido limpio',
+      'Alimentación: 5V–24V DC'
+    ],
+    svg: 'board-knobs'
+  },
+  {
+    id: 'zkmt21',
+    name: 'Placa Amplificadora ZK-MT21 2.1',
+    model: 'ZK-MT21 · 2×50W + 100W SUB',
+    category: 'medio',
+    price: 75,
+    power: '200W',
+    badge: '2.1 Canales',
+    specs: [
+      'Potencia: 200W (2×50W + 100W subwoofer)',
+      'Entradas: Bluetooth + AUX (3.5mm)',
+      'Control: graves, agudos, volumen, sub',
+      'Alimentación: 12–24V'
+    ],
+    svg: 'board-knobs'
+  },
+  {
+    id: 'cs8673e',
+    name: 'Placa Amplificadora CS8673E + USB',
+    model: 'CS8673E · 2×50W + 100W SUB',
+    category: 'medio',
+    price: 85,
+    power: '200W',
+    badge: 'Con USB',
+    specs: [
+      'Potencia: 200W (2×50W + 100W sub)',
+      'Entradas: Bluetooth, USB y AUX 3.5mm',
+      'Control: graves, agudos, volumen, sub',
+      'Alimentación: 5–26V'
+    ],
+    svg: 'board-knobs'
+  },
+  {
+    id: 'xyap100l',
+    name: 'Amplificador XY-AP100L',
+    model: 'XY-AP100L · 2×100W',
+    category: 'medio',
+    price: 95,
+    power: '200W',
+    badge: 'App Sinilink',
+    specs: [
+      'Potencia total: 200W (2×100W estéreo)',
+      'Bluetooth 5.0, AUX y USB (modo disco U)',
+      'Control por app Sinilink (Android/iOS)',
+      'Alimentación: 8V–26V DC'
+    ],
+    svg: 'board-round'
+  },
+  {
+    id: 'zk1002t',
+    name: 'Amplificador Estéreo ZK-1002T',
+    model: 'ZK-1002T · 2×100W',
+    category: 'medio',
+    price: 110,
+    power: '200W',
+    badge: 'Estéreo HiFi',
+    specs: [
+      'Potencia: 200W (2×100W estéreo)',
+      'Bluetooth 5.0 y AUX 3.5mm',
+      'Control: volumen, agudos y graves',
+      'Alimentación: 12V–24V DC'
+    ],
+    svg: 'board-knobs'
+  },
+  {
+    id: 'zkht21',
+    name: 'Placa Amplificadora ZK-HT21',
+    model: 'ZK-HT21 · 2×160W + 220W SUB',
+    category: 'alto',
+    price: 165,
+    power: '540W',
+    badge: '2.1 Pro',
+    specs: [
+      'Potencia: 2×160W + 220W subwoofer',
+      'Entradas: Bluetooth, USB y AUX',
+      'Ventilador ultrasilencioso',
+      'Alimentación: 15–36V'
+    ],
+    svg: 'board-fan'
+  },
+  {
+    id: 'yss350h',
+    name: 'Placa Amplificadora YS-S350H',
+    model: 'YS-S350H · 2×220W + 350W SUB',
+    category: 'alto',
+    price: 245,
+    power: '790W',
+    badge: 'Chip TPA3251',
+    specs: [
+      'Potencia: 2×220W + 350W subwoofer',
+      'Chip TPA3251 alta fidelidad',
+      'Múltiples protecciones integradas',
+      'Alimentación: 18–38V'
+    ],
+    svg: 'board-fan'
+  },
+  {
+    id: 'as21hpa',
+    name: 'Placa Amplificadora AS21HPA',
+    model: 'AS21HPA · 2×300W + 600W SUB',
+    category: 'alto',
+    price: 320,
+    power: '1200W',
+    badge: 'Top Gama',
+    specs: [
+      'Potencia: 2×300W + 600W subwoofer',
+      'Bluetooth, USB, AUX + tarjeta integrada',
+      'Chip TPA3251 máxima fidelidad',
+      'Alimentación: 19–51V'
+    ],
+    svg: 'board-fan'
+  },
+  {
+    id: 'kitauto',
+    name: 'Kit Reproductor de Música Auto',
+    model: 'Kebidu · BT + USB/TF/FM/AUX',
+    category: 'mp3',
+    price: 55,
+    power: 'MP3',
+    badge: 'Para auto',
+    specs: [
+      'Bluetooth 5.0, USB, TF, AUX y FM',
+      'Pantalla LED a color',
+      'Control remoto incluido',
+      'Alimentación: 9V–12V'
+    ],
+    svg: 'board-display'
+  },
+  {
+    id: 'mp3bt25',
+    name: 'Placa Amplificadora MP3 BT 5.0',
+    model: 'MP3 · 2×25W',
+    category: 'mp3',
+    price: 40,
+    power: '50W',
+    badge: 'Compacto',
+    specs: [
+      'Potencia total: 50W (2×25W estéreo)',
+      'Bluetooth 5.0, AUX, USB, TF y FM',
+      'Reproducción sin pérdidas (FLAC/APE)',
+      'Alimentación: 7–18V DC'
+    ],
+    svg: 'board-display'
+  },
+  {
+    id: 'mp3120',
+    name: 'Módulo Amplificador MP3 120W',
+    model: 'MP3 · 2×60W con USB/TF/FM',
+    category: 'mp3',
+    price: 65,
+    power: '120W',
+    badge: 'Multiformato',
+    specs: [
+      'Potencia: 120W (2×60W estéreo)',
+      'Bluetooth 5.0, USB, TF, AUX y FM',
+      'Soporta MP3, WAV, APE, FLAC',
+      'Alimentación: 8–24V DC'
+    ],
+    svg: 'board-display'
+  },
+  {
+    id: 'mp3200',
+    name: 'Módulo Amplificador MP3 200W',
+    model: 'MP3 · 2×100W con Control Sólido',
+    category: 'mp3',
+    price: 95,
+    power: '200W',
+    badge: 'Premium',
+    specs: [
+      'Potencia: 200W (2×100W estéreo)',
+      'Doble chip TPA3116 Clase D',
+      'USB, TF, AUX, Bluetooth 5.0, FM',
+      'Control remoto sólido (sin batería)'
+    ],
+    svg: 'board-display'
+  },
+  {
+    id: 'd10mic',
+    name: 'Placa Amplificadora D10 con Micrófono',
+    model: 'D10 · 30-150W con Subwoofer',
+    category: 'medio',
+    price: 75,
+    power: '150W',
+    badge: 'Karaoke',
+    specs: [
+      'Potencia ajustable: 30–120W',
+      'Entradas: Bluetooth, RCA, USB, TF y MIC',
+      'Micrófonos duales con efecto eco + FM',
+      'Alimentación: 12–24V DC o 110–220V AC'
+    ],
+    svg: 'board-controls'
+  }
+];
+
+/* ======================================
+   SVG PRODUCT ILLUSTRATIONS
+   ====================================== */
+const svgs = {
+  'board-small': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="pcb1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a3a2e"/><stop offset="1" stop-color="#0a1f1a"/></linearGradient></defs>
+    <rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb1)" stroke="#2d5f4e" stroke-width="1"/>
+    <circle cx="40" cy="70" r="18" fill="#c0c0c0" stroke="#333" stroke-width="2"/>
+    <circle cx="40" cy="70" r="10" fill="#2d8659"/>
+    <rect x="80" y="50" width="40" height="30" rx="2" fill="#222" stroke="#ff6b35" stroke-width="0.5"/>
+    <circle cx="150" cy="45" r="9" fill="#666" stroke="#999"/>
+    <circle cx="150" cy="95" r="9" fill="#666" stroke="#999"/>
+    <rect x="165" y="60" width="18" height="20" rx="2" fill="#000"/>
+    <line x1="20" y1="30" x2="190" y2="30" stroke="#ff6b35" stroke-width="0.3" opacity="0.5"/>
+    <line x1="20" y1="110" x2="190" y2="110" stroke="#ff6b35" stroke-width="0.3" opacity="0.5"/>
+  </svg>`,
+  'board-knobs': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="pcb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient></defs>
+    <rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb2)" stroke="#444"/>
+    <circle cx="40" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
+    <circle cx="40" cy="70" r="8" fill="#ff6b35"/>
+    <circle cx="80" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
+    <circle cx="80" cy="70" r="8" fill="#3b82f6"/>
+    <circle cx="120" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
+    <circle cx="120" cy="70" r="8" fill="#3b82f6"/>
+    <circle cx="160" cy="70" r="14" fill="#888" stroke="#333" stroke-width="2"/>
+    <circle cx="160" cy="70" r="8" fill="#3b82f6"/>
+    <line x1="40" y1="60" x2="40" y2="64" stroke="white" stroke-width="1.5"/>
+    <line x1="80" y1="60" x2="80" y2="64" stroke="white" stroke-width="1.5"/>
+    <line x1="120" y1="60" x2="120" y2="64" stroke="white" stroke-width="1.5"/>
+    <line x1="160" y1="60" x2="160" y2="64" stroke="white" stroke-width="1.5"/>
+  </svg>`,
+  'board-round': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="pcb3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+      <radialGradient id="knob3"><stop offset="0" stop-color="#aaa"/><stop offset="1" stop-color="#333"/></radialGradient>
+    </defs>
+    <rect x="10" y="20" width="180" height="100" rx="6" fill="url(#pcb3)" stroke="#444"/>
+    <circle cx="100" cy="70" r="28" fill="url(#knob3)" stroke="#000" stroke-width="2"/>
+    <circle cx="100" cy="70" r="20" fill="#1a1a1a"/>
+    <circle cx="100" cy="70" r="3" fill="#ff6b35"/>
+    <rect x="30" y="55" width="20" height="30" rx="2" fill="#000" stroke="#666"/>
+    <rect x="150" y="55" width="20" height="30" rx="2" fill="#000" stroke="#666"/>
+    <text x="35" y="95" fill="#ff6b35" font-size="6" font-family="monospace">AUX</text>
+    <text x="153" y="95" fill="#ff6b35" font-size="6" font-family="monospace">USB</text>
+  </svg>`,
+  'board-fan': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="pcb4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a2a"/><stop offset="1" stop-color="#050510"/></linearGradient></defs>
+    <rect x="10" y="15" width="180" height="110" rx="6" fill="url(#pcb4)" stroke="#3b82f6" stroke-width="0.5"/>
+    <circle cx="100" cy="70" r="30" fill="#0a0a0a" stroke="#444" stroke-width="2"/>
+    <g transform="translate(100 70)">
+      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333"/>
+      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(72)"/>
+      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(144)"/>
+      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(216)"/>
+      <path d="M 0,-24 Q 8,-12 0,0 Q -8,-12 0,-24 Z" fill="#333" transform="rotate(288)"/>
+      <circle r="6" fill="#ff6b35"/>
+    </g>
+    <circle cx="30" cy="40" r="8" fill="#444"/>
+    <circle cx="30" cy="40" r="4" fill="#3b82f6"/>
+    <circle cx="30" cy="100" r="8" fill="#444"/>
+    <circle cx="30" cy="100" r="4" fill="#3b82f6"/>
+    <circle cx="170" cy="40" r="8" fill="#444"/>
+    <circle cx="170" cy="40" r="4" fill="#ff6b35"/>
+    <circle cx="170" cy="100" r="8" fill="#444"/>
+    <circle cx="170" cy="100" r="4" fill="#ff6b35"/>
+  </svg>`,
+  'board-display': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="pcb5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#050505"/></linearGradient></defs>
+    <rect x="10" y="30" width="180" height="80" rx="4" fill="url(#pcb5)" stroke="#444"/>
+    <rect x="55" y="45" width="90" height="32" rx="2" fill="#1a0000" stroke="#ff6b35" stroke-width="0.5"/>
+    <text x="100" y="68" fill="#ff3030" font-size="18" font-family="'Courier New', monospace" text-anchor="middle" font-weight="bold">88:8</text>
+    <circle cx="30" cy="95" r="6" fill="#333" stroke="#888"/>
+    <circle cx="50" cy="95" r="4" fill="#666"/>
+    <circle cx="70" cy="95" r="4" fill="#666"/>
+    <circle cx="90" cy="95" r="4" fill="#666"/>
+    <circle cx="110" cy="95" r="4" fill="#666"/>
+    <circle cx="130" cy="95" r="4" fill="#666"/>
+    <circle cx="150" cy="95" r="4" fill="#666"/>
+    <rect x="165" y="90" width="18" height="12" rx="1" fill="#1e40af"/>
+    <text x="174" y="99" fill="white" font-size="6" text-anchor="middle" font-family="sans-serif">BT</text>
+  </svg>`,
+  'board-controls': `<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="pcb6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2f1a"/><stop offset="1" stop-color="#0f0a05"/></linearGradient></defs>
+    <rect x="10" y="20" width="180" height="100" rx="4" fill="url(#pcb6)" stroke="#ffb347" stroke-width="0.5"/>
+    <circle cx="35" cy="55" r="8" fill="#ff0" stroke="#333"/>
+    <circle cx="60" cy="55" r="8" fill="#f00" stroke="#333"/>
+    <circle cx="85" cy="55" r="8" fill="#f90" stroke="#333"/>
+    <circle cx="110" cy="55" r="8" fill="#f90" stroke="#333"/>
+    <circle cx="135" cy="55" r="8" fill="#ff0" stroke="#333"/>
+    <circle cx="160" cy="55" r="8" fill="#ff0" stroke="#333"/>
+    <rect x="30" y="80" width="140" height="25" rx="2" fill="#000" stroke="#666"/>
+    <text x="40" y="96" fill="#ff6b35" font-size="6" font-family="monospace">MIC VOL ECHO TREBLE BASS</text>
+  </svg>`
+};
+
+/* ======================================
+   RENDER PRODUCTS
+   ====================================== */
+const productsGrid = document.getElementById('productsGrid');
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+function renderProducts(category = 'all') {
+  productsGrid.innerHTML = '';
+  const filtered = category === 'all' ? products : products.filter(p => p.category === category);
+  filtered.forEach((p, i) => {
+    const card = document.createElement('div');
+    card.className = 'product-card reveal';
+    card.style.animationDelay = `${i * 0.05}s`;
+    card.innerHTML = `
+      <div class="product-image">
+        <div class="product-badge">${p.badge}</div>
+        <div class="product-power">${p.power}</div>
+        ${svgs[p.svg] || svgs['board-knobs']}
+      </div>
+      <div class="product-body">
+        <div class="product-model">${p.model}</div>
+        <h3 class="product-name">${p.name}</h3>
+        <ul class="product-specs">
+          ${p.specs.map(s => `<li>${s}</li>`).join('')}
+        </ul>
+        <div class="product-footer">
+          <div class="product-price">
+            <small>Desde</small>
+            <strong>S/ ${p.price}<small>.00</small></strong>
+          </div>
+          <button class="btn-cotizar" onclick="quickQuote('${p.id}')">
+            <i class="fas fa-calculator"></i> Cotizar
+          </button>
+        </div>
+      </div>
+    `;
+    productsGrid.appendChild(card);
+  });
+  // Re-observe new reveals
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
+  }, 50);
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderProducts(btn.dataset.category);
+  });
+});
+
+renderProducts();
+
+/* ======================================
+   POPULATE QUOTER DROPDOWN
+   ====================================== */
+const qProductSelect = document.getElementById('qProduct');
+products.forEach(p => {
+  const opt = document.createElement('option');
+  opt.value = p.id;
+  opt.textContent = `${p.name} — S/ ${p.price}`;
+  qProductSelect.appendChild(opt);
+});
+
+/* ======================================
+   QUOTE CALCULATOR
+   ====================================== */
+const qQty = document.getElementById('qQty');
+const qDelivery = document.getElementById('qDelivery');
+const optCheckboxes = document.querySelectorAll('.checkbox-option input[type="checkbox"]');
+
+function calculateQuote() {
+  const product = products.find(p => p.id === qProductSelect.value);
+  if (!product) return null;
+  const qty = parseInt(qQty.value) || 1;
+  const unit = product.price;
+  const subtotal = unit * qty;
+  let opts = 0;
+  optCheckboxes.forEach(cb => { if (cb.checked) opts += parseFloat(cb.dataset.price); });
+  const ship = parseFloat(qDelivery.value) || 0;
+  const base = subtotal + opts + ship;
+  const igv = base * 0.18;
+  const total = base + igv;
+  return { product, qty, unit, subtotal, opts, ship, igv, total };
+}
+
+function updateQuote() {
+  const q = calculateQuote();
+  if (!q) return;
+  document.getElementById('sumProduct').textContent = q.product.name;
+  document.getElementById('sumQty').textContent = q.qty;
+  document.getElementById('sumUnit').textContent = `S/ ${q.unit.toFixed(2)}`;
+  document.getElementById('sumSubtotal').textContent = `S/ ${q.subtotal.toFixed(2)}`;
+  document.getElementById('sumOpts').textContent = `S/ ${q.opts.toFixed(2)}`;
+  document.getElementById('sumShip').textContent = `S/ ${q.ship.toFixed(2)}`;
+  document.getElementById('sumIgv').textContent = `S/ ${q.igv.toFixed(2)}`;
+  document.getElementById('sumTotal').textContent = `S/ ${q.total.toFixed(2)}`;
+}
+
+[qProductSelect, qQty, qDelivery, ...optCheckboxes].forEach(el => {
+  el.addEventListener('change', updateQuote);
+  el.addEventListener('input', updateQuote);
+});
+
+updateQuote();
+
+/* ======================================
+   QUICK QUOTE (from product card)
+   ====================================== */
+function quickQuote(productId) {
+  qProductSelect.value = productId;
+  updateQuote();
+  document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
+}
+window.quickQuote = quickQuote;
+
+/* ======================================
+   WHATSAPP / EMAIL ACTIONS
+   ====================================== */
+const WHATSAPP_NUMBER = '51904894397';
+const EMAIL = 'contacto@audioelectronica.pe';
+
+function buildQuoteMessage() {
+  const q = calculateQuote();
+  const name = document.getElementById('qName').value || 'Cliente';
+  const optsList = [];
+  optCheckboxes.forEach(cb => {
+    if (cb.checked) {
+      const label = cb.parentElement.querySelector('label').textContent;
+      optsList.push(label);
+    }
+  });
+  const deliveryText = qDelivery.options[qDelivery.selectedIndex].text;
+  return `Hola Audio Electrónica Perú!%0A%0A*Solicitud de cotización*%0A%0ACliente: ${name}%0A%0A` +
+    `📦 Producto: ${q.product.name}%0A` +
+    `🔢 Cantidad: ${q.qty}%0A` +
+    `💰 Precio unitario: S/ ${q.unit.toFixed(2)}%0A` +
+    `🧾 Subtotal: S/ ${q.subtotal.toFixed(2)}%0A` +
+    `${optsList.length ? '✅ Opcionales: ' + optsList.join(', ') + '%0A' : ''}` +
+    `🚚 Envío: ${deliveryText}%0A` +
+    `💵 IGV: S/ ${q.igv.toFixed(2)}%0A` +
+    `*TOTAL: S/ ${q.total.toFixed(2)}*%0A%0A` +
+    `¿Podrían confirmar disponibilidad y tiempos de entrega? ¡Gracias!`;
+}
+
+document.getElementById('btnWhatsQuote').addEventListener('click', () => {
+  const msg = buildQuoteMessage();
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+  showNotification('Abriendo WhatsApp con tu cotización...');
+});
+
+document.getElementById('btnEmailQuote').addEventListener('click', () => {
+  const q = calculateQuote();
+  const name = document.getElementById('qName').value || 'Cliente';
+  const subject = encodeURIComponent(`Cotización: ${q.product.name}`);
+  const optsList = [];
+  optCheckboxes.forEach(cb => {
+    if (cb.checked) {
+      const label = cb.parentElement.querySelector('label').textContent;
+      optsList.push(label);
+    }
+  });
+  const body = encodeURIComponent(
+    `Hola,\n\nSolicito cotización con los siguientes detalles:\n\n` +
+    `Cliente: ${name}\n` +
+    `Producto: ${q.product.name}\n` +
+    `Cantidad: ${q.qty}\n` +
+    `Precio unitario: S/ ${q.unit.toFixed(2)}\n` +
+    `Subtotal: S/ ${q.subtotal.toFixed(2)}\n` +
+    (optsList.length ? `Opcionales: ${optsList.join(', ')}\n` : '') +
+    `Envío: ${qDelivery.options[qDelivery.selectedIndex].text}\n` +
+    `IGV: S/ ${q.igv.toFixed(2)}\n` +
+    `TOTAL: S/ ${q.total.toFixed(2)}\n\n` +
+    `Por favor confirmar disponibilidad y tiempo de entrega.\n\n¡Gracias!`
+  );
+  window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  showNotification('Abriendo tu cliente de correo...');
+});
+
+document.getElementById('btnAsesoria').addEventListener('click', () => {
+  const q = calculateQuote();
+  const msg = `Hola! Me interesa el producto *${q.product.name}* y quisiera agendar una asesoría técnica. ¿Cuándo podrían atenderme?`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+/* ======================================
+   CONTACT FORM
+   ====================================== */
+const contactForm = document.getElementById('contactForm');
+
+function getContactData() {
+  return {
+    name: document.getElementById('cName').value.trim(),
+    company: document.getElementById('cCompany').value.trim(),
+    phone: document.getElementById('cPhone').value.trim(),
+    email: document.getElementById('cEmail').value.trim(),
+    message: document.getElementById('cMessage').value.trim()
+  };
+}
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const d = getContactData();
+  const subject = encodeURIComponent(`Contacto desde web: ${d.name}`);
+  const body = encodeURIComponent(
+    `Nombre: ${d.name}\n` +
+    (d.company ? `Empresa: ${d.company}\n` : '') +
+    `Teléfono: ${d.phone}\n` +
+    `Correo: ${d.email}\n\n` +
+    `Mensaje:\n${d.message}`
+  );
+  window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  showNotification('Abriendo tu cliente de correo para enviar el mensaje...');
+});
+
+document.getElementById('btnContactWa').addEventListener('click', () => {
+  const d = getContactData();
+  if (!d.name || !d.phone || !d.email || !d.message) {
+    showNotification('Por favor completa nombre, teléfono, correo y mensaje', 'error');
+    return;
+  }
+  const msg = `Hola Audio Electrónica!%0A%0A*Contacto desde web*%0A%0A` +
+    `👤 Nombre: ${d.name}%0A` +
+    (d.company ? `🏢 Empresa: ${d.company}%0A` : '') +
+    `📞 Teléfono: ${d.phone}%0A` +
+    `📧 Correo: ${d.email}%0A%0A` +
+    `💬 Mensaje:%0A${d.message}`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+  showNotification('Abriendo WhatsApp...');
+});
+
+/* ======================================
+   NOTIFICATION
+   ====================================== */
+function showNotification(text, type = 'success') {
+  const notif = document.getElementById('notification');
+  document.getElementById('notifText').textContent = text;
+  notif.classList.add('show');
+  setTimeout(() => notif.classList.remove('show'), 3500);
+}
+
+/* ======================================
+   NAVIGATION
+   ====================================== */
+const navbar = document.getElementById('navbar');
+const mobileToggle = document.getElementById('mobileToggle');
+const navMenu = document.getElementById('navMenu');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+mobileToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+  mobileToggle.innerHTML = navMenu.classList.contains('open') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+});
+
+document.querySelectorAll('.nav-menu a').forEach(a => {
+  a.addEventListener('click', () => {
+    navMenu.classList.remove('open');
+    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  });
+});
+
+/* ======================================
+   SCROLL REVEAL
+   ====================================== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ======================================
+   ANIMATED COUNTERS
+   ====================================== */
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      let current = 0;
+      const step = Math.max(1, Math.ceil(target / 50));
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = current;
+      }, 30);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+/* ======================================
+   HERO AUDIO WAVE BARS
+   ====================================== */
+const heroWaves = document.getElementById('heroWaves');
+for (let i = 0; i < 80; i++) {
+  const bar = document.createElement('div');
+  bar.className = 'bar';
+  bar.style.animationDelay = `${Math.random() * 1.5}s`;
+  bar.style.height = `${20 + Math.random() * 60}%`;
+  heroWaves.appendChild(bar);
+}
+
+/* ======================================
+   FOOTER YEAR
+   ====================================== */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
