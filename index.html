@@ -173,9 +173,16 @@ section { padding: 100px 0; position: relative; }
 .product-card:hover::before { transform: scaleX(1); }
 .product-card.out-of-stock { opacity: 0.7; }
 .product-card.out-of-stock::after { content: 'AGOTADO'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-12deg); font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: rgba(239, 68, 68, 0.5); letter-spacing: 0.1em; pointer-events: none; z-index: 5; text-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
-.product-image { aspect-ratio: 16 / 10; background: radial-gradient(circle at 30% 30%, #1a2349 0%, #050817 100%); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--color-border); }
-.product-image::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px); background-size: 20px 20px; }
-.product-image svg { width: 68%; height: 68%; z-index: 1; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); }
+.product-image { aspect-ratio: 16 / 10; background: radial-gradient(circle at 30% 30%, #1a2349 0%, #050817 100%); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--color-border); text-decoration: none; color: inherit; }
+.product-image::before { content: ''; position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px); background-size: 20px 20px; }
+.product-image.is-link { cursor: pointer; }
+.product-media { position: relative; width: 68%; height: 68%; z-index: 1; display: flex; align-items: center; justify-content: center; }
+.product-media img { width: 100%; height: 100%; object-fit: contain; padding: 8px; opacity: 0; transition: opacity 0.25s ease, transform 0.3s ease; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.45)); }
+.product-media svg { width: 100%; height: 100%; transition: opacity 0.25s ease, transform 0.3s ease; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); }
+.product-image.has-photo .product-media img { opacity: 1; }
+.product-image.has-photo .product-media svg { opacity: 0; transform: scale(0.96); }
+.product-image.is-link:hover .product-media img,
+.product-image.is-link:hover .product-media svg { transform: scale(1.03); }
 .product-badge { position: absolute; top: 12px; left: 12px; background: rgba(5, 8, 23, 0.9); border: 1px solid var(--color-accent); color: var(--color-accent); padding: 4px 10px; border-radius: 100px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; z-index: 2; backdrop-filter: blur(10px); }
 .product-stock-badge { position: absolute; top: 12px; right: 12px; padding: 4px 10px; border-radius: 100px; font-size: 0.68rem; font-weight: 700; z-index: 2; backdrop-filter: blur(10px); display: inline-flex; align-items: center; gap: 5px; }
 .product-stock-badge.available { background: rgba(34, 197, 94, 0.15); border: 1px solid var(--color-success); color: var(--color-success); }
@@ -1203,7 +1210,47 @@ const CONFIG = {
 /* ==========================================================
    PRODUCTOS (datos reales desde dim_producto)
    ========================================================== */
-const PRODUCTS = [
+const PRODUCT_DIM = {
+  P001: { price: 25, link: 'https://web.facebook.com/share/1B53nuKAmu/' },
+  P002: { price: 90, link: 'https://web.facebook.com/share/1CP26njxMB/' },
+  P003: { price: 65, link: '' },
+  P004: { price: 65, link: 'https://web.facebook.com/share/1CkZwSUomm/' },
+  P005: { price: 30, link: 'https://web.facebook.com/share/1EDA96eauA/' },
+  P006: { price: 50, link: 'https://web.facebook.com/share/1Avcu8QveY/' },
+  P007: { price: 25, link: 'https://web.facebook.com/share/1E76W3nP2e/' },
+  P008: { price: 5, link: '' },
+  P009: { price: 135, link: 'https://web.facebook.com/share/1CgKhnw69r/' },
+  P010: { price: 170, link: 'https://web.facebook.com/share/1CZFNCAytL/' },
+  P011: { price: 40, link: '' },
+  P012: { price: 35, link: '' },
+  P013: { price: 20, link: '' },
+  P014: { price: 40, link: '' },
+  P015: { price: 220, link: 'https://web.facebook.com/share/17LXAy5JHe/' },
+  P025: { price: 25, link: 'https://web.facebook.com/share/19ninmiQiA/' },
+  P026: { price: 40, link: 'https://web.facebook.com/share/1D3UuwUwiK/' },
+  P027: { price: 160, link: '' },
+  P032: { price: 90, link: 'https://web.facebook.com/share/1D3UuwUwiK/' },
+  P034: { price: 40, link: 'https://web.facebook.com/share/17Q8qDFQdQ/' },
+  P035: { price: 50, link: 'https://web.facebook.com/share/1BSBjNnH99/' },
+  P036: { price: 35, link: '' },
+  P037: { price: 10, link: '' },
+  P039: { price: 40, link: '' },
+  P041: { price: 280, link: 'https://web.facebook.com/share/1CESCBiqNd/' },
+  P047: { price: 30, link: 'https://web.facebook.com/share/1BnQYVC41g/' },
+  P048: { price: 45, link: 'https://web.facebook.com/share/1LTQ9MaFYy/' },
+  P055: { price: 20, link: 'https://web.facebook.com/share/1E76W3nP2e/' },
+  P057: { price: 45, link: 'https://web.facebook.com/share/1LTQ9MaFYy/' }
+};
+
+function productImagePath(id) {
+  return `img/${String(id || '').trim().toLowerCase()}.jpg`;
+}
+
+function hasActiveProductLink(link) {
+  return typeof link === 'string' && /^https?:\/\//i.test(link.trim());
+}
+
+const RAW_PRODUCTS = [
   // Audio - Amplificadores 2.1
   { id: 'P002', name: 'Amplificador 2.1 50Wx2 + 100W Sub', desc: 'Módulo con entrada USB, Bluetooth y AUX. Ideal para sistemas 2.1 caseros.', cat: 'amplificador', price: 85, stock: 0, sku: 'ZK-MT21-USB', link: 'https://web.facebook.com/share/19BS4VCDYy/', svg: 'amp-knobs', badge: '2.1 con USB' },
   { id: 'P004', name: 'Amplificador 2.1 200W sin USB', desc: 'Módulo amplificador negro compacto. Bluetooth + AUX, ideal para parlantes medianos.', cat: 'amplificador', price: 75, stock: 62, sku: 'ZK-MT21', link: 'https://web.facebook.com/share/1C1VVLizhu/', svg: 'amp-knobs', badge: 'Más vendido' },
@@ -1246,6 +1293,17 @@ const PRODUCTS = [
   { id: 'P037', name: 'Sensor de movimiento para focos', desc: 'Sensor infrarrojo automático para focos. Ahorro energético en pasillos y escaleras.', cat: 'iluminacion', price: 10, stock: 10, sku: 'SENSOR-MOV', link: '#', svg: 'sensor', badge: 'Automático' }
 ];
 
+const PRODUCTS = RAW_PRODUCTS.map((product) => {
+  const dimData = PRODUCT_DIM[String(product.id || '').toUpperCase()];
+
+  return {
+    ...product,
+    price: dimData && Number.isFinite(dimData.price) ? dimData.price : product.price,
+    link: dimData && Object.prototype.hasOwnProperty.call(dimData, 'link') ? dimData.link : product.link,
+    image: product.image || productImagePath(product.id)
+  };
+});
+
 /* ==========================================================
    SVG ILLUSTRATIONS
    ========================================================== */
@@ -1287,15 +1345,23 @@ function renderProducts(category = 'all') {
   filtered.forEach((p, i) => {
     const s = stockStatus(p.stock);
     const outOfStock = p.stock === 0;
+    const hasLink = hasActiveProductLink(p.link);
+    const mediaTag = hasLink ? 'a' : 'div';
+    const mediaAttributes = hasLink
+      ? `class="product-image is-link" href="${p.link}" target="_blank" rel="noopener noreferrer" aria-label="Ver ${p.name} en Facebook"`
+      : 'class="product-image"';
     const card = document.createElement('div');
     card.className = 'product-card reveal' + (outOfStock ? ' out-of-stock' : '');
     card.style.animationDelay = `${i * 0.04}s`;
     card.innerHTML = `
-      <div class="product-image">
+      <${mediaTag} ${mediaAttributes}>
         <div class="product-badge">${p.badge}</div>
         <div class="product-stock-badge ${s.class}"><span class="dot"></span>${s.label}</div>
-        ${SVGS[p.svg] || SVGS['amp-knobs']}
-      </div>
+        <div class="product-media">
+          <img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" onload="this.closest('.product-image').classList.add('has-photo')" onerror="this.remove()">
+          ${SVGS[p.svg] || SVGS['amp-knobs']}
+        </div>
+      </${mediaTag}>
       <div class="product-body">
         <div class="product-category-tag">${p.sku}</div>
         <h3 class="product-name">${p.name}</h3>
